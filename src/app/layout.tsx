@@ -1,8 +1,6 @@
 import { type Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
-
-
 import "@/assets/css/globals.css";
 import { cn } from "@/lib/utils";
 
