@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
-import "@/app/assets/css/globals.css";
+import "@/assets/css/globals.css";
 import { cn } from "@/lib/utils";
 import { TRPCReactProvider } from "@/trpc/react";
 
