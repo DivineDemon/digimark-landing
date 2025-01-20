@@ -1,9 +1,10 @@
 import { type Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
+
+
 import "@/assets/css/globals.css";
 import { cn } from "@/lib/utils";
-import { TRPCReactProvider } from "@/trpc/react";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -20,9 +21,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={cn("antialiased", openSans.className)}>
-      <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
