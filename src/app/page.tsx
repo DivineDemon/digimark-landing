@@ -1,7 +1,8 @@
-import Founder from "@/components/founder";
-import Hero from "@/components/hero";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import Navbar from "@/components/navbar";
+import Founder from "@/sections/founder";
+import Hero from "@/sections/hero";
+import Services from "@/sections/services";
 
 const Page = () => {
   return (
@@ -10,6 +11,7 @@ const Page = () => {
         <Navbar />
         <Hero />
         <Founder />
+        <Services />
       </MaxWidthWrapper>
     </div>
   );
