@@ -10,20 +10,20 @@ const Founder = () => {
           <Image
             src={DummyDP}
             alt="dummy-dp"
-            className="size-24 rounded-full border-[8px] border-brand-950"
+            className="size-20 rounded-full border-[8px] border-brand-950"
           />
           <Image
             src={DummyDP}
             alt="dummy-dp"
-            className="size-24 rounded-full border-[8px] border-brand-950"
+            className="size-20 rounded-full border-[8px] border-brand-950"
           />
           <Image
             src={DummyDP}
             alt="dummy-dp"
-            className="size-24 rounded-full border-[8px] border-brand-950"
+            className="size-20 rounded-full border-[8px] border-brand-950"
           />
         </div>
-        <span className="w-full pl-3 text-left text-lg uppercase !leading-[20px] text-white">
+        <span className="w-full text-left text-lg uppercase !leading-[20px] text-white">
           founders
           <br />
           of digimark

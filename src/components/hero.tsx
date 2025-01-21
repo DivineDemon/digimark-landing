@@ -27,12 +27,12 @@ const Hero = () => {
       <div className="relative col-span-2 w-full">
         <Image src={HeroFolder} alt="hero-folder" className="z-0 h-full" />
         <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-center justify-between px-9 pb-9 pt-16 text-white">
-          <span className="w-full text-left text-[140px] font-[600] uppercase !leading-[120px] tracking-tighter">
+          <span className="w-full text-left text-[120px] font-[600] uppercase !leading-[100px] tracking-tighter">
             let&apos;s build
             <br />
             the next
           </span>
-          <span className="z-[2] -mt-[71px] w-full text-left text-[140px] font-[600] uppercase !leading-[120px] tracking-tighter">
+          <span className="z-[2] -mt-[100px] w-full text-left text-[120px] font-[600] uppercase !leading-[100px] tracking-tighter">
             tech thing
           </span>
           {threeDs.map((image) => (
@@ -40,7 +40,7 @@ const Hero = () => {
               key={image.id}
               src={image.image}
               className={cn(
-                "ease-[cubic-bezier(0.77, 0, 0.175, 1)] absolute right-24 top-10 z-0 w-[300px] rotate-[22.5deg] transition-transform duration-1000",
+                "ease-[cubic-bezier(0.77, 0, 0.175, 1)] absolute right-14 top-14 z-0 w-[225px] rotate-[22.5deg] transition-transform duration-1000",
                 {
                   "translate-y-0 scale-100": image.id === activeIndex + 1,
                   "-translate-y-[8rem] scale-0": image.id < activeIndex + 1,
@@ -51,11 +51,11 @@ const Hero = () => {
             />
           ))}
           <div className="flex w-full items-center justify-between border-t border-white pt-9">
-            <div className="flex items-center justify-center gap-9">
+            <div className="flex items-center justify-center gap-5">
               <span className="text-7xl font-[600] !leading-[72px] tracking-tighter">
                 10Y
               </span>
-              <span className="text-[30px] font-medium uppercase !leading-[32px] tracking-tighter">
+              <span className="pt-[5px] text-[30px] font-medium uppercase !leading-[32px] tracking-tighter">
                 of design-driven
                 <br />
                 product development
@@ -92,7 +92,7 @@ const Hero = () => {
         </div>
         <span className="mb-3.5 mt-7 px-1.5 text-2xl font-medium uppercase text-white">
           web design
-          <br />& custom web development.
+          <br />& web development.
         </span>
         {/* Marquee Animation */}
         <div className="flex w-full flex-col items-center justify-center">
