@@ -4,6 +4,7 @@ import Clientele from "@/sections/clientele";
 import Founder from "@/sections/founder";
 import Hero from "@/sections/hero";
 import Services from "@/sections/services";
+import Testimonials from "@/sections/testimonials";
 
 const Page = () => {
   return (
@@ -15,6 +16,7 @@ const Page = () => {
         <Services />
         <Clientele />
       </MaxWidthWrapper>
+      <Testimonials />
     </div>
   );
 };

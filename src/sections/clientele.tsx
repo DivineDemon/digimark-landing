@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import DummyBrandTwo from "@/assets/img/dummy-brand2.svg";
 import EarthGIF from "@/assets/img/earth.gif";
 import { cn } from "@/lib/utils";
 
@@ -18,7 +19,11 @@ const Clientele = () => {
             }
           )}
         >
-          <span className="w-full text-center">icon</span>
+          <Image
+            src={DummyBrandTwo}
+            alt="dummy-brand-2"
+            className="h-20 translate-y-7 transition-transform duration-200 group-hover:-translate-y-2"
+          />
           <span className="w-full text-center text-gray-400 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">
             Lorem ipsum dolor sit amet consectetur adipisicing.
           </span>
