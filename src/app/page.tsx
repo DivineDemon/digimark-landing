@@ -1,5 +1,6 @@
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import Navbar from "@/components/navbar";
+import Benefits from "@/sections/benefits";
 import Clientele from "@/sections/clientele";
 import Founder from "@/sections/founder";
 import Hero from "@/sections/hero";
@@ -21,6 +22,7 @@ const Page = () => {
       <Testimonials />
       <MaxWidthWrapper className="z-[1]">
         <Projects />
+        <Benefits />
       </MaxWidthWrapper>
     </div>
   );

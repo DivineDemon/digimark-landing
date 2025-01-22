@@ -1,0 +1,40 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 50"
+  width="200"
+  height="100">
+  <path
+    d="M25,25c0-10,15-10,25,0s15,10,25,0"
+    fill="none"
+    stroke="#1C3512"
+    stroke-width="4"
+    stroke-linecap="round">
+    <animate
+      attributeName="stroke-dasharray"
+      values="1, 200; 89, 200; 1, 200"
+      dur="1.5s"
+      repeatCount="indefinite" />
+    <animate
+      attributeName="stroke-dashoffset"
+      values="0; -30; -124"
+      dur="1.5s"
+      repeatCount="indefinite" />
+  </path>
+  <path
+    d="M75,25c0,10-15,10-25,0s-15-10-25,0"
+    fill="none"
+    stroke="#1C3512"
+    stroke-width="4"
+    stroke-linecap="round">
+    <animate
+      attributeName="stroke-dasharray"
+      values="1, 200; 89, 200; 1, 200"
+      dur="1.5s"
+      repeatCount="indefinite" />
+    <animate
+      attributeName="stroke-dashoffset"
+      values="0; -30; -124"
+      dur="1.5s"
+      repeatCount="indefinite" />
+  </path>
+</svg>

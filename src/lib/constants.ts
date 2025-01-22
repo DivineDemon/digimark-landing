@@ -92,3 +92,27 @@ export const projects = [
     video: DummyProject,
   },
 ];
+
+export const benefits = [
+  {
+    id: 1,
+    title: "$530M",
+    subtitle: "Total Funding",
+    description:
+      "Hard work and dedication of the Halo Lab team help our clients secure new successful investment deals.",
+  },
+  {
+    id: 2,
+    title: "500+",
+    subtitle: "Completed projects",
+    description:
+      "With our exceptional approach to every project, we bring the dream projects of our clients to life.",
+  },
+  {
+    id: 3,
+    title: "",
+    subtitle: "Positive vibes",
+    description:
+      "We aim to provide the perfect digital solutions for your business, making this process friendly and chill.",
+  },
+];
