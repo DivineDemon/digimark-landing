@@ -47,7 +47,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-8 overflow-x-hidden">
+        <div className="flex w-full flex-col gap-8 overflow-hidden">
           <div
             className="flex w-full items-start justify-start"
             style={{
