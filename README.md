@@ -27,3 +27,4 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+{/* <div className="absolute z-0 -bottom-0 inset-x-0 h-96 rounded-t-full bg-brand-300/50 filter blur-2xl"></div> */}

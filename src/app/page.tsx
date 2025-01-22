@@ -1,3 +1,5 @@
+import Copyright from "@/components/copyright";
+import Footer from "@/components/footer";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import Navbar from "@/components/navbar";
 import Benefits from "@/sections/benefits";
@@ -11,7 +13,7 @@ import Testimonials from "@/sections/testimonials";
 
 const Page = () => {
   return (
-    <div className="relative flex w-full flex-col items-start justify-start bg-brand-950">
+    <div className="flex w-full flex-col items-start justify-start bg-brand-950">
       <MaxWidthWrapper className="z-[1] p-5">
         <Navbar />
         <Hero />
@@ -19,13 +21,14 @@ const Page = () => {
         <Services />
         <Clientele />
       </MaxWidthWrapper>
-      {/* <div className="absolute z-0 -bottom-0 inset-x-0 h-96 rounded-t-full bg-brand-300/50 filter blur-2xl"></div> */}
       <Testimonials />
       <MaxWidthWrapper className="z-[1]">
         <Projects />
         <Benefits />
         <Contact />
       </MaxWidthWrapper>
+      <Footer />
+      <Copyright />
     </div>
   );
 };
