@@ -23,7 +23,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="mb-24 mt-48 flex w-full items-end justify-end">
+    <div className="z-[1] mb-24 mt-48 flex w-full items-end justify-end">
       <MaxWidthWrapper className="mx-0 !ml-auto max-w-screen-2xl">
         <div className="flex w-full items-start justify-start gap-5">
           <div className="min-w-sm relative shrink-0">

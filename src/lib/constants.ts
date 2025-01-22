@@ -1,6 +1,8 @@
 import { LassoSelect, LayoutDashboard, Search, Shapes } from "lucide-react";
 
 import D1 from "@/assets/img/1.png";
+import DummyBrand3 from "@/assets/img/dummy-brand3.svg";
+import DummyProject from "@/assets/img/dummy-project.gif";
 
 export const threeDs = [
   {
@@ -45,5 +47,48 @@ export const services = [
     title: "Marketing",
     description:
       "With various tools, our experts can help you expand the target audience and increase brand awareness.",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    brand: DummyBrand3,
+    title: "$40 Million Raised by Mighty Buildings in Series B",
+    description:
+      "We enhanced Mighty Buildings' web portal and configurator. They have grown to 100+ employees and secured $100M investment.",
+    tags: ["real estate", "manufacturing"],
+    flag: "🏳️‍⚧️",
+    video: DummyProject,
+  },
+  {
+    id: 2,
+    brand: DummyBrand3,
+    title: "$40 Million Raised by Mighty Buildings in Series B",
+    description:
+      "We enhanced Mighty Buildings' web portal and configurator. They have grown to 100+ employees and secured $100M investment.",
+    tags: ["real estate", "manufacturing"],
+    flag: "🏳️‍⚧️",
+    video: DummyProject,
+  },
+  {
+    id: 3,
+    brand: DummyBrand3,
+    title: "$40 Million Raised by Mighty Buildings in Series B",
+    description:
+      "We enhanced Mighty Buildings' web portal and configurator. They have grown to 100+ employees and secured $100M investment.",
+    tags: ["real estate", "manufacturing"],
+    flag: "🏳️‍⚧️",
+    video: DummyProject,
+  },
+  {
+    id: 4,
+    brand: DummyBrand3,
+    title: "$40 Million Raised by Mighty Buildings in Series B",
+    description:
+      "We enhanced Mighty Buildings' web portal and configurator. They have grown to 100+ employees and secured $100M investment.",
+    tags: ["real estate", "manufacturing"],
+    flag: "🏳️‍⚧️",
+    video: DummyProject,
   },
 ];
