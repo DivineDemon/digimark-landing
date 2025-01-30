@@ -25,14 +25,14 @@ const Testimonials = () => {
   return (
     <div className="z-[1] mb-24 mt-48 flex w-full items-end justify-end">
       <MaxWidthWrapper className="mx-0 !ml-auto max-w-screen-2xl">
-        <div className="flex w-full items-start justify-start gap-5">
-          <div className="min-w-sm relative shrink-0">
+        <div className="flex w-full flex-col items-start justify-start md:flex-row lg:gap-5">
+          <div className="relative my-auto w-[350px] shrink-0 lg:w-auto xl:my-0">
             <Image
               src={DummyClient}
               alt="dummy-client"
               className="z-0 h-full"
             />
-            <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-start justify-end gap-5 bg-gradient-to-t from-brand-950 via-transparent to-transparent text-white">
+            <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-start justify-end gap-5 bg-gradient-to-t from-brand-950 via-transparent to-transparent p-5 text-white 2xl:p-0">
               <span className="text-[96px] font-semibold !leading-[96px]">
                 4.9
               </span>
@@ -53,7 +53,7 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 items-start justify-start gap-5 overflow-hidden">
+          <div className="ml-5 flex flex-1 items-start justify-start gap-5 overflow-hidden">
             {[...Array(10)].map((_, idx) => (
               <TestimonialCard key={idx} currentIndex={currentIndex} />
             ))}

@@ -27,27 +27,27 @@ const Projects = () => {
       <Image
         src={HeroFolder}
         alt="flipped-folder"
-        className="z-0 w-full scale-x-[-1] transform"
+        className="z-0 aspect-[9/16] h-[320px] w-full scale-x-[-1] transform md:aspect-auto md:h-auto"
       />
-      <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-center justify-between gap-8 p-8">
+      <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-center justify-between gap-3 p-3 md:gap-5 md:p-5 xl:gap-8 xl:p-8">
         <div className="flex w-full items-end justify-between">
-          <span className="w-full text-left text-[120px] font-[600] uppercase !leading-[100px] tracking-tighter text-brand-950">
+          <span className="w-full text-left text-3xl font-[600] uppercase tracking-tighter text-brand-950 md:text-5xl lg:text-6xl xl:text-[120px] xl:leading-[100px]">
             our
             <br />
             projects
           </span>
-          <div className="flex items-center justify-center -space-x-6 pr-8">
+          <div className="flex items-center justify-center -space-x-2 pr-3 xl:-space-x-6 xl:pr-8">
             <Image
               src={DummyDP}
               alt="dummy-dp"
-              className="size-28 rounded-full"
+              className="size-10 rounded-full md:size-14 xl:size-28"
             />
-            <div className="flex size-28 shrink-0 items-center justify-center rounded-full bg-brand-950">
-              <Play className="size-7 text-white" fill="white" />
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand-950 md:size-14 xl:size-28">
+              <Play className="size-4 text-white xl:size-7" fill="white" />
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-8 overflow-hidden">
+        <div className="flex w-full flex-col gap-5 overflow-hidden lg:gap-8">
           <div
             className="flex w-full items-start justify-start"
             style={{
@@ -60,14 +60,12 @@ const Projects = () => {
             ))}
           </div>
           <div className="flex w-full items-center justify-center text-brand-950">
-            <ChevronLeftCircle
-              onClick={handlePrev}
-              className="size-10 cursor-pointer"
-            />
-            <ChevronRightCircle
-              onClick={handleNext}
-              className="ml-5 mr-10 size-10 cursor-pointer"
-            />
+            <button type="button" onClick={handlePrev}>
+              <ChevronLeftCircle className="size-10" />
+            </button>
+            <button type="button" onClick={handleNext} className="ml-5 mr-10">
+              <ChevronRightCircle className="size-10" />
+            </button>
             <div className="h-2 flex-1 rounded-full border border-brand-950">
               <div
                 className={cn(

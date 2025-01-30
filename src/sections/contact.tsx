@@ -9,17 +9,17 @@ const Contact = () => {
       }}
     >
       <div
-        className="flex h-[500px] w-full flex-col items-center justify-center gap-7 overflow-hidden bg-white"
+        className="flex w-full flex-col items-center justify-center gap-5 overflow-hidden bg-white p-5 md:h-[500px] md:gap-7"
         style={{
           clipPath: "polygon(90% 0, 100% 25%, 100% 100%, 0 100%, 0 0)",
         }}
       >
-        <span className="w-full text-center text-6xl font-[600] !leading-[60px] tracking-tight">
+        <span className="w-full text-center text-2xl font-[600] tracking-tight md:text-6xl md:leading-[60px]">
           Ready to discuss
           <br />
           your project with us?
         </span>
-        <span className="w-full text-center text-gray-500">
+        <span className="w-full text-center text-sm text-gray-500 md:text-base">
           Let's talk about how we can craft a user experience that not
           <br />
           only looks great but drives real growth for your product.

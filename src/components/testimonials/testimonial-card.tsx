@@ -14,13 +14,13 @@ const TestimonialCard = ({ currentIndex }: TestimonialCardProps) => {
     <div
       className="relative flex flex-shrink-0 flex-nowrap items-center justify-center transition-transform duration-500 ease-in-out"
       style={{
-        transform: `translateX(-${currentIndex * 100}%)`,
+        transform: `translateX(-${currentIndex * 105}%)`,
       }}
     >
       <Image
         src={TestimonialPage}
         alt="testimonial-page"
-        className="z-0 h-[613px] w-full"
+        className="z-0 h-[535px] w-full md:h-[613px]"
       />
       <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-center justify-between p-10">
         <div className="flex w-full items-center justify-start gap-5 border-b border-white/50 pb-10">

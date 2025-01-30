@@ -13,16 +13,24 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="grid h-full w-full shrink-0 grid-cols-2 rounded-xl bg-brand-950/50">
-      <div className="col-span-1 flex h-full w-full flex-col items-start justify-start p-10 text-white">
+    <div className="grid h-auto w-full shrink-0 grid-cols-2 rounded-xl bg-brand-950/50 md:h-full">
+      <div className="col-span-1 flex w-full flex-col items-start justify-start p-2 text-white md:h-full md:p-5 xl:p-10">
         <Image src={project.brand} alt="dummy-brand-3" />
-        <span className="mb-5 mt-7 w-full text-pretty text-left text-[45px] !leading-[50px]">
+        <span className="mb-2.5 mt-5 hidden w-full text-pretty text-left md:flex md:text-xl lg:mb-5 lg:mt-7 lg:text-[45px] lg:leading-[50px]">
           {project.title}
         </span>
-        <span className="w-full text-left">{project.description}</span>
+        <span className="hidden w-full text-left md:flex md:text-xs">
+          {project.description}
+        </span>
         <div className="mt-auto flex w-full items-center justify-start">
-          <span className="pt-1 uppercase">{project.tags.join(", ")}</span>
-          &nbsp;|&nbsp;<span className="pt-0.5 text-2xl">{project.flag}</span>
+          <span className="hidden pt-1 uppercase md:flex">
+            {project.tags.join(", ")}
+          </span>
+          <span className="flex pt-1 text-xs uppercase md:hidden">
+            {project.tags.slice(0, 1).join(", ")}
+          </span>
+          &nbsp;|&nbsp;
+          <span className="pt-0.5 text-xs md:text-2xl">{project.flag}</span>
         </div>
       </div>
       <div

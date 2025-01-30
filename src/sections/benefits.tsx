@@ -7,12 +7,12 @@ import { benefits } from "@/lib/constants";
 const Benefits = () => {
   return (
     <div className="relative mb-24 mt-48 flex w-full flex-col items-center justify-center gap-20">
-      <span className="w-full text-left text-[100px] font-semibold uppercase !leading-[100px] tracking-tighter text-white">
+      <span className="w-full text-left text-[72px] font-semibold uppercase leading-[72px] tracking-tighter text-white xl:text-[100px] xl:leading-[100px]">
         our
         <br />
         benefits
       </span>
-      <div className="grid w-full grid-cols-4 gap-10">
+      <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <div
           className="col-span-1 h-fit w-full overflow-hidden"
           style={{

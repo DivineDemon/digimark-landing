@@ -22,13 +22,15 @@ const Page = () => {
         <Clientele />
       </MaxWidthWrapper>
       <Testimonials />
-      <MaxWidthWrapper className="z-[1]">
+      <MaxWidthWrapper className="z-[1] p-5">
         <Projects />
         <Benefits />
         <Contact />
       </MaxWidthWrapper>
       <Footer />
-      <Copyright />
+      <MaxWidthWrapper className="z-[1] px-5">
+        <Copyright />
+      </MaxWidthWrapper>
     </div>
   );
 };
