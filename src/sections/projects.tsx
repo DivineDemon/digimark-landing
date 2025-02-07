@@ -24,12 +24,44 @@ const Projects = () => {
 
   return (
     <div className="relative mb-24 mt-48 flex w-full items-center justify-center">
-      <Image
+      {/* <Image
         src={HeroFolder}
         alt="flipped-folder"
         className="z-0 aspect-[9/16] h-[320px] w-full scale-x-[-1] transform md:aspect-auto md:h-auto"
-      />
-      <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-center justify-between gap-3 p-3 md:gap-5 md:p-5 xl:gap-8 xl:p-8">
+      /> */}
+      <div
+        className="relative h-[300px] w-full overflow-hidden md:h-[475px] lg:h-[800px]"
+        style={{
+          filter: "url(#flt_tag)",
+        }}
+      >
+        <div
+          className="relative h-full w-full overflow-hidden bg-brand-500"
+          style={{
+            clipPath:
+              "polygon(35% 10%, 100% 10%, 100% 100%, 0 100%, 0 0, 25% 0)",
+          }}
+        ></div>
+        <svg className="absolute">
+          <defs>
+            <filter id="flt_tag">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="8"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                result="flt_tag"
+              />
+              <feComposite in="SourceGraphic" in2="flt_tag" operator="atop" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      {/* <div className="absolute inset-0 z-[1] flex h-full w-full flex-col items-center justify-between gap-3 p-3 md:gap-5 md:p-5 xl:gap-8 xl:p-8">
         <div className="flex w-full items-end justify-between">
           <span className="w-full text-left text-3xl font-[600] uppercase tracking-tighter text-brand-950 md:text-5xl lg:text-6xl xl:text-[120px] xl:leading-[100px]">
             our
@@ -81,7 +113,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
