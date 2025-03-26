@@ -6,6 +6,7 @@ interface MaxWidthWrapperProps {
   className?: string;
   isTopBorder?: boolean;
   isTopAccent?: boolean;
+  isBottomBorder?: boolean;
   children: React.ReactNode;
 }
 
@@ -14,9 +15,14 @@ const MaxWidthWrapper = ({
   className,
   isTopBorder,
   isTopAccent,
+  isBottomBorder = true,
 }: MaxWidthWrapperProps) => {
   return (
-    <div className="w-full border-b border-gray-300">
+    <div
+      className={cn("w-full", {
+        "border-b border-gray-300": isBottomBorder,
+      })}
+    >
       <div
         className={cn(
           "relative mx-auto h-full w-full max-w-[1200px] border-x border-gray-300 p-3",
@@ -26,7 +32,11 @@ const MaxWidthWrapper = ({
           }
         )}
       >
-        <div className="absolute -bottom-3 -left-3 size-6 bg-[#F4F4F4] p-1">
+        <div
+          className={cn("absolute -bottom-3 -left-3 size-6 bg-[#F4F4F4] p-1", {
+            hidden: !isBottomBorder,
+          })}
+        >
           <Plus className="text-muted-foreground size-full" />
         </div>
         <div
@@ -37,7 +47,11 @@ const MaxWidthWrapper = ({
           <Plus className="text-muted-foreground size-full" />
         </div>
         {children}
-        <div className="absolute -right-3 -bottom-3 size-6 bg-[#F4F4F4] p-1">
+        <div
+          className={cn("absolute -right-3 -bottom-3 size-6 bg-[#F4F4F4] p-1", {
+            hidden: !isBottomBorder,
+          })}
+        >
           <Plus className="text-muted-foreground size-full" />
         </div>
         <div
