@@ -1,6 +1,8 @@
 import Benefits from "@/components/landing/benefits";
 import Hero from "@/components/landing/hero";
 import HowItWorks from "@/components/landing/how-it-works";
+import Scheduling from "@/components/landing/scheduling";
+import Testimonials from "@/components/landing/testimonials";
 import Trusted from "@/components/landing/trusted";
 
 const Page = () => {
@@ -10,6 +12,8 @@ const Page = () => {
       <Trusted />
       <HowItWorks />
       <Benefits />
+      <Testimonials />
+      <Scheduling />
     </div>
   );
 };
