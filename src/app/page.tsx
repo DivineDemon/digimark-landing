@@ -1,4 +1,5 @@
 import Benefits from "@/components/landing/benefits";
+import Business from "@/components/landing/business";
 import ExploreApps from "@/components/landing/explore-apps";
 import Hero from "@/components/landing/hero";
 import HowItWorks from "@/components/landing/how-it-works";
@@ -16,6 +17,7 @@ const Page = () => {
       <Testimonials />
       <Scheduling />
       <ExploreApps />
+      <Business />
     </div>
   );
 };
