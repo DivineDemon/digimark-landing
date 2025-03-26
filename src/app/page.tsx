@@ -6,6 +6,7 @@ import HowItWorks from "@/components/landing/how-it-works";
 import Scheduling from "@/components/landing/scheduling";
 import Testimonials from "@/components/landing/testimonials";
 import Trusted from "@/components/landing/trusted";
+import WallOfLove from "@/components/landing/wall-of-love";
 
 const Page = () => {
   return (
@@ -18,6 +19,7 @@ const Page = () => {
       <Scheduling />
       <ExploreApps />
       <Business />
+      <WallOfLove />
     </div>
   );
 };
