@@ -9,6 +9,14 @@ import {
   Video,
 } from "lucide-react";
 
+import GoogleIcon from "@/assets/icons/google.svg";
+import LinearIcon from "@/assets/icons/linear.svg";
+import MetaIcon from "@/assets/icons/meta.svg";
+import MicrosoftIcon from "@/assets/icons/microsoft.svg";
+import OutlookIcon from "@/assets/icons/outlook.svg";
+import PaypalIcon from "@/assets/icons/paypal.svg";
+import SalesforceIcon from "@/assets/icons/salesforce.svg";
+import SupabaseIcon from "@/assets/icons/supabase.svg";
 import TrustedOne from "@/assets/img/trusted1.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
@@ -150,5 +158,40 @@ export const subBenefits = [
     id: 8,
     name: "Simple customization",
     icon: Settings,
+  },
+];
+
+export const brands = [
+  {
+    id: 1,
+    image: GoogleIcon,
+  },
+  {
+    id: 2,
+    image: LinearIcon,
+  },
+  {
+    id: 3,
+    image: MetaIcon,
+  },
+  {
+    id: 4,
+    image: MicrosoftIcon,
+  },
+  {
+    id: 5,
+    image: OutlookIcon,
+  },
+  {
+    id: 6,
+    image: PaypalIcon,
+  },
+  {
+    id: 7,
+    image: SalesforceIcon,
+  },
+  {
+    id: 8,
+    image: SupabaseIcon,
   },
 ];
