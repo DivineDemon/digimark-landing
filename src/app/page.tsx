@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Benefits from "@/components/landing/benefits";
 import Business from "@/components/landing/business";
 import CTA from "@/components/landing/cta";
@@ -22,6 +23,7 @@ const Page = () => {
       <WallOfLove />
       <Scheduling />
       <CTA />
+      <Footer />
     </div>
   );
 };

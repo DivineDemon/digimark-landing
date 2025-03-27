@@ -302,7 +302,7 @@ export const testimonials = [
     social_handle: "@masonc",
     social_logo: "https://cdn-icons-png.flaticon.com/512/145/145802.png",
     client_image: "https://randomuser.me/api/portraits/men/12.jpg",
-    description: "Perfect execution! Couldn’t be happier with the results.",
+    description: "Perfect execution! Couldn't be happier with the results.",
   },
   {
     id: 13,
