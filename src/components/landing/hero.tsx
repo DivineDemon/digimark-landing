@@ -21,16 +21,11 @@ const Hero = () => {
             <ChevronRight className="mt-[0.5px] ml-2 size-3.5" />
           </span>
           <span className="my-10 w-full text-left text-[70px] leading-[70px] font-[600] tracking-tighter">
-            The better way
-            <br />
-            to schedule
-            <br />
-            your meetings
+            Boost Your Business with ROI Driven Solutions
           </span>
           <span className="text-muted-foreground w-full text-left">
-            A fully customizable scheduling software for individuals, businesses
-            taking calls and developers building scheduling platforms where
-            users meet users.
+            Empowering SMEs with tailored SaaS development, AI integrations, and
+            end-to-end automation to drive growth and efficiency.
           </span>
           <CustomButton size="lg" className="mt-5 mb-2.5 w-full">
             <Image

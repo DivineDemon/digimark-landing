@@ -1,12 +1,12 @@
 import {
-  AppWindow,
-  Code,
-  CreditCard,
-  Languages,
-  Link,
-  Settings,
-  Shield,
-  Video,
+  Cpu,
+  Megaphone,
+  MessageCircle,
+  Package,
+  Rocket,
+  Sliders,
+  TrendingUp,
+  Zap,
 } from "lucide-react";
 
 import GoogleIcon from "@/assets/icons/google.svg";
@@ -74,90 +74,91 @@ export const trusted = [
 export const howItWorks = [
   {
     id: 1,
-    title: "Connect your calendar",
+    title: "Discovery & Strategy",
     description:
-      "We'll handle all the cross-referencing, so you don't have to worry about double bookings.",
+      "We begin by understanding your business goals, challenges, and target audience to craft a strategic roadmap.",
   },
   {
     id: 2,
-    title: "Set your availability",
+    title: "Design & Development",
     description:
-      "Want to block off weekends? Set up any buffers? We make that easy.",
+      "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
   },
   {
     id: 3,
-    title: "Choose how to meet",
-    description: "It could be a video chat, phone call, or a walk in the park!",
+    title: "Deployment & Support",
+    description:
+      "Post-launch, we provide continuous support and optimization to ensure sustained success.",
   },
 ];
 
 export const benefits = [
   {
     id: 1,
-    title: "Avoid meeting overload",
+    title: "Technical Expertise",
     description:
-      "Only get booked when you want to. Set daily, weekly or monthly limits and add buffers around your events to allow you to focus or take a break.",
+      "Certified engineers fluent in AI/ML, cloud architecture, IoT, and DevOps.",
   },
   {
     id: 2,
-    title: "Stand out with a custom booking link",
+    title: "Client-Centric Process",
     description:
-      "Customize your booking link so it's short and easy to remember for your bookers. No more long, complicated links one can easily forget.",
+      "Transparent communication, milestone tracking, and adaptive workflows.",
   },
   {
     id: 3,
-    title: "Streamline your bookers' experience",
+    title: "Proven Impact",
     description:
-      "Let your bookers overlay their calendar, receive booking confirmations via text or email, get events added to their calendar, and allow them to reschedule with ease.",
+      "95% client retention rate with solutions that boost efficiency by 40% on average.",
   },
   {
     id: 4,
-    title: "Reduce no-shows with automated meeting reminders",
+    title: "Future-Ready",
     description:
-      "Easily send sms or meeting reminder emails about bookings, and send automated follow-ups to gather any relevant information before the meeting.",
+      "Scalable systems designed to evolve with emerging tech and market demands.",
   },
 ];
 
 export const subBenefits = [
   {
     id: 1,
-    name: "Accept payments",
-    icon: CreditCard,
+    name: "ROI Driven SaaS Development",
+    icon: TrendingUp,
   },
   {
     id: 2,
-    name: "Built-in video conferencing",
-    icon: Video,
+    name: "Fast MVP Development",
+    icon: Rocket,
   },
   {
     id: 3,
-    name: "Short booking links",
-    icon: Link,
+    name: "AI Agent Powered Solutions",
+    icon: Cpu,
   },
   {
     id: 4,
-    name: "Privacy first",
-    icon: Shield,
+    name: "Custom Chatbot Development",
+    icon: MessageCircle,
   },
   {
     id: 5,
-    name: "65+ languages",
-    icon: Languages,
+    name: "Custom Software Development",
+    icon: Package,
   },
   {
     id: 6,
-    name: "Easy embeds",
-    icon: Code,
+    name: "Social Media Marketing",
+    icon: Megaphone,
   },
   {
     id: 7,
-    name: "All your favourite apps",
-    icon: AppWindow,
+    name: "End-to-End Automation",
+    icon: Zap,
   },
   {
     id: 8,
     name: "Simple customization",
-    icon: Settings,
+    icon: Sliders,
   },
 ];
 

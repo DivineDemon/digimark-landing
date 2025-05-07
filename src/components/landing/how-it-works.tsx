@@ -14,13 +14,12 @@ const HowItWorks = () => {
           How it Works
         </span>
         <span className="w-full text-center text-[48px] leading-[48px] font-[600] tracking-tighter">
-          With us, appointment scheduling is easy
+          Our Proven Process
         </span>
         <span className="text-muted-foreground w-full text-center">
-          Effortless scheduling for business and individuals, powerful solutions
-          for fast-
+          A streamlined, end-to-end process designed to turn your vision
           <br />
-          growing modern companies.
+          into lasting impact.
         </span>
         <div className="!mt-10 grid w-full grid-cols-3 gap-3">
           {howItWorks.map((item) => (

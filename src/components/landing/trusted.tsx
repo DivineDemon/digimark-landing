@@ -10,9 +10,11 @@ const Trusted = () => {
       <div className="grid w-full grid-cols-4 gap-4 p-5">
         <div className="flex h-full w-full items-center justify-center">
           <span className="text-muted-foreground w-full text-left text-[12px] leading-[18px] font-medium">
-            Trusted by fast-growing
+            We partner with visionary
             <br />
-            companies around the world
+            organizations to redefine
+            <br />
+            what&apos;s possible.
           </span>
         </div>
         <div className="col-span-3 grid w-full grid-cols-5 gap-5">

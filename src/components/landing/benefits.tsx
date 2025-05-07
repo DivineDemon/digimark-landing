@@ -19,11 +19,10 @@ const Benefits = () => {
           Benefits
         </span>
         <span className="w-full px-2.5 text-center text-[48px] leading-[48px] font-[600] tracking-tighter">
-          Your all-purpose scheduling app
+          Why Choose Us
         </span>
         <span className="text-muted-foreground w-full px-2.5 text-center">
-          Discover a variety of our advanced features. Unlimited and free for
-          individuals.
+          Where Technical Mastery Meets Unwavering Commitment.
         </span>
         <div className="!mt-10 grid w-full grid-cols-2 gap-6 px-2.5">
           {benefits.map((benefit) => (
