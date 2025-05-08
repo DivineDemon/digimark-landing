@@ -17,6 +17,16 @@ import OutlookIcon from "@/assets/icons/outlook.svg";
 import PaypalIcon from "@/assets/icons/paypal.svg";
 import SalesforceIcon from "@/assets/icons/salesforce.svg";
 import SupabaseIcon from "@/assets/icons/supabase.svg";
+import Test1 from "@/assets/img/test/test1.png";
+import Test2 from "@/assets/img/test/test2.png";
+import Test3 from "@/assets/img/test/test3.png";
+import Test4 from "@/assets/img/test/test4.png";
+import Test5 from "@/assets/img/test/test5.png";
+import Test6 from "@/assets/img/test/test6.png";
+import TestChoose1 from "@/assets/img/test/test-choose1.jpg";
+import TestChoose2 from "@/assets/img/test/test-choose2.jpg";
+import TestChoose3 from "@/assets/img/test/test-choose3.jpg";
+import TestChoose4 from "@/assets/img/test/test-choose4.jpg";
 import TrustedOne from "@/assets/img/trusted1.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
@@ -75,18 +85,24 @@ export const howItWorks = [
   {
     id: 1,
     title: "Discovery & Strategy",
+    ring1: Test1,
+    ring2: Test2,
     description:
       "We begin by understanding your business goals, challenges, and target audience to craft a strategic roadmap.",
   },
   {
     id: 2,
     title: "Design & Development",
+    ring1: Test3,
+    ring2: Test4,
     description:
       "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
   },
   {
     id: 3,
     title: "Deployment & Support",
+    ring1: Test5,
+    ring2: Test6,
     description:
       "Post-launch, we provide continuous support and optimization to ensure sustained success.",
   },
@@ -96,26 +112,30 @@ export const benefits = [
   {
     id: 1,
     title: "Technical Expertise",
+    image: TestChoose1,
     description:
-      "Certified engineers fluent in AI/ML, cloud architecture, IoT, and DevOps.",
+      "Certified engineers fluent in AI/ML, cloud architecture, IoT, and DevOps. \nOur team leverages best-in-class tools to craft robust, secure, and maintainable solutions that stand the test of time.",
   },
   {
     id: 2,
     title: "Client-Centric Process",
+    image: TestChoose2,
     description:
-      "Transparent communication, milestone tracking, and adaptive workflows.",
+      "Transparent communication, milestone tracking, and adaptive workflows. \nWe prioritize your feedback at every stage, ensuring deliverables align precisely with your strategic goals.",
   },
   {
     id: 3,
     title: "Proven Impact",
+    image: TestChoose3,
     description:
-      "95% client retention rate with solutions that boost efficiency by 40% on average.",
+      "95% client retention rate with solutions that boost efficiency by 40% on average. \nWe've got case studies to demonstrate how we've optimized company workflows.",
   },
   {
     id: 4,
     title: "Future-Ready",
+    image: TestChoose4,
     description:
-      "Scalable systems designed to evolve with emerging tech and market demands.",
+      "Scalable systems designed to evolve with emerging tech and market demands. \nOur modular architectures make integrating next-gen capabilities a breeze, keeping you ahead of the curve.",
   },
 ];
 

@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
+
+import TestLogo from "@/assets/img/test/test-logo.svg";
 
 import CustomButton from "./custom-button";
 import { Button } from "./ui/button";
@@ -39,9 +42,9 @@ const Navbar = () => {
         transition={{ duration: 0.3 }}
         className="flex h-16 w-full items-center justify-between rounded-xl border border-gray-300 bg-white px-5 shadow shadow-gray-200"
       >
-        <span className="w-[205px] text-3xl font-semibold tracking-tighter">
-          Cal.com<sup>®</sup>
-        </span>
+        <div className="flex w-[205px] items-center justify-start">
+          <Image src={TestLogo} alt="logo" className="w-28" />
+        </div>
         <div className="flex items-center justify-center gap-10 text-sm">
           {[
             "Solutions",

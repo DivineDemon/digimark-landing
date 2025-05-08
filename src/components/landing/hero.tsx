@@ -6,6 +6,7 @@ import GoogleIcon from "@/assets/icons/google.svg";
 import HeroBrandOne from "@/assets/img/herobrand1.svg";
 import HeroBrandTwo from "@/assets/img/herobrand2.svg";
 import HeroBrandThree from "@/assets/img/herobrand3.svg";
+import TestHome from "@/assets/img/test/test-home.jpg";
 
 import CustomButton from "../custom-button";
 import MaxWidthWrapper from "../max-width-wrapper";
@@ -50,8 +51,14 @@ const Hero = () => {
           </span>
         </div>
         <div className="col-span-1 flex w-full flex-col items-center justify-center gap-10">
-          <div className="ml-auto aspect-square h-[400px] w-3/4 rounded-l-2xl border-y border-l p-1">
-            <div className="h-full w-full rounded-l-2xl border-y border-l" />
+          <div className="ml-auto aspect-square h-[400px] w-[90%] rounded-l-2xl border-y border-l p-1">
+            <div className="h-full w-full rounded-l-2xl border-y border-l">
+              <Image
+                src={TestHome}
+                alt="test-hero"
+                className="h-full w-full rounded-l-2xl object-cover object-right"
+              />
+            </div>
           </div>
           <div className="ml-auto flex w-3/4 items-center justify-between">
             <Image src={HeroBrandTwo} alt="herobrand2" className="w-28" />

@@ -1,9 +1,13 @@
-import Image from "next/image";
-
-import OutlookIcon from "@/assets/icons/outlook.svg";
+import Image, { type StaticImageData } from "next/image";
 
 interface HowItWorksCardProps {
-  data: { id: number; title: string; description: string };
+  data: {
+    id: number;
+    title: string;
+    ring1: StaticImageData;
+    ring2: StaticImageData;
+    description: string;
+  };
 }
 
 const HowItWorksCard = ({ data }: HowItWorksCardProps) => {
@@ -29,7 +33,7 @@ const HowItWorksCard = ({ data }: HowItWorksCardProps) => {
           className="absolute flex aspect-square w-80 animate-spin items-center justify-center rounded-full border border-gray-300/25"
         >
           <div className="absolute -top-5 size-10 rounded-full border bg-white p-2 shadow">
-            <Image src={OutlookIcon} alt="outlook" className="size-full" />
+            <Image src={data.ring1} alt="outlook" className="size-full" />
           </div>
         </div>
         {/* Rotating Ring 1 */}
@@ -40,7 +44,7 @@ const HowItWorksCard = ({ data }: HowItWorksCardProps) => {
           className="absolute flex aspect-square w-60 animate-spin items-center justify-center rounded-full border border-gray-300/50"
         >
           <div className="absolute -top-5 size-10 rounded-full border bg-white p-2 shadow">
-            <Image src={OutlookIcon} alt="outlook" className="size-full" />
+            <Image src={data.ring2} alt="outlook" className="size-full" />
           </div>
         </div>
         {/* Inner Most Circle */}
