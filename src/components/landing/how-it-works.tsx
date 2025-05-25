@@ -11,7 +11,7 @@ const HowItWorks = () => {
       <div className="flex w-full flex-col items-center justify-center gap-5 py-20">
         <span className="mx-auto flex rounded-full border bg-white px-3 py-1 text-xs font-medium shadow">
           <Flame className="mt-[0.5px] mr-2 size-3.5" />
-          How it Works
+          How we Work
         </span>
         <span className="w-full text-center text-[48px] leading-[48px] font-[600] tracking-tighter">
           Our Proven Process

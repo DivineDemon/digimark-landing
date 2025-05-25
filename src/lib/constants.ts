@@ -1,9 +1,16 @@
 import {
+  BarChart3,
+  BrainCog,
+  Building2,
   Cpu,
+  Handshake,
   Megaphone,
   MessageCircle,
   Package,
+  Repeat,
   Rocket,
+  ServerCog,
+  ShieldCheck,
   Sliders,
   TrendingUp,
   Zap,
@@ -23,10 +30,6 @@ import Test3 from "@/assets/img/test/test3.png";
 import Test4 from "@/assets/img/test/test4.png";
 import Test5 from "@/assets/img/test/test5.png";
 import Test6 from "@/assets/img/test/test6.png";
-import TestChoose1 from "@/assets/img/test/test-choose1.jpg";
-import TestChoose2 from "@/assets/img/test/test-choose2.jpg";
-import TestChoose3 from "@/assets/img/test/test-choose3.jpg";
-import TestChoose4 from "@/assets/img/test/test-choose4.jpg";
 import TrustedOne from "@/assets/img/trusted1.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
@@ -112,30 +115,65 @@ export const benefits = [
   {
     id: 1,
     title: "Technical Expertise",
-    image: TestChoose1,
+    icon: BrainCog,
     description:
-      "Certified engineers fluent in AI/ML, cloud architecture, IoT, and DevOps. \nOur team leverages best-in-class tools to craft robust, secure, and maintainable solutions that stand the test of time.",
+      "Certified engineers fluent in AI/ML, cloud architecture, IoT, and DevOps. Our team leverages best-in-class tools to craft robust, secure, and maintainable solutions that stand the test of time.",
   },
   {
     id: 2,
     title: "Client-Centric Process",
-    image: TestChoose2,
+    icon: Handshake,
     description:
-      "Transparent communication, milestone tracking, and adaptive workflows. \nWe prioritize your feedback at every stage, ensuring deliverables align precisely with your strategic goals.",
+      "Transparent communication, milestone tracking, and adaptive workflows. We prioritize your feedback at every stage, ensuring deliverables align precisely with your strategic goals.",
   },
   {
     id: 3,
     title: "Proven Impact",
-    image: TestChoose3,
+    icon: BarChart3,
     description:
-      "95% client retention rate with solutions that boost efficiency by 40% on average. \nWe've got case studies to demonstrate how we've optimized company workflows.",
+      "95% client retention rate with solutions that boost efficiency by 40% on average. We've got case studies to demonstrate how we've optimized company workflows.",
   },
   {
     id: 4,
     title: "Future-Ready",
-    image: TestChoose4,
+    icon: Rocket,
     description:
-      "Scalable systems designed to evolve with emerging tech and market demands. \nOur modular architectures make integrating next-gen capabilities a breeze, keeping you ahead of the curve.",
+      "Scalable systems designed to evolve with emerging tech and market demands. Our modular architectures make integrating next-gen capabilities a breeze, keeping you ahead of the curve.",
+  },
+  {
+    id: 5,
+    title: "Agile Delivery",
+    icon: Repeat,
+    description:
+      "Iterative development cycles, quick feedback loops, and continuous integration ensure that we adapt swiftly to changes without compromising on quality or deadlines.",
+  },
+  {
+    id: 6,
+    title: "End-to-End Ownership",
+    icon: ShieldCheck,
+    description:
+      "From ideation to post-deployment support, we take complete responsibility for every phase of the project, giving you peace of mind and a single point of accountability.",
+  },
+  {
+    id: 7,
+    title: "Industry-Specific Insights",
+    icon: Building2,
+    description:
+      "We bring domain knowledge to the table, tailoring our solutions to the nuances of your industry—whether it's healthcare, finance, retail, or logistics.",
+  },
+  {
+    id: 8,
+    title: "Security First",
+    icon: ShieldCheck,
+    description:
+      "Our approach incorporates security at every layer—code, data, and infrastructure—to safeguard your operations and earn user trust.",
+  },
+  {
+    id: 9,
+    title: "Seamless Integration",
+    icon: ServerCog,
+    description:
+      "We build solutions that work effortlessly with your existing tools and systems—minimizing disruption and maximizing ROI through smooth transitions.",
   },
 ];
 
@@ -220,154 +258,90 @@ export const brands = [
 export const testimonials = [
   {
     id: 1,
-    name: "Alice Johnson",
-    social_handle: "@alicej",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
-    client_image: "https://randomuser.me/api/portraits/women/1.jpg",
+    name: "Damien O'Brien",
+    social_handle: "@damienmagician",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733558.png",
+    client_image: "https://randomuser.me/api/portraits/men/1.jpg",
     description:
-      "I couldn't be happier with the service. Super responsive and highly professional!",
+      "The most impressive thing about them was their willingness to go the extra mile.",
   },
   {
     id: 2,
-    name: "Michael Lee",
-    social_handle: "@michaellee",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    client_image: "https://randomuser.me/api/portraits/men/2.jpg",
-    description:
-      "The attention to detail was incredible. From start to finish, I felt like a valued client. Highly recommend!",
+    name: "Annabel Williams",
+    social_handle: "@thevocalcoachofficial",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733558.png",
+    client_image: "https://randomuser.me/api/portraits/women/2.jpg",
+    description: "They always fix any problem and are very reasonable.",
   },
   {
     id: 3,
-    name: "Sophia Brown",
-    social_handle: "@sophiab",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
-    client_image: "https://randomuser.me/api/portraits/women/3.jpg",
+    name: "Shagor Salehin",
+    social_handle: "Shagor Salehin",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+    client_image: "https://randomuser.me/api/portraits/men/3.jpg",
     description:
-      "Absolutely fantastic! I rarely leave reviews, but this experience was worth every penny. Thank you!",
+      "I'm very happy with DigiMark Developers and will repeat business and build a long-term relationship with them.",
   },
   {
     id: 4,
-    name: "Daniel Garcia",
-    social_handle: "@danielg",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/145/145802.png",
+    name: "Calum Nguyen",
+    social_handle: "Calum Nguyen",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
     client_image: "https://randomuser.me/api/portraits/men/4.jpg",
     description:
-      "A seamless and enjoyable experience. If you're considering their services, just go for it!",
+      "They have high attention to details, care about accessibility and coding practices, and are responsive.",
   },
   {
     id: 5,
-    name: "Emma Wilson",
-    social_handle: "@emmawilson",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
-    client_image: "https://randomuser.me/api/portraits/women/5.jpg",
+    name: "Founder, Real Estate Startup",
+    social_handle: "foundersnetwork.com",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    client_image: "https://randomuser.me/api/portraits/men/6.jpg",
     description:
-      "Super professional, quick turnaround, and exceeded expectations!",
+      "They are giving the best IT services, maintaining scalability and reliability.",
   },
   {
     id: 6,
-    name: "James Miller",
-    social_handle: "@jamesm",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    client_image: "https://randomuser.me/api/portraits/men/6.jpg",
+    name: "Jeremy Redman",
+    social_handle: "jeremyredman.com",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    client_image: "https://randomuser.me/api/portraits/men/7.jpg",
     description:
-      "Top-notch service! Everything was handled efficiently, and communication was superb.",
+      "They were on me for every task and stayed compliant with any deadlines throughout.",
+  },
+];
+
+export const industries = [
+  {
+    id: 1,
+    name: "Accounting",
+    icon: "https://img.icons8.com/3d-fluency/94/accounting.png",
+    image:
+      "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: "How LedgerPro cut audit prep by 40%",
   },
   {
-    id: 7,
-    name: "Olivia Martinez",
-    social_handle: "@oliviam",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
-    client_image: "https://randomuser.me/api/portraits/women/7.jpg",
-    description:
-      "It was such a pleasure working with them. They took my vague ideas and turned them into something amazing!",
+    id: 2,
+    name: "Travel & Tour",
+    icon: "https://img.icons8.com/clouds/100/expedia.png",
+    image:
+      "https://plus.unsplash.com/premium_photo-1683133963821-a499e44dbeae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: "JetSetTrip increased demo attendance by 30%",
   },
   {
-    id: 8,
-    name: "William Anderson",
-    social_handle: "@williamand",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/145/145802.png",
-    client_image: "https://randomuser.me/api/portraits/men/8.jpg",
-    description:
-      "I was blown away by their level of professionalism and quality of work. Simply outstanding!",
+    id: 3,
+    name: "Healthcare",
+    icon: "https://img.icons8.com/isometric/50/clinic.png",
+    image:
+      "https://plus.unsplash.com/premium_photo-1672760403439-bf51a26c1ae6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: "MedLink reduced no-shows by 25%",
   },
   {
-    id: 9,
-    name: "Charlotte Thompson",
-    social_handle: "@charlottet",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
-    client_image: "https://randomuser.me/api/portraits/women/9.jpg",
-    description:
-      "They went above and beyond! I was truly impressed by how much effort they put into making everything perfect.",
-  },
-  {
-    id: 10,
-    name: "Benjamin White",
-    social_handle: "@benwhite",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    client_image: "https://randomuser.me/api/portraits/men/10.jpg",
-    description:
-      "I usually don't write testimonials, but this experience deserves recognition. Excellent work!",
-  },
-  {
-    id: 11,
-    name: "Isabella Harris",
-    social_handle: "@isabellah",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
-    client_image: "https://randomuser.me/api/portraits/women/11.jpg",
-    description:
-      "One of the best teams I've ever worked with! They listened, adapted, and delivered a flawless result.",
-  },
-  {
-    id: 12,
-    name: "Mason Clark",
-    social_handle: "@masonc",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/145/145802.png",
-    client_image: "https://randomuser.me/api/portraits/men/12.jpg",
-    description: "Perfect execution! Couldn't be happier with the results.",
-  },
-  {
-    id: 13,
-    name: "Ava Lewis",
-    social_handle: "@aval",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
-    client_image: "https://randomuser.me/api/portraits/women/13.jpg",
-    description:
-      "Honestly, I was skeptical at first, but they absolutely delivered! I'll be back for sure.",
-  },
-  {
-    id: 14,
-    name: "Liam Walker",
-    social_handle: "@liamw",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    client_image: "https://randomuser.me/api/portraits/men/14.jpg",
-    description:
-      "I had a great experience! Professional, responsive, and they really know their stuff.",
-  },
-  {
-    id: 15,
-    name: "Mia Hall",
-    social_handle: "@miah",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
-    client_image: "https://randomuser.me/api/portraits/women/15.jpg",
-    description:
-      "The customer service was next level. They made sure everything was just right!",
-  },
-  {
-    id: 16,
-    name: "Noah Allen",
-    social_handle: "@noaha",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/145/145802.png",
-    client_image: "https://randomuser.me/api/portraits/men/16.jpg",
-    description:
-      "What a great experience! They truly care about their clients and it shows.",
-  },
-  {
-    id: 17,
-    name: "Evelyn Young",
-    social_handle: "@evelyny",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733579.png",
-    client_image: "https://randomuser.me/api/portraits/women/17.jpg",
-    description:
-      "From the initial call to the final result, everything was smooth. I'll be recommending them to everyone I know!",
+    id: 4,
+    name: "Custom",
+    icon: "https://img.icons8.com/clouds/100/workflow.png",
+    image:
+      "https://images.unsplash.com/photo-1581092786450-7ef25f140997?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: "Acme Corp automated 100% of their booking flow",
   },
 ];

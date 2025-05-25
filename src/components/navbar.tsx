@@ -7,8 +7,7 @@ import { motion } from "framer-motion";
 
 import TestLogo from "@/assets/img/test/test-logo.svg";
 
-import CustomButton from "./custom-button";
-import { Button } from "./ui/button";
+import CustomLink from "./custom-link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -45,26 +44,9 @@ const Navbar = () => {
         <div className="flex w-[205px] items-center justify-start">
           <Image src={TestLogo} alt="logo" className="w-28" />
         </div>
-        <div className="flex items-center justify-center gap-10 text-sm">
-          {[
-            "Solutions",
-            "Enterprise",
-            "Templates",
-            "Developer",
-            "Resources",
-            "Pricing",
-          ].map((item, idx) => (
-            <span key={idx}>{item}</span>
-          ))}
-        </div>
-        <div className="flex w-[205px] items-center justify-center gap-5">
-          <Button type="button" variant="ghost">
-            Sign in
-          </Button>
-          <CustomButton>
-            <span>Get started</span>
-          </CustomButton>
-        </div>
+        <CustomLink href="https://calendly.com/digimark-developers">
+          Get Started
+        </CustomLink>
       </motion.div>
     </nav>
   );

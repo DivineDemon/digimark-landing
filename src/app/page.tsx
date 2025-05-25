@@ -1,13 +1,11 @@
 import Footer from "@/components/footer";
 import Benefits from "@/components/landing/benefits";
-import Business from "@/components/landing/business";
 import CTA from "@/components/landing/cta";
-import ExploreApps from "@/components/landing/explore-apps";
 import Hero from "@/components/landing/hero";
 import HowItWorks from "@/components/landing/how-it-works";
-import Scheduling from "@/components/landing/scheduling";
-import Testimonials from "@/components/landing/testimonials";
+import Industries from "@/components/landing/industries";
 import Trusted from "@/components/landing/trusted";
+import VideoBot from "@/components/landing/video-bot";
 import WallOfLove from "@/components/landing/wall-of-love";
 
 const Page = () => {
@@ -17,13 +15,11 @@ const Page = () => {
       <Trusted />
       <HowItWorks />
       <Benefits />
-      <Testimonials />
-      <ExploreApps />
-      <Business />
+      <Industries />
       <WallOfLove />
-      <Scheduling />
       <CTA />
       <Footer />
+      <VideoBot />
     </div>
   );
 };

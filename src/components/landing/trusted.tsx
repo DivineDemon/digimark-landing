@@ -5,27 +5,39 @@ import { trusted } from "@/lib/constants";
 import MaxWidthWrapper from "../max-width-wrapper";
 
 const Trusted = () => {
+  const logos = [...trusted, ...trusted, ...trusted];
+
   return (
-    <MaxWidthWrapper className="h-fit" isTopAccent={true}>
+    <MaxWidthWrapper className="h-fit" isTopAccent>
       <div className="grid w-full grid-cols-4 gap-4 p-5">
-        <div className="flex h-full w-full items-center justify-center">
-          <span className="text-muted-foreground w-full text-left text-[12px] leading-[18px] font-medium">
+        <div className="flex items-center justify-center">
+          <span className="text-muted-foreground text-[12px] leading-[18px] font-medium">
             We partner with visionary
             <br />
             organizations to redefine
             <br />
-            what&apos;s possible.
+            what's possible.
           </span>
         </div>
-        <div className="col-span-3 grid w-full grid-cols-5 gap-5">
-          {trusted.map((brand) => (
-            <Image
-              key={brand.id}
-              src={brand.image}
-              alt={`brand-${brand.id}`}
-              className="col-span-1 aspect-video w-24"
-            />
-          ))}
+        <div
+          className="relative col-span-3 overflow-hidden"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            maskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
+          <div className="animate-marquee flex gap-10">
+            {logos.map((brand, i) => (
+              <Image
+                key={`${brand.id}-${i}`}
+                src={brand.image}
+                alt={`brand-${brand.id}`}
+                className="aspect-video w-24 flex-shrink-0"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </MaxWidthWrapper>

@@ -24,13 +24,13 @@ const HowItWorksCard = ({ data }: HowItWorksCardProps) => {
           {data.description}
         </span>
       </div>
-      <div className="relative mx-auto mt-[44px] flex aspect-square w-[300px] items-center justify-center">
+      <div className="relative mx-auto mt-[44px] flex aspect-square w-[200px] items-center justify-center">
         {/* Rotating Ring 2 */}
         <div
           style={{
-            animationDuration: "15s",
+            animationDuration: "10s",
           }}
-          className="absolute flex aspect-square w-80 animate-spin items-center justify-center rounded-full border border-gray-300/25"
+          className="absolute flex aspect-square w-[220px] animate-spin items-center justify-center rounded-full border border-gray-300/50"
         >
           <div className="absolute -top-5 size-10 rounded-full border bg-white p-2 shadow">
             <Image src={data.ring1} alt="outlook" className="size-full" />
@@ -39,19 +39,23 @@ const HowItWorksCard = ({ data }: HowItWorksCardProps) => {
         {/* Rotating Ring 1 */}
         <div
           style={{
-            animationDuration: "10s",
+            animationDuration: "5s",
           }}
-          className="absolute flex aspect-square w-60 animate-spin items-center justify-center rounded-full border border-gray-300/50"
+          className="absolute flex aspect-square w-[140px] animate-spin items-center justify-center rounded-full border border-gray-300/75"
         >
           <div className="absolute -top-5 size-10 rounded-full border bg-white p-2 shadow">
             <Image src={data.ring2} alt="outlook" className="size-full" />
           </div>
         </div>
         {/* Inner Most Circle */}
-        <div className="absolute flex aspect-square w-40 items-center justify-center rounded-full border border-gray-300/75">
-          <span className="rounded-full border px-5 py-2 font-semibold shadow">
-            Digimark
-          </span>
+        <div className="absolute flex aspect-square w-[60px] items-center justify-center rounded-full border border-gray-300">
+          <Image
+            src="/favicon.webp"
+            alt="favicon"
+            className="size-[35px]"
+            width={35}
+            height={35}
+          />
         </div>
       </div>
     </div>
