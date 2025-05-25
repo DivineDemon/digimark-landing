@@ -50,7 +50,7 @@ const HowItWorksCard = ({ data }: HowItWorksCardProps) => {
         {/* Inner Most Circle */}
         <div className="absolute flex aspect-square w-40 items-center justify-center rounded-full border border-gray-300/75">
           <span className="rounded-full border px-5 py-2 font-semibold shadow">
-            Cal.com
+            Digimark
           </span>
         </div>
       </div>
