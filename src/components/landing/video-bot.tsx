@@ -32,7 +32,7 @@ const VideoBot = () => {
     >
       <div
         className={cn(
-          "absolute -top-56 right-0 size-52 rounded-lg border shadow transition-opacity duration-500 ease-in-out",
+          "absolute right-0 bottom-24 size-52 rounded-lg border shadow transition-opacity duration-500 ease-in-out",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
