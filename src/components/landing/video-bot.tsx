@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { BotMessageSquare } from "lucide-react";
+import {  MonitorPlay } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -25,7 +25,7 @@ const VideoBot = () => {
 
   return (
     <div
-      className="bg-primary fixed right-10 bottom-10 z-[1] flex size-20 cursor-pointer items-center justify-center rounded-full p-5"
+      className="bg-primary fixed left-10 bottom-10 z-[1] flex size-20 cursor-pointer items-center justify-center rounded-full p-5"
       onClick={handleToggle}
       aria-expanded={isOpen}
       aria-label={isOpen ? "Close video bot" : "Open video bot"}
@@ -45,11 +45,11 @@ const VideoBot = () => {
           ref={videoRef}
           playsInline={true}
           src="/bot-video.mp4"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover "
         />
       </div>
 
-      <BotMessageSquare
+      <MonitorPlay
         className={cn(
           "size-full text-white transition-all duration-500 ease-in-out",
           {

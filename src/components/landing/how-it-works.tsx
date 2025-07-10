@@ -21,9 +21,14 @@ const HowItWorks = () => {
           <br />
           into lasting impact.
         </span>
-        <div className="!mt-10 grid w-full grid-cols-3 gap-3">
-          {howItWorks.map((item) => (
-            <HowItWorksCard key={item.id} data={item} />
+        <div className="!mt-10 grid w-full gap-3 md:grid-cols-2 lg:grid-cols-3">
+          {howItWorks.map((item, index) => (
+            <div
+              key={item.id}
+              className={index === 2 ? "md:col-span-2 flex md:w-[50%] lg:w-full mx-auto lg:col-span-1" : ""}
+            >
+              <HowItWorksCard data={item} />
+            </div>
           ))}
         </div>
       </div>

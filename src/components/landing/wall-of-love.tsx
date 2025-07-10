@@ -22,7 +22,7 @@ const WallOfLove = () => {
           <br />
           scheduling meetings.
         </span>
-        <div className="mt-10 grid w-full grid-cols-3 gap-3">
+        <div className="mt-10 grid w-full md:grid-cols-3 gap-3">
           <div className="col-span-1 flex w-full flex-col items-start justify-start gap-3">
             {testimonials.slice(0, 2).map((item) => (
               <TestimonialCard key={item.id} data={item} />

@@ -133,7 +133,7 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="fixed right-32 bottom-10 z-[1]">
+    <div className="fixed right-10 bottom-10 z-[1]">
       <button
         onClick={handleToggle}
         aria-expanded={isOpen}

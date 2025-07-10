@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed inset-x-0 top-2.5 z-50 mx-auto w-[1190px] px-5">
+    <nav className="fixed inset-x-0 top-2.5 z-50 mx-auto w-full max-w-[1190px] px-5">
       <motion.div
         initial={{
           backgroundColor: "rgba(255, 255, 255, 0)",

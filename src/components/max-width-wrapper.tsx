@@ -25,7 +25,7 @@ const MaxWidthWrapper = ({
     >
       <div
         className={cn(
-          "relative mx-auto h-full w-full max-w-[1200px] border-x border-gray-300 p-3",
+          "relative mx-auto h-full w-[95%] xl:w-full max-w-[1200px] border-x border-gray-300 p-3",
           className,
           {
             "border-t": isTopBorder,
