@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 import { BotMessageSquare, CircleX, Loader2, Send } from "lucide-react";
@@ -9,6 +10,7 @@ import { toast } from "sonner";
 import { ragAction } from "@/app/(server-actions)/rag-action";
 import { cn } from "@/lib/utils";
 
+import DMLogo from "../../assets/img/test/dmlogo.webp";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
@@ -19,6 +21,14 @@ const ChatBot = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([]);
+  const [showInitialMessages, setShowInitialMessages] = useState<boolean>(true);
+
+  const initialMessages = [
+    "What services do you offer?",
+    "How can I contact support?",
+    "What are your business hours?",
+    "Where can I find documentation?",
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -44,19 +54,27 @@ const ChatBot = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const handleChat = async () => {
-    if (!query.trim()) return;
+  const handleInitialMessageClick = async (message: string) => {
+    setQuery(message);
+    setShowInitialMessages(false);
+    await handleChat(message); // Send the message immediately
+  };
+
+  const handleChat = async (customMessage?: string) => {
+    const messageToSend = customMessage || query;
+    if (!messageToSend.trim()) return;
 
     setLoading(true);
     setMessages((prev) => [
       ...prev,
-      { role: "user", content: query },
+      { role: "user", content: messageToSend },
       { role: "assistant", content: "" },
     ]);
     setQuery("");
+    setShowInitialMessages(false);
 
     try {
-      const response: ReadableStream = await ragAction(query, messages);
+      const response: ReadableStream = await ragAction(messageToSend, messages);
 
       if (!response) {
         toast.error("No response body received");
@@ -157,15 +175,21 @@ const ChatBot = () => {
           }
         }}
         className={cn(
-          "absolute right-0 bottom-24 flex aspect-[9/16] w-72 flex-col items-start justify-between rounded-lg bg-white shadow transition-opacity duration-500 ease-in-out",
+          "absolute right-0 bottom-24 flex aspect-[9/16] w-96 flex-col items-start justify-between rounded-lg bg-white shadow transition-opacity duration-500 ease-in-out",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
           }
         )}
       >
-        <div className="bg-primary flex w-full items-center justify-center rounded-t-lg py-2.5 pr-2.5 pl-5 text-white">
-          <span className="flex-1 text-left font-semibold">Help Bot</span>
+        <div className="bg-primary flex w-full items-center justify-between rounded-t-lg py-2.5 pr-2.5 pl-5 text-white">
+          <div className="flex items-center gap-3">
+            <Image src={DMLogo} alt="logo" className="size-5" />
+            <span className="flex-1 gap-4 text-left font-semibold">
+              {" "}
+              DigiBot
+            </span>
+          </div>
           <Button
             type="button"
             variant="ghost"
@@ -186,10 +210,11 @@ const ChatBot = () => {
             return (
               <span
                 key={idx}
-                className={cn("bg-secondary rounded-md px-3 py-1.5 text-xs", {
+                className={cn("rounded-md px-3 py-1.5 text-xs", {
                   "flex items-center": isAssistant && isLast && loading,
-                  "bg-primary ml-auto w-2/3 text-white": !isAssistant,
-                  "bg-secondary text-black": isAssistant,
+                  "bg-primary ml-auto w-fit max-w-[80%] text-white":
+                    !isAssistant,
+                  "bg-secondary w-fit max-w-[80%] text-black": isAssistant,
                 })}
               >
                 {message.content as string}
@@ -199,6 +224,24 @@ const ChatBot = () => {
               </span>
             );
           })}
+
+          {messages.length === 0 && showInitialMessages && (
+            <div className="mt-auto flex w-full flex-col gap-2 pb-2">
+              {initialMessages.map((message, idx) => (
+                <button
+                  key={idx}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleInitialMessageClick(message);
+                  }}
+                  className="bg-secondary hover:bg-primary/10 w-fit rounded-md px-3 py-1.5 text-left text-xs transition-colors"
+                >
+                  {message}
+                </button>
+              ))}
+            </div>
+          )}
+
           <div ref={messagesEndRef} />
         </div>
         <form

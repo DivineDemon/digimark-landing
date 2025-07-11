@@ -46,8 +46,8 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="ml-auto flex w-3/4 items-center justify-between">
-            <Image
+          <div className="ml-auto flex w-3/4 items-center justify-end">
+            {/* <Image
               src={HeroBrandTwo}
               alt="herobrand2"
               className="w-20 lg:w-28"
@@ -56,7 +56,7 @@ const Hero = () => {
               src={HeroBrandOne}
               alt="herobrand1"
               className="w-20 lg:w-28"
-            />
+            /> */}
             <Image
               src={HeroBrandThree}
               alt="herobrand3"
