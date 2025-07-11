@@ -21,7 +21,7 @@ const Industries = () => {
 
   return (
     <MaxWidthWrapper className="h-fit" isTopAccent={false}>
-      <div className="grid w-full md:grid-cols-2 gap-10 py-20">
+      <div className="grid w-full gap-10 py-20 md:grid-cols-2">
         <div className="flex w-full flex-col items-center justify-center gap-5">
           <span className="mr-auto flex rounded-full border bg-white px-2.5 py-1 text-xs font-medium shadow">
             <Factory className="mt-[0.5px] mr-2 size-3.5" />
@@ -80,7 +80,7 @@ const Industries = () => {
                 className="col-span-1 flex w-full cursor-pointer items-center justify-center border-t border-gray-300 pt-2.5 shadow-[inset_0px_10px_10px_0px_#00000011]"
               >
                 <span
-                  className={cn("text-lg font-semibold truncate", {
+                  className={cn("truncate text-lg font-semibold", {
                     "opacity-50": selectedBrand.name !== item.name,
                   })}
                 >

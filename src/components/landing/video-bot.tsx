@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import {  MonitorPlay } from "lucide-react";
+import { MonitorPlay } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -25,14 +25,14 @@ const VideoBot = () => {
 
   return (
     <div
-      className="bg-primary fixed left-10 bottom-10 z-[1] flex size-20 cursor-pointer items-center justify-center rounded-full p-5"
+      className="bg-primary fixed bottom-10 left-10 z-[1] flex size-20 cursor-pointer items-center justify-center rounded-full p-5"
       onClick={handleToggle}
       aria-expanded={isOpen}
       aria-label={isOpen ? "Close video bot" : "Open video bot"}
     >
       <div
         className={cn(
-          "absolute right-0 bottom-24 size-52 rounded-lg border shadow transition-opacity duration-500 ease-in-out",
+          "absolute bottom-24 left-0 size-52 rounded-lg border shadow transition-opacity duration-500 ease-in-out",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
@@ -45,7 +45,7 @@ const VideoBot = () => {
           ref={videoRef}
           playsInline={true}
           src="/bot-video.mp4"
-          className="h-full w-full object-cover "
+          className="h-full w-full object-cover"
         />
       </div>
 

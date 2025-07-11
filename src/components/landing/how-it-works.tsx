@@ -25,7 +25,11 @@ const HowItWorks = () => {
           {howItWorks.map((item, index) => (
             <div
               key={item.id}
-              className={index === 2 ? "md:col-span-2 flex md:w-[50%] lg:w-full mx-auto lg:col-span-1" : ""}
+              className={
+                index === 2
+                  ? "mx-auto flex md:col-span-2 md:w-[50%] lg:col-span-1 lg:w-full"
+                  : ""
+              }
             >
               <HowItWorksCard data={item} />
             </div>
