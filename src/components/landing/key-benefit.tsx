@@ -8,21 +8,21 @@ import MaxWidthWrapper from "../max-width-wrapper";
 
 const KeyBenefit = () => {
   return (
-    <MaxWidthWrapper className="h-fit" isTopAccent>
-      <div className="flex w-full flex-col items-center justify-center py-16">
+    <MaxWidthWrapper className="h-fit py-20" isTopAccent>
+      <div className="flex w-full flex-col items-center justify-center py-7">
         <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 text-xs font-medium shadow">
           <Sparkle className="mt-[0.5px] mr-2 size-3.5" />
           Key Benefits
         </span>
       </div>
-      <div className="w-full px-16 py-10">
-        <div className="grid grid-cols-2 space-y-20">
+      <div className="w-full px-4 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 space-y-5 lg:space-y-20">
           <Image
             src={Benifit1}
             alt=""
             className="h-88 rounded-2xl object-cover shadow-lg"
           />
-          <div className="py-10 pl-10">
+          <div className="lg:py-10 lg:pl-10">
             <div className="flex size-8 items-center justify-center rounded-sm bg-gray-200 text-sm font-medium text-gray-500">
               01
             </div>
@@ -63,7 +63,7 @@ const KeyBenefit = () => {
             alt=""
             className="h-88 rounded-2xl object-cover shadow-lg"
           />
-          <div className="py-10 pl-10">
+          <div className="lg:py-10 lg:pl-10">
             <div className="flex size-8 items-center justify-center rounded-sm bg-gray-200 text-sm font-medium text-gray-500">
               03
             </div>

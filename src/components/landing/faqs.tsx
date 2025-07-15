@@ -11,8 +11,8 @@ import MaxWidthWrapper from "../max-width-wrapper";
 
 export function FAQS() {
   return (
-    <MaxWidthWrapper className="h-fit px-3 pb-20" isTopAccent={false}>
-      <div className="flex w-full flex-col items-center justify-center py-16">
+    <MaxWidthWrapper className="h-fit px-3 py-20" isTopAccent={false}>
+      <div className="flex w-full flex-col items-center justify-center py-7">
         <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 text-xs font-medium shadow">
           <ShieldQuestionIcon className="mt-[0.5px] mr-2 size-3.5" />
           FAQs

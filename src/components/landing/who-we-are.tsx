@@ -13,8 +13,8 @@ import MaxWidthWrapper from "../max-width-wrapper";
 
 const WhoWeAre = () => {
   return (
-    <MaxWidthWrapper className="h-fit pb-20" isTopAccent>
-      <div className="flex w-full flex-col items-center justify-center py-16">
+    <MaxWidthWrapper className="h-full py-20" isTopAccent>
+      <div className="flex w-full flex-col items-center justify-center py-7">
         <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 text-xs font-medium shadow">
           <Sparkle className="mt-[0.5px] mr-2 size-3.5" />
           Who We Are
@@ -24,44 +24,44 @@ const WhoWeAre = () => {
         <p className="text-5xl font-semibold">Who We Are</p>
         <div className="my-10 flex w-full flex-col items-center justify-center">
           <div className="grid w-fit grid-cols-4 border-b">
-            <div className="relative size-32 border-r p-8">
+            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
               <Image src={WWA1} alt="" className="size-full" />{" "}
               <div className="absolute -right-3 -bottom-3 size-6 bg-white p-1">
                 <Plus className="size-full text-gray-300" />
               </div>
             </div>
-            <div className="relative size-32 border-r p-8">
+            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
               <Image src={WWA3} alt="" className="size-full" />
               <div className="absolute -right-3 -bottom-3 size-6 bg-white p-1">
                 <Plus className="size-full text-gray-300" />
               </div>
             </div>
-            <div className="relative size-32 border-r p-8">
+            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
               <Image src={WWA5} alt="" className="size-full" />
               <div className="absolute -right-3 -bottom-3 size-6 bg-white p-1">
                 <Plus className="size-full text-gray-300" />
               </div>
             </div>
-            <div className="relative size-32 p-8">
+            <div className="relative size-20 lg:size-32 p-4 lg:p-8">
               <Image src={WWA4} alt="" className="size-full" />
             </div>
           </div>
           <div className="grid w-fit grid-cols-4">
-            <div className="relative size-32 border-r p-8">
+            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
               <Image src={WWA3} alt="" className="size-full" />
             </div>
-            <div className="relative size-32 border-r p-8">
+            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
               <Image src={WWA1} alt="" className="size-full" />
             </div>
-            <div className="relative size-32 border-r p-8">
+            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
               <Image src={WWA2} alt="" className="size-full" />
             </div>
-            <div className="relative size-32 p-8">
+            <div className="relative size-20 lg:size-32 p-4 lg:p-8">
               <Image src={WWA1} alt="" className="size-full" />
             </div>
           </div>
         </div>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-center">
           Cal.com works with all apps already in your flow ensuring everything
           works perfectly together.
         </p>
@@ -69,7 +69,7 @@ const WhoWeAre = () => {
           <CustomButton>
             Sign up <ChevronRight />
           </CustomButton>
-          <CustomButton className="mt-0 bg-gray-200 text-black">
+          <CustomButton className="mt-0 bg-gray-200 text-black hover:bg-gray-300">
             Explore Apps <ChevronRight />
           </CustomButton>
         </div>
