@@ -32,10 +32,17 @@ const ChatBot = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // Check if click is outside popup AND not on toggle button
+      const target = event.target as HTMLElement;
+      const isInitialMessageClick =
+        target.closest(".initial-message-container") ||
+        target.closest(".initial-message-button");
+
       if (
         popupRef.current &&
-        !popupRef.current.contains(event.target as Node) &&
-        !(event.target as Element).closest(".chat-toggle-button")
+        !popupRef.current.contains(target) &&
+        !target.closest(".chat-toggle-button") &&
+        !isInitialMessageClick
       ) {
         setIsOpen(false);
       }
@@ -54,10 +61,10 @@ const ChatBot = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const handleInitialMessageClick = async (message: string) => {
+  const handleInitialMessageClick = (message: string) => {
     setQuery(message);
     setShowInitialMessages(false);
-    await handleChat(message); // Send the message immediately
+    handleChat(message);
   };
 
   const handleChat = async (customMessage?: string) => {
@@ -168,14 +175,8 @@ const ChatBot = () => {
 
       <div
         ref={popupRef}
-        onMouseDown={(e) => e.stopPropagation()}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            e.stopPropagation();
-          }
-        }}
         className={cn(
-          "absolute right-0 bottom-24 flex aspect-[9/16] w-96 flex-col items-start justify-between rounded-lg bg-white shadow transition-opacity duration-500 ease-in-out",
+          "absolute right-0 bottom-24 flex aspect-[8/16] h-[calc(100vh-215px)] flex-col items-start justify-between rounded-lg bg-white shadow transition-opacity duration-500 ease-in-out lg:aspect-[9/16]",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
@@ -194,10 +195,7 @@ const ChatBot = () => {
             type="button"
             variant="ghost"
             size="icon"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsOpen(false);
-            }}
+            onClick={() => setIsOpen(false)}
           >
             <CircleX />
           </Button>
@@ -226,15 +224,12 @@ const ChatBot = () => {
           })}
 
           {messages.length === 0 && showInitialMessages && (
-            <div className="mt-auto flex w-full flex-col gap-2 pb-2">
+            <div className="initial-message-container mt-auto flex w-full flex-col gap-2 pb-2">
               {initialMessages.map((message, idx) => (
                 <button
                   key={idx}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleInitialMessageClick(message);
-                  }}
-                  className="bg-secondary hover:bg-primary/10 w-fit rounded-md px-3 py-1.5 text-left text-xs transition-colors"
+                  onClick={() => handleInitialMessageClick(message)}
+                  className="initial-message-button bg-secondary hover:bg-primary/10 w-fit rounded-md px-3 py-1.5 text-left text-xs transition-colors"
                 >
                   {message}
                 </button>
@@ -247,11 +242,9 @@ const ChatBot = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            e.stopPropagation();
             handleChat();
           }}
           className="flex w-full items-center justify-center gap-2.5 border-t p-2.5"
-          onClick={(e) => e.stopPropagation()}
         >
           <Input
             type="text"
@@ -266,12 +259,6 @@ const ChatBot = () => {
             type="submit"
             variant="default"
             size="icon"
-            onMouseDown={(e) => e.stopPropagation()}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.stopPropagation();
-              }
-            }}
           >
             {loading ? (
               <Loader2 className="h-4 w-4 animate-spin" />

@@ -24,39 +24,39 @@ const WhoWeAre = () => {
         <p className="text-5xl font-semibold">Who We Are</p>
         <div className="my-10 flex w-full flex-col items-center justify-center">
           <div className="grid w-fit grid-cols-4 border-b">
-            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
+            <div className="relative size-20 border-r p-4 lg:size-32 lg:p-8">
               <Image src={WWA1} alt="" className="size-full" />{" "}
               <div className="absolute -right-3 -bottom-3 size-6 bg-white p-1">
                 <Plus className="size-full text-gray-300" />
               </div>
             </div>
-            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
+            <div className="relative size-20 border-r p-4 lg:size-32 lg:p-8">
               <Image src={WWA3} alt="" className="size-full" />
               <div className="absolute -right-3 -bottom-3 size-6 bg-white p-1">
                 <Plus className="size-full text-gray-300" />
               </div>
             </div>
-            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
+            <div className="relative size-20 border-r p-4 lg:size-32 lg:p-8">
               <Image src={WWA5} alt="" className="size-full" />
               <div className="absolute -right-3 -bottom-3 size-6 bg-white p-1">
                 <Plus className="size-full text-gray-300" />
               </div>
             </div>
-            <div className="relative size-20 lg:size-32 p-4 lg:p-8">
+            <div className="relative size-20 p-4 lg:size-32 lg:p-8">
               <Image src={WWA4} alt="" className="size-full" />
             </div>
           </div>
           <div className="grid w-fit grid-cols-4">
-            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
+            <div className="relative size-20 border-r p-4 lg:size-32 lg:p-8">
               <Image src={WWA3} alt="" className="size-full" />
             </div>
-            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
+            <div className="relative size-20 border-r p-4 lg:size-32 lg:p-8">
               <Image src={WWA1} alt="" className="size-full" />
             </div>
-            <div className="relative size-20 lg:size-32 border-r p-4 lg:p-8">
+            <div className="relative size-20 border-r p-4 lg:size-32 lg:p-8">
               <Image src={WWA2} alt="" className="size-full" />
             </div>
-            <div className="relative size-20 lg:size-32 p-4 lg:p-8">
+            <div className="relative size-20 p-4 lg:size-32 lg:p-8">
               <Image src={WWA1} alt="" className="size-full" />
             </div>
           </div>

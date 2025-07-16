@@ -16,7 +16,7 @@ const KeyBenefit = () => {
         </span>
       </div>
       <div className="w-full px-4 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 space-y-5 lg:space-y-20">
+        <div className="grid grid-cols-1 space-y-5 lg:grid-cols-2 lg:space-y-20">
           <Image
             src={Benifit1}
             alt=""

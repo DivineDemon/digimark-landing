@@ -12,7 +12,7 @@ const SubBenefits = () => {
       </div>
 
       <div className="flex w-full flex-col items-center justify-center divide-y divide-gray-300 border-y border-gray-300">
-        <div className="hidden  relative lg:grid w-full grid-cols-1 md:grid-cols-3  lg:grid-cols-6 divide-x divide-gray-300">
+        <div className="relative hidden w-full grid-cols-1 divide-x divide-gray-300 md:grid-cols-3 lg:grid lg:grid-cols-6">
           <div className="absolute -top-3 left-[15.7%] z-[1] size-6 border-none bg-[#F4F4F4] p-1">
             <Plus className="text-muted-foreground size-full" />
           </div>
@@ -44,7 +44,7 @@ const SubBenefits = () => {
             <Plus className="text-muted-foreground size-full" />
           </div>
 
-          <div className=" col-span-1 aspect-square w-full p-2.5" />
+          <div className="col-span-1 aspect-square w-full p-2.5" />
           {subBenefits.slice(0, 4).map((item) => (
             <div
               key={item.id}
@@ -64,9 +64,9 @@ const SubBenefits = () => {
               </div>
             </div>
           ))}
-          <div className=" col-span-1 aspect-square w-full p-2.5" />
+          <div className="col-span-1 aspect-square w-full p-2.5" />
         </div>
-        <div className="relative hidden lg:grid w-full grod-cols-1 md:grid-cols-3 lg:grid-cols-6 divide-x divide-gray-300">
+        <div className="grod-cols-1 relative hidden w-full divide-x divide-gray-300 md:grid-cols-3 lg:grid lg:grid-cols-6">
           <div className="absolute -bottom-3 left-[15.7%] z-[1] size-6 border-none bg-[#F4F4F4] p-1">
             <Plus className="text-muted-foreground size-full" />
           </div>
@@ -105,12 +105,12 @@ const SubBenefits = () => {
           <div className="col-span-1 aspect-square w-full p-2.5" />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:hidden">
-        {subBenefits.map((item) => (
+          {subBenefits.map((item) => (
             <div
               key={item.id}
               className="col-span-1 aspect-square w-full p-2.5"
             >
-              <div className="flex aspect-square w-full flex-col items-center justify-center gap-5 rounded-xl border bg-white p-1 lg:p-5 shadow">
+              <div className="flex aspect-square w-full flex-col items-center justify-center gap-5 rounded-xl border bg-white p-1 shadow lg:p-5">
                 <div className="relative size-16 rounded-lg border border-gray-300 bg-[#F4F4F4] p-5 shadow">
                   <div className="absolute top-2 left-2 size-[4px] rounded-full bg-gray-300" />
                   <div className="absolute top-2 right-2 size-[4px] rounded-full bg-gray-300" />
