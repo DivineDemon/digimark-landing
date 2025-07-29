@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-
 import { BotMessageSquare, CircleX, Loader2, Send } from "lucide-react";
+import Image from "next/image";
 import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 import { ragAction } from "@/app/(server-actions)/rag-action";
@@ -35,8 +34,7 @@ const ChatBot = () => {
       // Check if click is outside popup AND not on toggle button
       const target = event.target as HTMLElement;
       const isInitialMessageClick =
-        target.closest(".initial-message-container") ||
-        target.closest(".initial-message-button");
+        target.closest(".initial-message-container") || target.closest(".initial-message-button");
 
       if (
         popupRef.current &&
@@ -72,11 +70,7 @@ const ChatBot = () => {
     if (!messageToSend.trim()) return;
 
     setLoading(true);
-    setMessages((prev) => [
-      ...prev,
-      { role: "user", content: messageToSend },
-      { role: "assistant", content: "" },
-    ]);
+    setMessages((prev) => [...prev, { role: "user", content: messageToSend }, { role: "assistant", content: "" }]);
     setQuery("");
     setShowInitialMessages(false);
 
@@ -104,8 +98,7 @@ const ChatBot = () => {
           .map((line) => {
             try {
               return JSON.parse(line);
-            } catch (e) {
-              console.error("JSON Parse Error:", e);
+            } catch (_e) {
               return null;
             }
           })
@@ -121,10 +114,7 @@ const ChatBot = () => {
 
             if (typeof deltaContent === "string") {
               content = deltaContent;
-            } else if (
-              typeof deltaContent === "object" &&
-              deltaContent?.response
-            ) {
+            } else if (typeof deltaContent === "object" && deltaContent?.response) {
               content = deltaContent.response;
             }
           } else if (jsonObj?.response) {
@@ -134,16 +124,12 @@ const ChatBot = () => {
           if (content) {
             botMessage += content;
             setMessages((prev) =>
-              prev.map((msg, index) =>
-                index === prev.length - 1
-                  ? { ...msg, content: botMessage }
-                  : msg
-              )
+              prev.map((msg, index) => (index === prev.length - 1 ? { ...msg, content: botMessage } : msg)),
             );
           }
         }
       }
-    } catch (error) {
+    } catch (_error) {
       toast.error("Chat Failed!");
       setMessages((prev) => [
         ...prev,
@@ -163,13 +149,10 @@ const ChatBot = () => {
         onClick={handleToggle}
         aria-expanded={isOpen}
         aria-label={isOpen ? "Close chat bot" : "Open chat bot"}
-        className="chat-toggle-button bg-primary flex size-20 cursor-pointer items-center justify-center rounded-full p-5"
+        className="chat-toggle-button flex size-20 cursor-pointer items-center justify-center rounded-full bg-primary p-5"
       >
         <BotMessageSquare
-          className={cn(
-            "size-full text-white transition-all duration-500 ease-in-out",
-            { "rotate-[360deg]": isOpen }
-          )}
+          className={cn("size-full text-white transition-all duration-500 ease-in-out", { "rotate-[360deg]": isOpen })}
         />
       </button>
 
@@ -180,23 +163,15 @@ const ChatBot = () => {
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
-          }
+          },
         )}
       >
-        <div className="bg-primary flex w-full items-center justify-between rounded-t-lg py-2.5 pr-2.5 pl-5 text-white">
+        <div className="flex w-full items-center justify-between rounded-t-lg bg-primary py-2.5 pr-2.5 pl-5 text-white">
           <div className="flex items-center gap-3">
             <Image src={DMLogo} alt="logo" className="size-5" />
-            <span className="flex-1 gap-4 text-left font-semibold">
-              {" "}
-              DigiBot
-            </span>
+            <span className="flex-1 gap-4 text-left font-semibold"> DigiBot</span>
           </div>
-          <Button
-            type="button"
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsOpen(false)}
-          >
+          <Button type="button" variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
             <CircleX />
           </Button>
         </div>
@@ -210,15 +185,12 @@ const ChatBot = () => {
                 key={idx}
                 className={cn("rounded-md px-3 py-1.5 text-xs", {
                   "flex items-center": isAssistant && isLast && loading,
-                  "bg-primary ml-auto w-fit max-w-[80%] text-white":
-                    !isAssistant,
-                  "bg-secondary w-fit max-w-[80%] text-black": isAssistant,
+                  "ml-auto w-fit max-w-[80%] bg-primary text-white": !isAssistant,
+                  "w-fit max-w-[80%] bg-secondary text-black": isAssistant,
                 })}
               >
                 {message.content as string}
-                {isAssistant && isLast && loading && (
-                  <Loader2 className="size-4 animate-spin" />
-                )}
+                {isAssistant && isLast && loading && <Loader2 className="size-4 animate-spin" />}
               </span>
             );
           })}
@@ -229,7 +201,7 @@ const ChatBot = () => {
                 <button
                   key={idx}
                   onClick={() => handleInitialMessageClick(message)}
-                  className="initial-message-button bg-secondary hover:bg-primary/10 w-fit rounded-md px-3 py-1.5 text-left text-xs transition-colors"
+                  className="initial-message-button w-fit rounded-md bg-secondary px-3 py-1.5 text-left text-xs transition-colors hover:bg-primary/10"
                 >
                   {message}
                 </button>
@@ -254,17 +226,8 @@ const ChatBot = () => {
             className="flex-1 text-xs placeholder:text-xs"
             disabled={loading}
           />
-          <Button
-            disabled={loading || !query.trim()}
-            type="submit"
-            variant="default"
-            size="icon"
-          >
-            {loading ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
-            ) : (
-              <Send className="h-4 w-4" />
-            )}
+          <Button disabled={loading || !query.trim()} type="submit" variant="default" size="icon">
+            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
           </Button>
         </form>
       </div>

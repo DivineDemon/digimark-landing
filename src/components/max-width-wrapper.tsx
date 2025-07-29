@@ -20,46 +20,46 @@ const MaxWidthWrapper = ({
   return (
     <div
       className={cn("w-full", {
-        "border-b border-gray-300": isBottomBorder,
+        "border-gray-300 border-b": isBottomBorder,
       })}
     >
       <div
         className={cn(
-          "relative mx-auto h-full w-[95%] max-w-[1200px] border-x border-gray-300 p-3 xl:w-full",
+          "relative mx-auto h-full w-[95%] max-w-[1200px] border-gray-300 border-x p-3 xl:w-full",
           className,
           {
             "border-t": isTopBorder,
-          }
+          },
         )}
       >
         <div
-          className={cn("absolute -bottom-3 -left-3 size-6 bg-[#F4F4F4] p-1", {
+          className={cn("-bottom-3 -left-3 absolute size-6 bg-[#F4F4F4] p-1", {
             hidden: !isBottomBorder,
           })}
         >
-          <Plus className="text-muted-foreground size-full" />
+          <Plus className="size-full text-muted-foreground" />
         </div>
         <div
-          className={cn("absolute -top-3 -left-3 size-6 bg-[#F4F4F4] p-1", {
+          className={cn("-top-3 -left-3 absolute size-6 bg-[#F4F4F4] p-1", {
             hidden: !isTopAccent,
           })}
         >
-          <Plus className="text-muted-foreground size-full" />
+          <Plus className="size-full text-muted-foreground" />
         </div>
         {children}
         <div
-          className={cn("absolute -right-3 -bottom-3 size-6 bg-[#F4F4F4] p-1", {
+          className={cn("-right-3 -bottom-3 absolute size-6 bg-[#F4F4F4] p-1", {
             hidden: !isBottomBorder,
           })}
         >
-          <Plus className="text-muted-foreground size-full" />
+          <Plus className="size-full text-muted-foreground" />
         </div>
         <div
-          className={cn("absolute -top-3 -right-3 size-6 bg-[#F4F4F4] p-1", {
+          className={cn("-top-3 -right-3 absolute size-6 bg-[#F4F4F4] p-1", {
             hidden: !isTopAccent,
           })}
         >
-          <Plus className="text-muted-foreground size-full" />
+          <Plus className="size-full text-muted-foreground" />
         </div>
       </div>
     </div>

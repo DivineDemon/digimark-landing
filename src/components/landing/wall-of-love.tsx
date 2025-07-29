@@ -9,16 +9,15 @@ const WallOfLove = () => {
   return (
     <MaxWidthWrapper className="h-fit" isBottomBorder={true} isTopAccent={true}>
       <div className="flex w-full flex-col items-center justify-center gap-5 py-20">
-        <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 text-xs font-medium shadow">
+        <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 font-medium text-xs shadow">
           <UserCheck className="mt-[0.5px] mr-2 size-3.5" />
           Testimonials
         </span>
-        <span className="w-full px-2.5 text-center text-[48px] leading-[48px] font-[600] tracking-tighter">
+        <span className="w-full px-2.5 text-center font-[600] text-[48px] leading-[48px] tracking-tighter">
           Don't take our word for it
         </span>
-        <span className="text-muted-foreground w-full px-2.5 text-center">
-          Our users are our best ambassadors. Discover why we're the top choice
-          for
+        <span className="w-full px-2.5 text-center text-muted-foreground">
+          Our users are our best ambassadors. Discover why we're the top choice for
           <br />
           scheduling meetings.
         </span>

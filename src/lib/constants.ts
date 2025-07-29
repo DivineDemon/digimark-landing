@@ -98,16 +98,14 @@ export const howItWorks = [
     title: "Design & Development",
     ring1: Test3,
     ring2: Test4,
-    description:
-      "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
+    description: "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
   },
   {
     id: 3,
     title: "Deployment & Support",
     ring1: Test5,
     ring2: Test6,
-    description:
-      "Post-launch, we provide continuous support and optimization to ensure sustained success.",
+    description: "Post-launch, we provide continuous support and optimization to ensure sustained success.",
   },
 ];
 
@@ -262,8 +260,7 @@ export const testimonials = [
     social_handle: "@damienmagician",
     social_logo: "https://cdn-icons-png.flaticon.com/512/733/733558.png",
     client_image: "https://randomuser.me/api/portraits/men/1.jpg",
-    description:
-      "The most impressive thing about them was their willingness to go the extra mile.",
+    description: "The most impressive thing about them was their willingness to go the extra mile.",
   },
   {
     id: 2,
@@ -297,8 +294,7 @@ export const testimonials = [
     social_handle: "foundersnetwork.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: "https://randomuser.me/api/portraits/men/6.jpg",
-    description:
-      "They are giving the best IT services, maintaining scalability and reliability.",
+    description: "They are giving the best IT services, maintaining scalability and reliability.",
   },
   {
     id: 6,
@@ -306,8 +302,7 @@ export const testimonials = [
     social_handle: "jeremyredman.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: "https://randomuser.me/api/portraits/men/7.jpg",
-    description:
-      "They were on me for every task and stayed compliant with any deadlines throughout.",
+    description: "They were on me for every task and stayed compliant with any deadlines throughout.",
   },
 ];
 

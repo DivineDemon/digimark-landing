@@ -1,8 +1,7 @@
 "use client";
 
-import { Fragment, useEffect, useRef, useState } from "react";
-
 import { Briefcase, Plus } from "lucide-react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import { benefits } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -53,7 +52,7 @@ const Benefits = () => {
     if (node && containerRef.current) {
       // Calculate scroll position without affecting vertical scroll
       const container = containerRef.current;
-      const containerLeft = container.scrollLeft;
+      const _containerLeft = container.scrollLeft;
       const containerWidth = container.offsetWidth;
       const nodeLeft = node.offsetLeft;
       const nodeWidth = node.offsetWidth;
@@ -73,35 +72,29 @@ const Benefits = () => {
   }, [currentIndex]);
 
   return (
-    <MaxWidthWrapper
-      className="h-fit !px-0"
-      isBottomBorder={true}
-      isTopAccent={true}
-    >
+    <MaxWidthWrapper className="!px-0 h-fit" isBottomBorder={true} isTopAccent={true}>
       <div className="relative flex w-full flex-col items-center justify-center gap-5 py-20">
-        <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 text-xs font-medium shadow">
+        <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 font-medium text-xs shadow">
           <Briefcase className="mt-[0.5px] mr-2 size-3.5" />
           Benefits
         </span>
-        <span className="w-full px-2.5 text-center text-[48px] leading-[48px] font-[600] tracking-tighter">
+        <span className="w-full px-2.5 text-center font-[600] text-[48px] leading-[48px] tracking-tighter">
           Why Choose Us
         </span>
-        <span className="text-muted-foreground w-full px-2.5 text-center">
+        <span className="w-full px-2.5 text-center text-muted-foreground">
           Where Technical Mastery Meets Unwavering Commitment.
         </span>
 
         <div
           ref={containerRef}
-          className="scrollbar-hide mt-10 flex w-full snap-x snap-mandatory items-center justify-start gap-2.5 overflow-x-auto overflow-y-visible border-y border-gray-300"
+          className="scrollbar-hide mt-10 flex w-full snap-x snap-mandatory items-center justify-start gap-2.5 overflow-x-auto overflow-y-visible border-gray-300 border-y"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {extendedBenefits.map((benefit, index) => (
             //@ts-ignore
             <Fragment key={`${benefit.id}-${index}`}>
-              {index > 0 && (
-                <div className="h-[266px] w-px border-l border-gray-300" />
-              )}
+              {index > 0 && <div className="h-[266px] w-px border-gray-300 border-l" />}
               <div
                 //@ts-ignore
                 ref={(el) => (itemRefs.current[index] = el)}
@@ -111,33 +104,29 @@ const Benefits = () => {
                   className={cn(
                     "flex h-[340px] w-[340px] shrink-0 flex-col items-center justify-between rounded-2xl border border-gray-300 bg-white p-7 shadow transition-all duration-500 md:h-[246px] md:w-[566px]",
                     {
-                      "scale-100 opacity-100":
-                        index === currentIndex || isTransitioning,
-                      "scale-95 opacity-35":
-                        index !== currentIndex && !isTransitioning,
-                    }
+                      "scale-100 opacity-100": index === currentIndex || isTransitioning,
+                      "scale-95 opacity-35": index !== currentIndex && !isTransitioning,
+                    },
                   )}
                 >
-                  <div className="group relative mr-auto flex size-14 items-center justify-center overflow-hidden rounded-lg border border-transparent bg-neutral-900 bg-gradient-to-b from-[#2c2c30] to-[#1d1d20] px-3 py-2 text-sm font-medium text-white transition-all duration-150 ease-in-out before:pointer-events-none before:absolute before:inset-0 before:rounded-lg before:shadow-[0px_2px_0.4px_0px_rgba(255,_255,_255,_0.16)_inset] hover:bg-neutral-800 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-1 focus-visible:outline-none lg:flex">
+                  <div className="group relative mr-auto flex size-14 items-center justify-center overflow-hidden rounded-lg border border-transparent bg-gradient-to-b bg-neutral-900 from-[#2c2c30] to-[#1d1d20] px-3 py-2 font-medium text-sm text-white transition-all duration-150 ease-in-out before:pointer-events-none before:absolute before:inset-0 before:rounded-lg before:shadow-[0px_2px_0.4px_0px_rgba(255,_255,_255,_0.16)_inset] hover:bg-neutral-800 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-1 lg:flex">
                     {/* @ts-ignore */}
                     <benefit.icon className="size-7 text-white" />
                   </div>
-                  <span className="w-full text-left text-[24px] leading-[30px] font-semibold tracking-tight text-black/85">
+                  <span className="w-full text-left font-semibold text-[24px] text-black/85 leading-[30px] tracking-tight">
                     {/* @ts-ignore */}
 
                     {benefit.title}
                   </span>
-                  <p className="w-full text-left text-[16px] leading-[24px] text-pretty text-gray-600">
+                  <p className="w-full text-pretty text-left text-[16px] text-gray-600 leading-[24px]">
                     {/* @ts-ignore */}
 
-                    {benefit.description
-                      .split("\n")
-                      .map((line: string, i: number) => (
-                        <Fragment key={i}>
-                          {line}
-                          <br />
-                        </Fragment>
-                      ))}
+                    {benefit.description.split("\n").map((line: string, i: number) => (
+                      <Fragment key={i}>
+                        {line}
+                        <br />
+                      </Fragment>
+                    ))}
                   </p>
                 </div>
               </div>
@@ -148,18 +137,18 @@ const Benefits = () => {
         {/* Plus icons decoration */}
         <div className="absolute top-[42.75%] hidden gap-[564px] md:flex">
           <div className="size-6 bg-[#F4F4F4] p-1">
-            <Plus className="text-muted-foreground size-full" />
+            <Plus className="size-full text-muted-foreground" />
           </div>
           <div className="size-6 bg-[#F4F4F4] p-1">
-            <Plus className="text-muted-foreground size-full" />
+            <Plus className="size-full text-muted-foreground" />
           </div>
         </div>
         <div className="absolute bottom-[10.80%] hidden gap-[564px] md:flex">
           <div className="size-6 bg-[#F4F4F4] p-1">
-            <Plus className="text-muted-foreground size-full" />
+            <Plus className="size-full text-muted-foreground" />
           </div>
           <div className="size-6 bg-[#F4F4F4] p-1">
-            <Plus className="text-muted-foreground size-full" />
+            <Plus className="size-full text-muted-foreground" />
           </div>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 import CalendlyIcon from "@/assets/icons/calendly.svg";
-import HeroBrandOne from "@/assets/img/herobrand1.svg";
-import HeroBrandTwo from "@/assets/img/herobrand2.svg";
 import HeroBrandThree from "@/assets/img/herobrand3.svg";
 import TestHome from "@/assets/img/test/test-home.jpg";
 
@@ -14,25 +12,15 @@ const Hero = () => {
     <MaxWidthWrapper className="h-fit pt-24" isTopAccent={false}>
       <div className="grid h-full w-full grid-cols-1 rounded-2xl border border-[#E1E2E3] bg-white px-2 py-4 md:grid-cols-2 md:py-20 lg:pl-20">
         <div className="flex w-full flex-col items-center justify-center lg:pr-10">
-          <span className="w-full text-left text-[54px] leading-[50px] font-[600] tracking-tighter md:my-10 lg:text-[70px] lg:leading-[70px]">
+          <span className="w-full text-left font-[600] text-[54px] leading-[50px] tracking-tighter md:my-10 lg:text-[70px] lg:leading-[70px]">
             Boost Your Business with ROI Driven Solutions
           </span>
-          <span className="text-muted-foreground w-full text-left">
-            Empowering SMEs with tailored SaaS development, AI integrations, and
-            end-to-end automation to drive growth and efficiency.
+          <span className="w-full text-left text-muted-foreground">
+            Empowering SMEs with tailored SaaS development, AI integrations, and end-to-end automation to drive growth
+            and efficiency.
           </span>
-          <CustomLink
-            href="https://calendly.com/digimark-developers"
-            size="lg"
-            className="mt-5 mb-2.5 w-full"
-          >
-            <Image
-              src={CalendlyIcon}
-              alt="calendly-icon"
-              width={16}
-              height={16}
-              className="size-8"
-            />
+          <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mt-5 mb-2.5 w-full">
+            <Image src={CalendlyIcon} alt="calendly-icon" width={16} height={16} className="size-8" />
             <span>Get Started</span>
           </CustomLink>
         </div>
@@ -57,11 +45,7 @@ const Hero = () => {
               alt="herobrand1"
               className="w-20 lg:w-28"
             /> */}
-            <Image
-              src={HeroBrandThree}
-              alt="herobrand3"
-              className="w-20 lg:w-28"
-            />
+            <Image src={HeroBrandThree} alt="herobrand3" className="w-20 lg:w-28" />
           </div>
         </div>
       </div>

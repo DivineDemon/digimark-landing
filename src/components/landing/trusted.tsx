@@ -11,7 +11,7 @@ const Trusted = () => {
     <MaxWidthWrapper className="h-fit" isTopAccent>
       <div className="grid w-full grid-cols-4 gap-4 p-5">
         <div className="flex items-center justify-center">
-          <span className="text-muted-foreground text-[12px] leading-[18px] font-medium">
+          <span className="font-medium text-[12px] text-muted-foreground leading-[18px]">
             We partner with visionary
             <br />
             organizations to redefine
@@ -22,13 +22,11 @@ const Trusted = () => {
         <div
           className="relative col-span-3 overflow-hidden"
           style={{
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-            maskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
           }}
         >
-          <div className="animate-marquee flex gap-10">
+          <div className="flex animate-marquee gap-10">
             {logos.map((brand, i) => (
               <Image
                 key={`${brand.id}-${i}`}

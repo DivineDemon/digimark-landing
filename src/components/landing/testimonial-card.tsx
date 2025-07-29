@@ -28,21 +28,17 @@ const TestimonialCard = ({ data }: TestimonialCardProps) => {
             alt="social"
             width={20}
             height={20}
-            className="absolute -right-2.5 bottom-0 size-5 rounded-full border bg-white p-[2px] shadow"
+            className="-right-2.5 absolute bottom-0 size-5 rounded-full border bg-white p-[2px] shadow"
           />
         </div>
         <div className="flex flex-1 flex-col items-center justify-center gap-1">
-          <span className="w-full text-left text-[18px] leading-[18px] font-medium tracking-tight">
-            {data.name}
-          </span>
-          <span className="text-muted-foreground w-full text-left text-[14px] leading-[14px]">
+          <span className="w-full text-left font-medium text-[18px] leading-[18px] tracking-tight">{data.name}</span>
+          <span className="w-full text-left text-[14px] text-muted-foreground leading-[14px]">
             {data.social_handle}
           </span>
         </div>
       </div>
-      <span className="w-full text-left text-[14px] leading-[18px] text-black/75">
-        {data.description}
-      </span>
+      <span className="w-full text-left text-[14px] text-black/75 leading-[18px]">{data.description}</span>
     </div>
   );
 };

@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
 import { MonitorPlay } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -25,7 +24,7 @@ const VideoBot = () => {
 
   return (
     <div
-      className="bg-primary fixed bottom-10 left-10 z-[1] flex size-20 cursor-pointer items-center justify-center rounded-full p-5"
+      className="fixed bottom-10 left-10 z-[1] flex size-20 cursor-pointer items-center justify-center rounded-full bg-primary p-5"
       onClick={handleToggle}
       aria-expanded={isOpen}
       aria-label={isOpen ? "Close video bot" : "Open video bot"}
@@ -36,7 +35,7 @@ const VideoBot = () => {
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
-          }
+          },
         )}
       >
         <video
@@ -50,12 +49,9 @@ const VideoBot = () => {
       </div>
 
       <MonitorPlay
-        className={cn(
-          "size-full text-white transition-all duration-500 ease-in-out",
-          {
-            "rotate-[360deg]": isOpen,
-          }
-        )}
+        className={cn("size-full text-white transition-all duration-500 ease-in-out", {
+          "rotate-[360deg]": isOpen,
+        })}
       />
     </div>
   );
