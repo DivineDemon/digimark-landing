@@ -324,7 +324,7 @@ export const testimonials = [
     name: "Founder, Real Estate Startup",
     social_handle: "foundersnetwork.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-    client_image: "https://randomuser.me/api/portraits/men/6.jpg",
+    client_image: Calum,
     description:
       "They are giving the best IT services, maintaining scalability and reliability.",
   },
