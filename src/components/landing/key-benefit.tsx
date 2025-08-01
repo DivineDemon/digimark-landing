@@ -1,8 +1,8 @@
 import { Sparkle } from "lucide-react";
 import Image from "next/image";
 
-import Benifit1 from "../../assets/img/key1.png";
-import Benifit2 from "../../assets/img/key2.png";
+import Benifit1 from "../../assets/img/key1.jpg";
+import Benifit2 from "../../assets/img/key2.jpg";
 import Benifit3 from "../../assets/img/key3.jpg";
 import MaxWidthWrapper from "../max-width-wrapper";
 

@@ -27,7 +27,11 @@ import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
 import TrustedTen from "@/assets/img/trusted10.svg";
 
-
+import Denim from "@/assets/img/damien.png";
+import Annabela from "@/assets/img/annabel.png";
+import Shagor from "@/assets/img/shagor.png";
+import Calum from "@/assets/img/claum.png";
+import Jermy from "@/assets/img/jermy.png";
 
 
 
@@ -270,24 +274,25 @@ export const testimonials = [
     id: 1,
     name: "Damien O'Brien",
     social_handle: "@damienmagician",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733558.png",
-    client_image: "https://randomuser.me/api/portraits/men/1.jpg",
-    description: "The most impressive thing about them was their willingness to go the extra mile.",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    client_image: Denim,
+    description:
+      "The most impressive thing about them was their willingness to go the extra mile.",
   },
   {
     id: 2,
     name: "Annabel Williams",
     social_handle: "@thevocalcoachofficial",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/733/733558.png",
-    client_image: "https://randomuser.me/api/portraits/women/2.jpg",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    client_image: Annabela,
     description: "They always fix any problem and are very reasonable.",
   },
   {
     id: 3,
     name: "Shagor Salehin",
     social_handle: "Shagor Salehin",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    client_image: "https://randomuser.me/api/portraits/men/3.jpg",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    client_image: Shagor,
     description:
       "I'm very happy with DigiMark Developers and will repeat business and build a long-term relationship with them.",
   },
@@ -295,8 +300,8 @@ export const testimonials = [
     id: 4,
     name: "Calum Nguyen",
     social_handle: "Calum Nguyen",
-    social_logo: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    client_image: "https://randomuser.me/api/portraits/men/4.jpg",
+    social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    client_image: Calum,
     description:
       "They have high attention to details, care about accessibility and coding practices, and are responsive.",
   },
@@ -306,15 +311,17 @@ export const testimonials = [
     social_handle: "foundersnetwork.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: "https://randomuser.me/api/portraits/men/6.jpg",
-    description: "They are giving the best IT services, maintaining scalability and reliability.",
+    description:
+      "They are giving the best IT services, maintaining scalability and reliability.",
   },
   {
     id: 6,
     name: "Jeremy Redman",
     social_handle: "jeremyredman.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-    client_image: "https://randomuser.me/api/portraits/men/7.jpg",
-    description: "They were on me for every task and stayed compliant with any deadlines throughout.",
+    client_image: Jermy,
+    description:
+      "They were on me for every task and stayed compliant with any deadlines throughout.",
   },
 ];
 
