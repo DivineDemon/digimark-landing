@@ -1,6 +1,20 @@
-import { BarChart3, BrainCog, Building2, Cpu, Handshake, Megaphone, MessageCircle, Package, Repeat, Rocket, ServerCog, ShieldCheck, Sliders, TrendingUp, Zap } from "lucide-react";
-
-
+import {
+  BarChart3,
+  BrainCog,
+  Building2,
+  Cpu,
+  Handshake,
+  Megaphone,
+  MessageCircle,
+  Package,
+  Repeat,
+  Rocket,
+  ServerCog,
+  ShieldCheck,
+  Sliders,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
 
 import GoogleIcon from "@/assets/icons/google.svg";
 import LinearIcon from "@/assets/icons/linear.svg";
@@ -32,8 +46,6 @@ import Annabela from "@/assets/img/annabel.png";
 import Shagor from "@/assets/img/shagor.png";
 import Calum from "@/assets/img/claum.png";
 import Jermy from "@/assets/img/jermy.png";
-
-
 
 export const trusted = [
   {
@@ -92,14 +104,16 @@ export const howItWorks = [
     title: "Design & Development",
     ring1: Test3,
     ring2: Test4,
-    description: "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
+    description:
+      "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
   },
   {
     id: 3,
     title: "Deployment & Support",
     ring1: Test5,
     ring2: Test6,
-    description: "Post-launch, we provide continuous support and optimization to ensure sustained success.",
+    description:
+      "Post-launch, we provide continuous support and optimization to ensure sustained success.",
   },
 ];
 
