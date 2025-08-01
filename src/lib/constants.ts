@@ -1,20 +1,6 @@
-import {
-  BarChart3,
-  BrainCog,
-  Building2,
-  Cpu,
-  Handshake,
-  Megaphone,
-  MessageCircle,
-  Package,
-  Repeat,
-  Rocket,
-  ServerCog,
-  ShieldCheck,
-  Sliders,
-  TrendingUp,
-  Zap,
-} from "lucide-react";
+import { BarChart3, BrainCog, Building2, Cpu, Handshake, Megaphone, MessageCircle, Package, Repeat, Rocket, ServerCog, ShieldCheck, Sliders, TrendingUp, Zap } from "lucide-react";
+
+
 
 import GoogleIcon from "@/assets/icons/google.svg";
 import LinearIcon from "@/assets/icons/linear.svg";
@@ -40,6 +26,10 @@ import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
 import TrustedTen from "@/assets/img/trusted10.svg";
+
+
+
+
 
 export const trusted = [
   {
@@ -178,42 +168,42 @@ export const benefits = [
 export const subBenefits = [
   {
     id: 1,
-    name: "ROI Driven SaaS Development",
+    name: "AI POC & MVP ",
     icon: TrendingUp,
   },
   {
     id: 2,
-    name: "Fast MVP Development",
+    name: "AI SaaS",
     icon: Rocket,
   },
   {
     id: 3,
-    name: "AI Agent Powered Solutions",
+    name: "AI Chatbots",
     icon: Cpu,
   },
   {
     id: 4,
-    name: "Custom Chatbot Development",
+    name: "Mobile App Development",
     icon: MessageCircle,
   },
   {
     id: 5,
-    name: "Custom Software Development",
+    name: "AI Automation & AI Agent",
     icon: Package,
   },
   {
     id: 6,
-    name: "Social Media Marketing",
+    name: "Bespoke Development",
     icon: Megaphone,
   },
   {
     id: 7,
-    name: "End-to-End Automation",
+    name: "Digital Marketing",
     icon: Zap,
   },
   {
     id: 8,
-    name: "Simple customization",
+    name: "Technology Consulting",
     icon: Sliders,
   },
 ];

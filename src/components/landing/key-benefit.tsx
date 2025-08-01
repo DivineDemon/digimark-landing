@@ -20,9 +20,15 @@ const KeyBenefit = () => {
             <div className="flex size-8 items-center justify-center rounded-sm bg-gray-200 font-medium text-gray-500 text-sm">
               01
             </div>
+            <p className="mt-5 mb-2.5 text-left text-[30px] leading-[35px] font-semibold">
+              Project Outsourcing
+            </p>
             <p className="mt-5 mb-2.5 text-left font-semibold text-[30px] leading-[35px]">
               Improve your scheduling efficiency
             </p>
+            <p className="text-muted-foreground w-full pr-16 text-left text-sm">
+              Ideal for startups and businesses that want to offload entire projects. We handle everything from planning to deployment while you focus on growth. Perfect for MVPs, SaaS platforms, mobile apps, and AI solutions.
+              </p>
             <p className="w-full pr-16 text-left text-muted-foreground text-sm">
               Cal.com empowers companies to reclaim valuable time and boost efficiency with enterprise-ready tools. By
               eliminating scheduling redundancies, you save time and money, freeing up resources to focus on what
@@ -34,6 +40,11 @@ const KeyBenefit = () => {
             <div className="flex size-8 items-center justify-center rounded-sm bg-gray-200 font-medium text-gray-500 text-sm">
               02
             </div>
+            <p className="mt-5 mb-2.5 text-left text-[30px] leading-[35px] font-semibold">
+             Individual Hiring
+            </p>
+            <p className="text-muted-foreground w-full pr-16 text-left text-sm">
+             Need a specific skill or resource? Hire vetted developers, designers, or AI engineers on-demand to fill talent gaps or scale your team quickly with full transparency and control.</p>
             <p className="mt-5 mb-2.5 text-left font-semibold text-[30px] leading-[35px]">Analyze and optimize</p>
             <p className="w-full pr-16 text-left text-muted-foreground text-sm">
               Cal.com offers powerful tools to streamline your workflow, including advanced routing forms, automated
@@ -48,8 +59,14 @@ const KeyBenefit = () => {
             <div className="flex size-8 items-center justify-center rounded-sm bg-gray-200 font-medium text-gray-500 text-sm">
               03
             </div>
+            <p className="mt-5 mb-2.5 text-left text-[30px] leading-[35px] font-semibold">
+              Dedicated Team
+              </p>
             <p className="mt-5 mb-2.5 text-left font-semibold text-[30px] leading-[35px]">
               Reduce time and reallocate resources
+            </p>
+            <p className="text-muted-foreground w-full pr-16 text-left text-sm">
+              For businesses that need a long-term, scalable tech team. We assemble a dedicated squad that works as an extension of your in-house team aligned with your goals, culture, and processes.
             </p>
             <p className="w-full pr-16 text-left text-muted-foreground text-sm">
               Cal.com’s built-in features, like payment processing and round-robin booking, eliminate time waste and

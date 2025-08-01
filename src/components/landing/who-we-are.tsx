@@ -18,9 +18,34 @@ const WhoWeAre = () => {
           Who We Are
         </span>
       </div>
-      <div className="flex w-full flex-col items-center justify-center rounded-lg bg-white px-8 py-10 shadow-md">
+      <div className="flex w-full flex-col items-center justify-center rounded-lg  px-8 py-10 shadow-md">
         <p className="font-semibold text-5xl">Who We Are</p>
         <div className="my-10 flex w-full flex-col items-center justify-center">
+          <div className="space-y-4">
+            <p>
+              At Digimark Developers, we help ambitious startups and growing
+              businesses across the USA and Canada turn ideas into high-impact
+              digital products. As a product and services-based technology
+              partner, we offer end-to-end solutions from strategy and design to
+              development, deployment, and scale.
+            </p>
+            <p>
+              We are a trusted partner for both funded startups and growth
+              companies. Our focus is simple: build solutions that drive
+              results. Whether it’s a custom SaaS platform, an intelligent
+              AI-powered chatbot, a user-friendly mobile app, or automation
+              tools that save time and money we deliver technology that moves
+              your business forward.
+            </p>
+            <p>
+              We pride ourselves on transparent communication, fast turnaround,
+              and long-term partnerships built on trust. From UI/UX design to
+              cloud engineering, we align every solution with your business
+              goals ensuring you get not just a product, but a competitive
+              advantage.
+            </p>
+          </div>
+          {/* <div className="my-10 flex w-full flex-col items-center justify-center">
           <div className="grid w-fit grid-cols-4 border-b">
             <div className="relative size-20 border-r p-4 lg:size-32 lg:p-8">
               <Image src={WWA1} alt="" className="size-full" />{" "}
@@ -61,14 +86,16 @@ const WhoWeAre = () => {
         </div>
         <p className="text-center text-muted-foreground">
           Cal.com works with all apps already in your flow ensuring everything works perfectly together.
-        </p>
+        </p>*/}
+        </div>
+
         <div className="mt-10 flex items-center justify-center gap-8">
           <CustomButton>
             Sign up <ChevronRight />
           </CustomButton>
-          <CustomButton className="mt-0 bg-gray-200 text-black hover:bg-gray-300">
+          {/* <CustomButton className="mt-0 bg-gray-200 text-black hover:bg-gray-300">
             Explore Apps <ChevronRight />
-          </CustomButton>
+          </CustomButton> */}
         </div>
       </div>
     </MaxWidthWrapper>
