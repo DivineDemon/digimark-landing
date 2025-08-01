@@ -207,6 +207,28 @@ export const subBenefits = [
     icon: Sliders,
   },
 ];
+export const whoWeAre = [
+  {
+    id: 1,
+    name: "Years of Experience: 9+ ",
+    icon: TrendingUp,
+  },
+  {
+    id: 2,
+    name: "4.9 Ratings on Clutch.co",
+    icon: Rocket,
+  },
+  {
+    id: 3,
+    name: "400+ Projects Delivered",
+    icon: Cpu,
+  },
+  {
+    id: 4,
+    name: "10+ AI Products Built",
+    icon: MessageCircle,
+  },
+];
 
 export const brands = [
   {
