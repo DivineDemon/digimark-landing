@@ -176,11 +176,11 @@ const WhoWeAre = () => {
             <div className="col-span-1 aspect-square w-full p-2.5" />
           </div>
         </div>
-        <div className="mt-10 flex items-center justify-center gap-8">
+        {/* <div className="mt-10 flex items-center justify-center gap-8">
           <CustomLink href="https://calendly.com/digimark-developers">
             Sign up <ChevronRight/>
           </CustomLink>
-        </div>
+        </div> */}
       </div>
     </MaxWidthWrapper>
   );
