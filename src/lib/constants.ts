@@ -24,6 +24,11 @@ import OutlookIcon from "@/assets/icons/outlook.svg";
 import PaypalIcon from "@/assets/icons/paypal.svg";
 import SalesforceIcon from "@/assets/icons/salesforce.svg";
 import SupabaseIcon from "@/assets/icons/supabase.svg";
+import Annabela from "@/assets/img/annabel.png";
+import Calum from "@/assets/img/claum.png";
+import Denim from "@/assets/img/damien.png";
+import Jermy from "@/assets/img/jermy.png";
+import Shagor from "@/assets/img/shagor.png";
 import Test1 from "@/assets/img/test/test1.png";
 import Test2 from "@/assets/img/test/test2.png";
 import Test3 from "@/assets/img/test/test3.png";
@@ -40,12 +45,6 @@ import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
 import TrustedTen from "@/assets/img/trusted10.svg";
-
-import Denim from "@/assets/img/damien.png";
-import Annabela from "@/assets/img/annabel.png";
-import Shagor from "@/assets/img/shagor.png";
-import Calum from "@/assets/img/claum.png";
-import Jermy from "@/assets/img/jermy.png";
 
 export const trusted = [
   {
@@ -104,16 +103,14 @@ export const howItWorks = [
     title: "Design & Development",
     ring1: Test3,
     ring2: Test4,
-    description:
-      "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
+    description: "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
   },
   {
     id: 3,
     title: "Deployment & Support",
     ring1: Test5,
     ring2: Test6,
-    description:
-      "Post-launch, we provide continuous support and optimization to ensure sustained success.",
+    description: "Post-launch, we provide continuous support and optimization to ensure sustained success.",
   },
 ];
 
@@ -290,8 +287,7 @@ export const testimonials = [
     social_handle: "@damienmagician",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Denim,
-    description:
-      "The most impressive thing about them was their willingness to go the extra mile.",
+    description: "The most impressive thing about them was their willingness to go the extra mile.",
   },
   {
     id: 2,
@@ -325,8 +321,7 @@ export const testimonials = [
     social_handle: "foundersnetwork.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Calum,
-    description:
-      "They are giving the best IT services, maintaining scalability and reliability.",
+    description: "They are giving the best IT services, maintaining scalability and reliability.",
   },
   {
     id: 6,
@@ -334,8 +329,7 @@ export const testimonials = [
     social_handle: "jeremyredman.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Jermy,
-    description:
-      "They were on me for every task and stayed compliant with any deadlines throughout.",
+    description: "They were on me for every task and stayed compliant with any deadlines throughout.",
   },
 ];
 
