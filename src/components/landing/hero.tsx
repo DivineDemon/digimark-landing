@@ -1,11 +1,12 @@
+"use client";
+
 import Image from "next/image";
-
+import { ClutchBadge } from "react-static-clutch-embed";
 import CalendlyIcon from "@/assets/icons/calendly.svg";
-import HeroBrandThree from "@/assets/img/herobrand3.svg";
 import TestHome from "@/assets/img/test/test-home.jpg";
-
 import CustomLink from "../custom-link";
 import MaxWidthWrapper from "../max-width-wrapper";
+import "react-static-clutch-embed/styles/badge.css";
 
 const Hero = () => {
   return (
@@ -35,17 +36,17 @@ const Hero = () => {
             </div>
           </div>
           <div className="ml-auto flex w-3/4 items-center justify-end">
-            {/* <Image
-              src={HeroBrandTwo}
-              alt="herobrand2"
-              className="w-20 lg:w-28"
+            <ClutchBadge
+              data={{
+                rating: 4.9,
+                reviewsCount: 11,
+                links: {
+                  reviewsCount: "https://www.clutch.co/profile/digimark-developers",
+                  logo: "https://clutch.co/logos/digimark-developers.svg",
+                  stars: "https://clutch.co/stars/4.9.svg",
+                },
+              }}
             />
-            <Image
-              src={HeroBrandOne}
-              alt="herobrand1"
-              className="w-20 lg:w-28"
-            /> */}
-            <Image src={HeroBrandThree} alt="herobrand3" className="w-20 lg:w-28" />
           </div>
         </div>
       </div>

@@ -489,3 +489,10 @@ How would you explain our AI + Web3 project to a new community member in 60 seco
 
 AI + Web3 communities attract devs, traders, and researchers. How do you create engagement strategies that speak to each of these segments?
 `;
+
+export const initialMessages = [
+  "What services do you offer?",
+  "How can I contact support?",
+  "What are your business hours?",
+  "Where can I find documentation?",
+];

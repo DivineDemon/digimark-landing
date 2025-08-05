@@ -144,3 +144,13 @@
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+
+.clutch-reviews-count .star-icon {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 2px;
+}
+
+.clutch-reviews-count .star-icon path {
+  fill: #ff3d2e !important;
+}
