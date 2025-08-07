@@ -384,6 +384,7 @@ Guidelines:
 10. Make sure to give the link as the hyperlink for the user and instead of Click Here, call it 'https://calendly.com/digimark-developers'
 11. Whenever you wanted to ask something from user, formate it as the numeric bullets in the end of response.
 12. Make sure to give your response in the perfect markdown formated.
+13. When its not needed, do not add any questions. But when needed and you're adding the questions. Make sure to format them as the bullet points.
 `;
 
 export const AI_CONTEXT = `
