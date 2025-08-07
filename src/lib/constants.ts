@@ -383,6 +383,7 @@ Guidelines:
 9.Meeting Scheduling: If the user requests a meeting, provide this link for scheduling: https://calendly.com/digimark-developers
 10. Make sure to give the link as the hyperlink for the user and instead of Click Here, call it 'https://calendly.com/digimark-developers'
 11. Whenever you wanted to ask something from user, formate it as the numeric bullets in the end of response.
+12. Make sure to give your response in the perfect markdown formated.
 `;
 
 export const AI_CONTEXT = `
