@@ -20,11 +20,20 @@ export async function ragAction(query: string, chatHistory: ChatCompletionMessag
     },
   ];
 
-  const streamResponse = await openai.chat.completions.create({
+  const response = await openai.chat.completions.create({
     model: "gpt-4.1",
     messages,
-    stream: true,
   });
 
-  return streamResponse.toReadableStream();
+  // Only return plain objects
+  return {
+    choices: response.choices,
+    usage: response.usage,
+    id: response.id,
+    created: response.created,
+    model: response.model,
+    object: response.object,
+    system_fingerprint: response.system_fingerprint,
+    service_tier: response.service_tier,
+  };
 }

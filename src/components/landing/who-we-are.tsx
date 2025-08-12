@@ -27,9 +27,9 @@ const WhoWeAre = () => {
             At <span className="font-bold">Digimark Developers</span>, we help ambitious startups and growing businesses
             across the&nbsp;
             <span className="font-bold">USA and Canada</span> turn ideas into high-impact digital products. As a&nbsp;
-            <span className="font-bold">product and services-based technology partner</span>, we offer e
-            <span className="font-bold">nd-to-end solutions</span> from strategy and design to development, deployment,
-            and scale.
+            <span className="font-bold">product and services-based technology partner</span>, we offer
+            <span className="font-bold"> end-to-end solutions</span> from strategy and design to development,
+            deployment, and scale.
           </p>
         </div>
         <div className="flex w-full items-start justify-start gap-2">
