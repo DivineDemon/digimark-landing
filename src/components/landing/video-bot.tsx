@@ -24,14 +24,14 @@ const VideoBot = () => {
 
   return (
     <div
-      className="fixed bottom-10 left-10 z-[1] flex size-20 cursor-pointer items-center justify-center rounded-full bg-primary p-5"
+      className="fixed bottom-10 left-10 z-[1] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3"
       onClick={handleToggle}
       aria-expanded={isOpen}
       aria-label={isOpen ? "Close video bot" : "Open video bot"}
     >
       <div
         className={cn(
-          "absolute bottom-24 left-0 size-52 rounded-lg border shadow transition-opacity duration-500 ease-in-out",
+          "absolute bottom-14 left-0 size-96 overflow-hidden rounded-xl border shadow transition-opacity duration-500 ease-in-out",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
@@ -47,7 +47,6 @@ const VideoBot = () => {
           className="h-full w-full object-cover"
         />
       </div>
-
       <MonitorPlay
         className={cn("size-full text-white transition-all duration-500 ease-in-out", {
           "rotate-[360deg]": isOpen,

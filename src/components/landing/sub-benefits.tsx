@@ -1,4 +1,4 @@
-import { Plus } from "lucide-react";
+import { HelpCircle, Plus } from "lucide-react";
 
 import { subBenefits } from "@/lib/constants";
 
@@ -6,11 +6,21 @@ import MaxWidthWrapper from "../max-width-wrapper";
 
 const SubBenefits = () => {
   return (
-    <MaxWidthWrapper className="pb-20" isBottomBorder={true}>
-      <div className="flex w-full flex-col items-center justify-center py-10">
-        <span className="mx-auto flex font-semibold text-5xl">Services</span>
+    <MaxWidthWrapper className="py-20" isBottomBorder={true}>
+      <div className="mb-10 flex w-full flex-col items-center justify-center gap-5">
+        <span className="mx-auto flex rounded-full border bg-white px-2.5 py-1 font-medium text-xs shadow">
+          <HelpCircle className="mt-[0.5px] mr-2 size-3.5" />
+          What We Do
+        </span>
+        <div className="flex w-full flex-col items-center justify-center">
+          <span className="mx-auto flex font-semibold text-5xl">Services</span>
+        </div>
+        <span className="w-full px-2.5 text-center text-muted-foreground">
+          We offer a wide range of services to help you build, scale, and maintain your digital products.
+          <br />
+          From custom software development to AI solutions, we have the expertise to bring your vision to life.
+        </span>
       </div>
-
       <div className="flex w-full flex-col items-center justify-center divide-y divide-gray-300 border-gray-300 border-y">
         <div className="relative hidden w-full grid-cols-1 divide-x divide-gray-300 md:grid-cols-3 lg:grid lg:grid-cols-6">
           <div className="-top-3 absolute left-[15.7%] z-[1] size-6 border-none bg-[#F4F4F4] p-1">
@@ -43,7 +53,6 @@ const SubBenefits = () => {
           <div className="-bottom-3 absolute right-[15.7%] z-[1] size-6 border-none bg-[#F4F4F4] p-1">
             <Plus className="size-full text-muted-foreground" />
           </div>
-
           <div className="col-span-1 aspect-square w-full p-2.5" />
           {subBenefits.slice(0, 4).map((item) => (
             <div key={item.id} className="col-span-1 aspect-square w-full p-2.5">

@@ -9,17 +9,13 @@ import { cn } from "@/lib/utils";
 import MaxWidthWrapper from "../max-width-wrapper";
 
 const Benefits = () => {
-  const [currentIndex, setCurrentIndex] = useState(1); // Start at 1 because we prepend a clone
+  const [currentIndex, setCurrentIndex] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [isHovered, setIsHovered] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const extendedBenefits = [
-    benefits[benefits.length - 1], // Clone of last item
-    ...benefits,
-    benefits[0], // Clone of first item
-  ];
+  const extendedBenefits = [benefits[benefits.length - 1], ...benefits, benefits[0]];
 
   useEffect(() => {
     if (isHovered || isTransitioning) return;
@@ -35,32 +31,28 @@ const Benefits = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Check if we need to jump to the opposite end (for seamless looping)
     if (currentIndex === extendedBenefits.length - 1) {
       setTimeout(() => {
         setIsTransitioning(true);
-        setCurrentIndex(1); // Jump to the first real item (not the clone)
+        setCurrentIndex(1);
       }, 500);
     } else if (currentIndex === 0) {
       setTimeout(() => {
         setIsTransitioning(true);
-        setCurrentIndex(extendedBenefits.length - 2); // Jump to the last real item
+        setCurrentIndex(extendedBenefits.length - 2);
       }, 500);
     }
 
     const node = itemRefs.current[currentIndex];
     if (node && containerRef.current) {
-      // Calculate scroll position without affecting vertical scroll
       const container = containerRef.current;
       const _containerLeft = container.scrollLeft;
       const containerWidth = container.offsetWidth;
       const nodeLeft = node.offsetLeft;
       const nodeWidth = node.offsetWidth;
 
-      // Calculate target scroll position
       const targetScroll = nodeLeft - containerWidth / 2 + nodeWidth / 2;
 
-      // Smooth scroll horizontally only
       container.scrollTo({
         left: targetScroll,
         behavior: isTransitioning ? "smooth" : "auto",
@@ -115,12 +107,10 @@ const Benefits = () => {
                   </div>
                   <span className="w-full text-left font-semibold text-[24px] text-black/85 leading-[30px] tracking-tight">
                     {/* @ts-ignore */}
-
                     {benefit.title}
                   </span>
                   <p className="w-full text-pretty text-left text-[16px] text-gray-600 leading-[24px]">
                     {/* @ts-ignore */}
-
                     {benefit.description.split("\n").map((line: string, i: number) => (
                       <Fragment key={i}>
                         {line}
@@ -133,8 +123,6 @@ const Benefits = () => {
             </Fragment>
           ))}
         </div>
-
-        {/* Plus icons decoration */}
         <div className="absolute top-[42.75%] hidden gap-[564px] md:flex">
           <div className="size-6 bg-[#F4F4F4] p-1">
             <Plus className="size-full text-muted-foreground" />

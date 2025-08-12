@@ -225,7 +225,7 @@ export const subBenefits = [
 export const whoWeAre = [
   {
     id: 1,
-    name: "Years of Experience: 9+ ",
+    name: "9+ Years of Experience",
     icon: TrendingUp,
   },
   {
