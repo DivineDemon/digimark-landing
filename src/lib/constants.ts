@@ -222,6 +222,7 @@ export const subBenefits = [
     icon: Sliders,
   },
 ];
+
 export const whoWeAre = [
   {
     id: 1,
@@ -369,18 +370,18 @@ export const industries = [
 ];
 
 export const SYSTEM_PROMPT = `
-You are a Retrieval-Augmented Generation (RAG) AI assistant designed to support users specifically in the software development domain. Your role is to provide clear, accurate, and helpful responses by intelligently combining retrieved context from uploaded documents with your internal domain knowledge.
+You are a Retrieval-Augmented Generation (RAG) AI assistant designed to support users specifically in the software development domain. Your role is to provide clear, accurate, concise (50 words or less) and helpful responses by intelligently combining retrieved context from uploaded documents with your internal domain knowledge.
 
 Guidelines:
 1. Primary Source: Use the retrieved context to answer user queries. Always prioritize context over internal knowledge when available.
 2. Domain Restriction: If the context is insufficient, rely only on your internal knowledge strictly within the software industry. Avoid topics outside this domain.
-3. Tone & Style: Keep your tone conversational and professional. Be concise — responses should not exceed 150 words.
+3. Tone & Style: Keep your tone conversational and professional. Be concise — responses should not exceed 50 words.
 4. Honesty: If you don't know the answer or if context is missing, admit it clearly rather than guessing.
-5. Engagement: At the end of each response, suggest a relevant follow-up question or next step to keep the conversation flowing naturally.
+5. Engagement: At the end of each response, suggest relevant follow-up messages that the user can ask you (in first-person) to keep the conversation flowing naturally Return these follow-up messages separately as an array of strings. Use '=' as a delimiter to separate the JSON from your response.
 6. Context Awareness: Maintain continuity by remembering relevant details from the chat history to provide coherent answers.
 7. Flow Guidance: Act like a smart AI agent, gently guiding the user through their goals or tasks — whether it's coding help, system architecture planning, or tech stack advice.
 8. Topic Filtering: Ignore any questions unrelated to software development. Politely redirect the user if needed.
-9.Meeting Scheduling: If the user requests a meeting, provide this link for scheduling: https://calendly.com/digimark-developers
+9. Meeting Scheduling: If the user requests a meeting, provide this link in bold characters for scheduling: https://calendly.com/digimark-developers
 10. Make sure to give the link as the hyperlink for the user and instead of Click Here, call it 'https://calendly.com/digimark-developers'
 11. Whenever you wanted to ask something from user, formate it as the numeric bullets in the end of response.
 12. Make sure to give your response in the perfect markdown formated.
@@ -388,114 +389,710 @@ Guidelines:
 `;
 
 export const AI_CONTEXT = `
-We provide a comprehensive suite of AI solutions, including Software as a Service (SaaS) products, Minimum Viable Product (MVP) development with AI integration, custom AI Chatbots, intelligent AI Agents, and AI-powered Automation services.
+What is DigiMark | Our Services | How We Work |  Why Partner With Us | Pricing | Case Studies | Get a Free Consultation | FAQs | Our Tech Stack | Our Engagement Model 
 
-Do you offer ongoing support and maintenance? Yes, we offer ongoing support and maintenance packages to ensure your AI solutions continue to perform optimally. The specifics of our support services will be outlined in your service agreement.
-
-SaaS:
-What SaaS AI products do you offer? We offer a range of AI-powered SaaS products designed to [mention specific benefits or areas, e.g., enhance customer engagement, improve operational efficiency, provide data-driven insights]. Please visit our SaaS product page for a detailed overview.
-
-Are your SaaS products customizable? While our core SaaS products offer robust features, we can often provide some level of customization to align with your specific workflows and branding. Let's discuss your customization needs.
-
-What are the security measures for your SaaS platforms? Data security is a top priority. We employ industry-standard security protocols, including encryption and access controls, to protect your data within our SaaS platforms.
-
-MVP Development:
-Can you build an MVP with AI capabilities? Absolutely! We specialize in developing Minimum Viable Products (MVPs) that integrate AI features to validate your business ideas and gather user feedback early in the development process.
-
-What is the typical timeline for AI-powered MVP development? The timeline for MVP development depends on the complexity of the features and the AI integration involved. We'll provide a realistic timeline after understanding your project scope.
-
-What technologies do you use for AI MVP development? We leverage a range of cutting-edge AI and development technologies to build robust and scalable MVPs, tailored to your specific requirements.
-
-Chatbots:
-Can you build a custom AI chatbot for my website or application? Yes, we specialize in building custom AI chatbots designed to enhance customer support, answer FAQs, generate leads, and more. Our chatbots can be integrated seamlessly with your existing platforms.
-
-What kind of data is needed to train an AI chatbot? The data required for training depends on the chatbot's purpose. It can include FAQs, customer service transcripts, product information, and other relevant text data. We'll guide you through the data preparation process.
-
-Can your chatbots integrate with other systems? Yes, our AI chatbots can be integrated with various CRM, helpdesk, and other business systems to streamline workflows and provide a unified experience.
-
-AI Agents:
-What are AI Agents and how can they benefit my business? AI Agents are intelligent, autonomous systems that can perform specific tasks or workflows without direct human intervention. They can automate repetitive tasks, improve decision-making, and enhance efficiency.
-
-What types of AI Agents can you develop? We can develop various types of AI Agents tailored to your needs, such as virtual assistants, data analysis agents, process automation agents, and more.
-
-How do you ensure the reliability and accuracy of your AI Agents? We employ rigorous testing and validation processes to ensure the reliability and accuracy of our AI Agents. We also provide ongoing monitoring and optimization.
-
-Automation:
-How can AI help automate my business processes? AI can automate a wide range of tasks, including data entry, document processing, customer communication, and decision-making, freeing up your team to focus on more strategic initiatives.
-
-What types of automation solutions do you offer? We offer customized AI-powered automation solutions tailored to your specific business needs, from robotic process automation (RPA) enhanced with AI to fully autonomous workflows.
-
-How do you identify opportunities for AI automation within a business? Our team conducts a thorough analysis of your business processes to identify areas where AI-powered automation can provide the most significant impact and return on investment.
 
 What is DigiMark Developers?
-DigiMark Developers is a full-cycle technology partner delivering end-to-end digital solutions globally. We specialize in UI/UX design, custom software engineering, AI-powered SaaS and MVP development, mobile application solutions, intelligent chatbot and AI agent integration, deployment services, and performance-driven digital marketing.
+Digimark Developers is a global AI consulting and software development firm, proudly serving businesses since 2017. With over 8 years of experience, we specialize in transforming ideas into powerful digital solutions that accelerate growth and drive innovation. Our expertise spans AI MVP development, AI-powered SaaS solutions, AI agent development, custom chatbot creation, and end-to-end custom software and mobile app development. We also offer strategic technology consultation and results-driven digital marketing services to help businesses stay ahead in a rapidly evolving digital landscape.
+Our streamlined process ensures fast, accurate, and scalable outcomes. To date, we've successfully delivered over 400 projects, launched more than 10 proprietary products, and earned the trust of 250+ clients worldwide. With a 4.9-star rating and a 90%+ customer retention rate, Digimark Developers empowers organizations to leverage AI, scale technology, and achieve sustainable success.
+What services do you offer?
+We help businesses grow with expert tech & AI solutions.
+ Here's what we offer:
+1️⃣ Software Development
+Custom Web Applications
+SaaS Platforms
+E-commerce Solutions
 
-From product research to launch and beyond, we act as a true partner aligning with your goals, adapting to your needs, and delivering measurable impact. With 400+ successful projects and a 95% retention rate, we’re trusted to turn ideas into real-world growth.
 
-How does DigiMark help grow our business and increase sales?
-DigiMark uses data-driven marketing and AI-powered insights to target your ideal customers and boost conversions. Our digital campaigns are optimized for maximum ROI – from personalized content to automated outreach – ensuring every marketing dollar works harder. The result is more qualified leads and a clear lift in sales, allowing you to focus on scaling your business.
+2️⃣ Mobile App Development
+iOS & Android Apps
+React Native & Cross-Platform Apps
 
-What does “end-to-end digital solutions” mean for our business with DigiMark?
-With DigiMark, “end-to-end” means we cover everything from initial strategy to final launch and beyond. We manage market research, UX/UI design, development, deployment, and ongoing optimization under one roof. This holistic approach ensures all parts of your digital project work together seamlessly, saving time and maximizing results.
 
-What types of AI solutions do you offer? 
-Digimark Developers offers a range of AI solutions including chatbot development, generative AI, computer vision, predictive analytics, and data engineering. We also provide AI PoC and MVP development to validate ideas quickly for industries like healthcare, fintech, retail, EdTech, and hospitality, helping businesses automate, personalize, and optimize operations.
+3️⃣ Artificial Intelligence Solutions
+AI Chatbots
+AI Voice Agents
+AI-Powered SaaS Tools
+Workflow Automation
+Machine Learning Models
+Computer Vision
+AI Consulting & MVP Development
 
-What measurable results can we expect from partnering with DigiMark?
-Partnering with DigiMark means expecting measurable improvements, not just promises. Our clients typically see faster growth in leads and revenue, thanks to more efficient operations and smarter marketing strategies. We provide clear reporting on key metrics, so you always see how our solutions are driving results and supporting your business goals.
 
-Can you handle market research and user testing?
-Absolutely. Thorough market research and user testing are integral to our process, ensuring the product surpasses market and user expectations, driving success from the start.
+4️⃣ Cloud & Backend Services
+AWS & Cloud Solutions
 
-What types of AI solutions can you build for my business?
-We create a range of AI solutions tailored to your needs, from predictive analytics and natural language processing tools to computer vision systems and AI-driven automation. Each solution is customized to address your specific challenges and integrate seamlessly with your existing infrastructure.
 
-How secure & scalable are the AI systems you develop?
-Security is built into everything we do from strong encryption and access controls to staying compliant with data protection standards. Our AI systems are also built to grow with your business, easily scaling to handle more users, data, or tasks without slowing down
+API Development & Integration
 
-How do you handle data privacy and compliance in AI development?
-We are committed to upholding the highest industry standards and regulatory requirements, including GDPR and HIPAA. Our AI models are developed with robust data anonymization techniques and secure handling protocols to ensure full compliance and safeguard user privacy at every stage.
 
-Do you provide Post launch support?
-Certainly. Our team provides continuous support and maintenance to ensure your AI solutions operate at peak performance. We also offer regular updates and scalability enhancements to align with the evolving needs of your business.
+5️⃣ Digital Marketing
+SEO & Social Media Marketing
 
-What sets your AI development services apart?
-Our focus on solving real business problems with tailored AI solutions sets us apart. We combine deep technical expertise with a practical understanding of industry needs to deliver solutions that drive tangible results.
 
-How does DigiMark digitize workflows and solve operational challenges?
+Branding & Online Presence
 
-DigiMark helps digitize your workflows by replacing manual processes with integrated digital tools. We create centralized dashboards and cloud-based systems so all your data and processes sync seamlessly. This automation breaks down silos, reduces errors, and speeds up day-to-day operations, freeing your team to focus on strategic priorities.
 
-What is your process for Product Development? 
-Pending
-How Digimark Developers ensure Quality & Transparency?  
-Pending
+ How We Work: 
 
-What Sets Digimark Developers Ahead of the Curve?
+ We deliver projects with full transparency and client collaboration:
+1. Kickoff & Planning - Define goals, timelines, and priorities. You get a shared roadmap (SRS/WBS) and a dedicated full-time project coordinator who updates you regularly and is available anytime.
+ 2. Two-Week Sprints - Predictable progress with mid-sprint updates, demos, and real-time tracking via our portal.
+ 3. Change Management - All changes go through documented approval, with clear impacts on time & cost.
+ 4. Regular Meetings - Pre-planned agendas, progress demos every Friday, and documented next steps.
+ 5. QA & Bug Tracking - Dedicated portal, priority fixes, and bi-weekly summaries.
+ 6. Delivery & Support - Final walkthrough, all credentials handed over, and 30-day priority post-launch support.
 
-Do you provide Consultation services as well?
-How do you develop a product development cycle?
 
-How do you maintain such a high client retention rate?
-We retain 95% of our clients by acting as strategic partners, not just service providers. We align with stakeholders’ goals, deliver consistent value, and stay responsive throughout the engagement. By focusing on quality, clear communication, and long-term collaboration, we build trust and drive results that keep partners coming back.
-How does DigiMark use automation to drive business growth?
-A: We carry out tailored automation strategies to streamline workflows, eliminate inefficiencies, and scale operations. By leveraging cutting-edge tools and AI-driven solutions, we help businesses boost sales, enhance customer engagement, and achieve sustainable growth—translating complex challenges into measurable results.
 
-How do you handle the confidentiality of your clients' ideas?
-Yes, we take confidentiality very seriously, and we are always willing to sign a non-disclosure agreement (NDA) to ensure your idea remains confidential for your satisfaction. 
+Why Partner With Us
+Stakeholders work with us because:
+✅ Transparency First - Real-time portals, bi-weekly demos, and zero hidden tasks.
+✅ 24/7 Dedicated Coordinator - A full-time project coordinator updates you regularly and is available anytime for questions or changes.
+✅ Local Presence in USA & Canada - We are a registered company in both USA and Canada, with a local director available to work closely with you so you can feel more comfortable and confident throughout the project.
+✅ Proven Process - SLA/MSA-backed timelines, quality, and communication standards.
+✅ Controlled Changes - No hidden costs, clear approvals.
+✅ True Partnership - We adapt to your workflow and goals, not the other way around.
 
-How do you coordinate with marketing, devs, and founders to align community sentiment with project milestones?
-How do you measure your success as a community manager? What KPIs do you report on weekly or monthly?
+Pricing 
+Chatbot using no code(Best for Small Businesses and Startups)
 
-What bots and moderation tools do you recommend for managing a large Telegram/Discord community, and why?
+Key Features
+Limited customization and design flexibility
+Uses rule-based logic (predefined questions and answers)
+Pre-designed templates for common use cases
+User input and data collection via forms and send it to Google Sheets, Airtable, or a CRM
+CRM and email marketing tool integrations
+Live chat handover to human agents
+Support for multiple languages
+Analytics and performance tracking dashboard
+Automated alerts and notifications
+Easy website embedding and chatbot widget customization
+Multi-channel deployment (Website, WhatsApp, Facebook Messenger, Instagram, Telegram)
+Platform to Use
+Tidio, ChatBot.com, ManyChat ,LandBot, Chatfuel, Voiceflow, Botpress, Make.com, 
 
-Have you set up automated onboarding, leveling systems, or gamification to improve user retention? What impact did it have?
-How would you increase Discord/telegram/twitter engagement from 10% daily active members to 30% within a month without using bots or fake engagement?
-What recent trends in the crypto space do you think most community managers are missing, and how would you leverage them?
+What is this For: 
+Perfect for local shops, freelancers, small service businesses, or anyone just starting who needs basic customer support automation without spending a lot.
 
-How would you explain our AI + Web3 project to a new community member in 60 seconds
+Pricing
+Monthly: $20 to $150
+One-time setup : $300 to $800
+Timeline
+Timeline: 3 to 5 Business days
 
-AI + Web3 communities attract devs, traders, and researchers. How do you create engagement strategies that speak to each of these segments?
+
+
+Custom Chatbot with RAG/ Voice ChatBot
+Key Features
+Uses Natural Language Processing (NLP) to understand complex queries
+
+Real-time document retrieval using vector search (PDFs, websites, databases)
+
+GPT-powered dynamic response generation with context awareness
+
+Supports multilingual question answering and contextual understanding
+
+Custom knowledge base ingestion with automatic updates
+
+Long-term memory for user context tracking and personalization
+
+Can be deployed across multiple channels (website, app, WhatsApp, social media)
+
+Highly customizable UI, voice, tone, and behavior aligned to your brand.
+
+API integrations (CRMs, ERPs, calendars, etc.), payment gateways, HR tools, and APIs
+Supports high-level security standards, compliance (GDPR, HIPAA), and user privacy
+
+Offers 24/7 support, uptime guarantees, and dedicated account managers
+
+Live agent handoff and ticketing system compatibility
+
+Built-in analytics dashboard for user insights and performance tracking
+Platform to Use
+GPT-4, LangChain, Pinecone, Supabase, PostgreSQL, OpenAI Assistants API, FastAPI, ChromaDB, Bedrock, hugging face, claude, grok, gemini
+
+Ideal For: 
+Our custom RAG-based chatbots are ideal for Enterprises, SaaS companies, and E-commerce platforms needing intelligent support, document Q&A, and process automation. 
+
+They serve industries like Law, Finance, Healthcare, and Education by securely retrieving answers from contracts, clinical guidelines, courseware, or internal documentation. These bots are tailored for each use case from customer support and compliance to internal tools and product discovery.
+Pricing:
+$4000 - $6000
+Timeline:
+4 weeks - 8 weeks
+AI Agent
+AI Voice Calling Agent using No Code/Low-Code AI Voice Agent
+Key Features
+Inbound & outbound AI voice agents with voicemail detection
+
+
+Personalized conversations with variables (name, order, intent)
+
+
+Multi-agent squads for sales, support & follow-ups
+
+
+CRM syncing (Go High-Level, Airtable, Sheets)
+
+
+Call summaries, recording, transcription & sentiment analysis
+
+
+Workflow automation for tasks, alerts, and pipeline updates
+
+
+Multilingual support
+
+
+Delivered in 5-10 days
+
+Best For (Use Cases by Business Type):
+Small businesses & startups, Local service providers, E-commerce sellers, Real estate agents, Freelancers or agencies
+Platforms to use
+n8n, Synthflow ai,, Go High-Level, Airtable, etc, Vapi AI, Bland AI, Make.com, Airtable, Google Sheets, Relevance AI, Twilio
+Timeline: 
+Delivered in 5-10 days
+Pricing: 
+Starting from $500 - $1,000 (one-time setup)
+
+Custom AI Calling Agent / Custom AI Voice Agent (Advanced)
+Key Features
+Fully tailored voice agents with dynamic scripting logic
+
+
+Custom API integrations & workflow orchestration
+
+
+Smart call routing, AI memory, lead scoring
+
+
+Self-hosted or enterprise-compliant deployment
+
+
+Real-time dashboard with analytics & monitoring
+
+
+Deep integration with CRMs, ERPs, and backend systems
+
+
+Setup of multiple AI agents collaborating across departments
+
+
+Ongoing optimization, SLA-based support
+Best For (Use Cases by Business Type):
+Mid-to-large sales teams, Call centers, Healthcare clinics, Banks/insurance, Enterprise SaaS companies, Logistics/freight businesses, etc.
+Tools/Tech Stack:
+Python, React/Next.js, OpenAI, Vapi, Twilio, LangChain, Relevance AI, n8n, PostgreSQL/Firebase, Custom Dashboards, ElevenLabs, Pinecode, Supabase, PostgreSQL
+Timeline:
+4 weeks to 6 weeks
+Pricing:
+Starting at $3,500+ (based on scope)
+
+Workflow Automation
+🚀 2. Growth Automation Plan
+Price:  $100 - $200
+Best for: Businesses managing multiple apps/systems
+Tools: Make.com / Zapier / Airtable / Go High-Level / n8n, ManyChat
+Includes:
+Up to 5 automated workflows
+
+
+Multi-platform integrations (Airtable, Slack, WhatsApp, CRM, email)
+
+
+Filtered logic, conditional routing, multi-step flows
+
+
+Error monitoring setup
+
+
+Monthly reports to Google Sheets
+
+
+3 - 5 day delivery
+
+
+2 revisions
+
+
+Use Cases:
+Lead flows: FB Lead Ad → CRM → WhatsApp → Email
+Lead Flows: Google Search → CRM → WhatsApp/Email → Calendar
+
+
+Order fulfillment automation (e.g., Shopify → Email → Inventory update)
+
+
+Internal task assignment: Form fill → Trello/ClickUp → Email notification
+
+
+Auto-invoice generator or subscription tracker
+
+🧠 3. Custom Automation System (Advanced)
+💰 Price: $500+ (custom quote)
+ Best for: Scaling businesses needing deep automation & integrations
+ Tools: n8n, Make, Custom APIs, Webhooks, Python scripts
+Time: 10 - 14 days
+Includes:
+Unlimited workflows (based on scope)
+
+
+Custom logic, advanced filters, and fallback rules
+
+
+API integrations with internal systems or third-party apps
+
+
+Multi-system orchestration (CRM ↔ Slack ↔ Email ↔ VoIP ↔ AI agent)
+
+
+Automated document creation, task routing, data backup
+
+
+Real-time alerting & dashboards
+
+
+Delivery based on scope
+
+
+SLA and ongoing maintenance option
+
+
+Use Cases:
+Sales + support pipeline automation (lead → contact → task → email → report)
+
+
+AI voice agent → CRM + booking + summary automation
+
+
+Payment sync: Stripe → invoice → email → CRM → WhatsApp
+
+
+HR onboarding workflows
+
+Mobile App Development (Feature-Wise Pricing)
+
+Key Features
+- User Authentication & Profile Management
+
+- Push Notifications & Alerts
+
+- Real-time Chat or Messaging
+
+- Location Services & Maps Integration
+
+- Payment Gateway Integration (Stripe, PayPal, etc.)
+
+- Admin Dashboard (Web-based)
+
+- Camera/File Upload Functionality
+
+- Social Media Integration (Login & Sharing)
+
+- Custom Animations & Transitions
+
+- Offline Mode & Local Storage
+
+- In-app Purchases or Subscriptions
+
+- Analytics & Crash Reporting Integration
+
+Platforms & Tech Stack
+We develop apps for both iOS and Android using React Native, Flutter, or native stacks like Swift and Kotlin. Backend options include Node.js, Firebase, and Django.
+What is This For?
+Ideal for startups, local service apps, on-demand delivery, booking platforms, or any digital product that needs a high-performance mobile app.
+Pricing
+Basic App (3-4 Features): $4,000 - $6,000
+Standard App (5-7 Features): $6,000 - $10,000
+Advanced App (8+ Features or Custom Backend): $12,000 - $20,000+
+Timeline
+4 to 10 Weeks (Depending on features and platform support)
+
+AI-Powered SaaS Tools (Feature-Wise Pricing)
+Key Features
+- User Authentication & Access Control
+
+- Smart AI Assistant (GPT-based chat, summarization, etc.)
+
+- Interactive Analytics Dashboard
+
+- Custom Frontend UI (Responsive, branded)
+
+- Admin Panel for Management
+
+- 3rd-Party API Integrations (Stripe, Twilio, Firebase, etc.)
+
+- Automated Email Notifications
+
+- Secure File Handling and Storage
+
+- Custom AI Model Integration (optional)
+
+- Real-Time Messaging or Internal Chat System
+
+Platforms & Tech Stack
+We use modern technologies like React, Next.js, Node.js, Django, PostgreSQL, OpenAI APIs, Pinecone, and services like AWS, Vercel, or Firebase for scalable deployment.
+
+What is This For?
+Ideal for startups, SaaS founders, or digital product owners who want to launch smart, scalable AI-powered tools fast - without hiring a full in-house team.
+
+
+Pricing
+Small Tool (3-4 Features): $4,000 - $6,000
+Medium Tool (5-7 Features): $6,000 - $10,000
+Advanced Tool (8+ Features with AI): $12,000 - $20,000+
+Timeline
+4 to 10 Weeks (Based on features and complexity)
+
+Custom Web Application Development (Feature-Wise Pricing)
+
+Key Services Covered
+SaaS MVP Development (Admin panel, auth, billing)
+
+
+Full-Stack Web Apps with custom workflows
+
+
+API Development & Integrations
+
+
+Cloud Apps on AWS, Firebase, or Supabase
+
+
+Responsive UI/UX (React, Next.js)
+
+
+Real-Time Features (Chat, notifications)
+
+
+Payment Integration (Stripe, PayPal, etc.)
+
+
+Analytics & Monitoring Tools
+
+
+File Uploads & Media Management
+
+
+Role-Based Access & Admin Control
+
+
+Platforms & Tech Stack
+We develop modern, scalable, and maintainable web apps using:
+* Frontend: React.js, Next.js
+* Backend: Django, FastAPI, Node.js
+* Databases: PostgreSQL, MongoDB, Supabase
+* Auth & Billing: Firebase Auth, Stripe, Supabase Auth
+* Cloud/Hosting: AWS, Vercel, Heroku, Firebase
+
+What is This For?
+Ideal for startups launching SaaS products, internal business tools, management dashboards, and digital platforms that require a solid backend, secure authentication, and user-friendly interfaces.
+
+Pricing
+* Basic App (3-4 Features / MVP-Lite): $3,000 - $5,000
+* Standard App (5-7 Features / Full MVP): $5,000 - $9,000
+* Advanced App (8+ Features / Complex Logic or Multi-Tier Roles): $10,000 - $18,000+
+
+Timeline
+4 to 12 Weeks (Depending on feature set, backend complexity, and integrations)
+
+
+Our Engagement Model
+At DigiMark Developers, we offer three flexible engagement models to fit your project's scope, timeline, and resource needs:
+Project Outsourcing
+ We manage end-to-end delivery which include planning, development, testing, and deployment so you can focus on growth. Ideal for MVPs, SaaS platforms, mobile apps, and AI solutions.
+
+
+Individual Hiring
+ Augment your team with on-demand experts. Hire vetted developers, designers, or AI engineers to fill skill gaps or scale quickly, with full transparency and control.
+
+
+Dedicated Team
+ Embed a long-term, scalable tech squad that operates as an extension of your in-house team aligned to your goals, culture, and workflows.
+
+
+All models include:
+Transparent communication & detailed reporting
+
+
+Weekly sprint reviews & milestone tracking
+
+
+Secure code ownership & IP protection
+
+
+Flexible billing (hourly, fixed-price, or monthly retainer)
+
+
+Get a Free Consultation
+Example: Adaptive Chat Flow (Full Script)
+⚡ Scenario: A visitor is interested in AI chatbot solutions but isn't sure how it works. The chatbot guides them, collects their data, and schedules a free consultation.
+🔹 User clicks: “Get a Free Consultation”
+🤖 Ava (Chatbot):
+ Hey! 👋 I'm Ava from Digimark Developers.
+ What do you need help with?
+🔹 AI / Chatbot
+ 🔹 Web or Mobile App
+ 🔹 MVP / SaaS
+ 🔹 Workflow Automation
+ 🔹 Not sure
+
+🧑 User:
+ AI / Chatbot
+
+🤖 Ava:
+ Nice. What's the goal?
+(e.g. “Qualify leads”, “24/7 support”, “WhatsApp booking”)
+
+🧑 User:
+ Qualify leads automatically
+
+🤖 Ava:
+ Got it! That's one of our most requested solutions.
+ Tried anything before?
+
+🧑 User:
+ Yes, I tried ManyChat.
+
+🤖 Ava:
+ Cool. We build smarter bots — NLP-based and tailored to your business.
+ Let's book your free session.
+Let's get you booked in for a quick call with one of our experts.
+📅 Pick a time here:
+ 👉 https://calendly.com/digimark-developers
+
+🧑 User:
+ Booked ✅
+OR
+
+
+Your name and email, please?
+
+🧑 User:
+ Muhammad | muhammad@leadflow.com
+
+🤖 Ava:
+Booked! ✅
+📅 Tuesday, Aug 13 - 3:00 PM EST
+📍 Meet link sent to your email.
+While you wait, want to check out:
+🔹 A quick case study
+ 🔹 Our pricing & process
+ 🔹 I’m good for now
+
+🧑 User:
+ Case study
+
+🤖 Ava:
+ Here you go 👉
+ 📄 AI Bot Case Study - 3x Leads
+Looking forward to chatting! And if you ever have questions, I'm always here to help. 👋
+Our Teck Stack
+🤖 DigiMARK:
+ We work with a future-ready tech stack, especially around Generative AI and modern web/app solutions. Here's a quick look:
+🧠 Generative AI:
+ OpenAI, LangChain, Llama, Pinecone, Vector DBs, GPT-4 APIs, RAG pipelines
+💻 Frontend:
+ React, Next.js, Angular, Tailwind
+⚙️ Backend:
+ Node.js, Python (FastAPI, Flask), Express, Laravel
+📱 Mobile:
+ React Native, Flutter, Swift
+☁️ Cloud & DevOps:
+ AWS, Firebase, Docker, Vercel, Supabase
+🗃️ Databases:
+ PostgreSQL, MongoDB, MySQL, Redis
+🔌 Integrations:
+ Stripe, Twilio, WhatsApp, Zapier, GHL, Calendly, and more
+
+Anything specific you're planning to build? I'd love to hear your idea. 👇✨
+
+FAQs
+🔧 General Services
+What services do you offer?
+
+
+Do you build custom software or only templates?
+
+
+Can you help with both frontend and backend?
+
+
+Do you offer MVP development for startups?
+
+
+Do you offer white-label development?
+
+
+
+🤖 AI & Generative AI
+What kind of AI solutions do you build?
+
+
+Do you work with GPT or build custom AI models?
+
+
+What's RAG and how does it help my business?
+
+
+Can you build a chatbot trained on my company data?
+
+
+How do you ensure AI solutions are scalable and secure?
+
+
+
+🛠️ Tech & Development
+What tech stack do you use?
+
+
+Do you build web and mobile apps?
+
+
+How do you manage app performance and speed?
+
+
+Can you integrate third-party APIs?
+
+
+
+📅 Process & Delivery
+How does your development process work?
+
+
+How long does it take to complete a project?
+
+
+Can I see a sample timeline or delivery roadmap?
+
+
+Do you follow Agile or fixed-scope models?
+
+
+
+💰 Pricing & Engagement
+How do you price your services?
+
+
+Do you offer hourly, fixed, or milestone-based pricing?
+
+
+Is there a minimum project size or budget?
+
+
+Do you offer free consultations?
+
+
+
+👥 Team & Support
+Who will I be working with on my project?
+
+
+Do you provide dedicated developers or full teams?
+
+
+Will I get post-launch support or maintenance?
+
+
+What time zones do you work in?
+
+
+
+🧾 Legal & Ownership
+Will I own the code after the project ends?
+
+
+Do you sign NDAs or contracts?
+
+
+How do you handle data privacy and security?
+
+
+
+🧠 Decision Support
+I'm not technical — can you still help me?
+
+
+Can you improve an existing system or codebase?
+
+
+I have an idea — where should I start?
+
+
+How do I know if my project is feasible?
+💼 About Services
+What services do you offer?
+
+
+Do you build AI or chatbot solutions?
+
+
+Can you help with MVP or SaaS products?
+
+
+Do you support both web and mobile development?
+
+
+Do you offer white-label partnerships?
+
+
+
+🛠️ Process & Requirements
+How do you gather project requirements?
+ → We create SRS documents, work breakdown structures, and hold a kickoff meeting to align everything.
+
+
+What's your development process like?
+ → We run weekly sprints, share sprint boards, hold client sync calls every Monday, and deliver updates every Friday.
+
+
+How do you manage bugs or issues?
+ → Bugs are tracked in a shared log, handled quickly by our team, and reviewed during our internal QA and client review.
+
+
+
+🧑‍💻 Working Model
+What's your working mode?
+ → We follow Agile with coordinated weekly sprints. Coordinators manage delivery, developers focus on execution, and clients stay in the loop.
+
+
+Do you sign SLAs or NDAs?
+ → Yes, we're happy to sign both — transparency and trust are key for us.
+
+
+Do you offer ongoing support or maintenance?
+ → Yes! We offer flexible post-launch support based on your needs — either ad hoc or via monthly retainers.
+
+
+Can I communicate with the team directly?
+ → Yes, our coordinators stay in touch with you throughout, and you'll meet with the tech lead when needed.
+
+
+
+⚙️ Technical
+What tech stack do you use?
+ → React, Node, Python, Firebase, AWS, Flutter, LangChain, OpenAI, and more. Just ask — we're flexible.
+
+
+Can you integrate tools like Stripe, WhatsApp, or GHL?
+ → Absolutely — we handle all major integrations.
+
+
+Can you improve or rebuild an existing system?
+ → Yes. We've upgraded and rebuilt legacy systems for several clients.
+
+
+
+💬 Getting Started
+Do you offer a free consultation?
+ → Yes! Book a call and let's explore how we can help.
+
+
+I have an idea but not a clear plan — can you still help?
+ → Definitely. We guide you through idea shaping, MVP scope, and roadmap creation.
+
+🤖 DIGI:
+ Anything else on your mind? Or want to jump on a quick call to discuss your idea? 😊
 `;
 
 export const initialMessages = [

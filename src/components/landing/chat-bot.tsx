@@ -9,7 +9,7 @@ import { ragAction } from "@/app/(server-actions)/rag-action";
 import { cn } from "@/lib/utils";
 import DMLogo from "../../assets/img/test/dmlogo.webp";
 import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
+import { Input } from "../ui/input";
 
 const ChatBot = () => {
   const [loading, setLoading] = useState(false);
@@ -18,6 +18,7 @@ const ChatBot = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [inputFocused, setInputFocused] = useState(false);
   const [showChat, setShowChat] = useState<boolean>(false);
+  const [nextSteps, setNextSteps] = useState<string[]>([]);
   const [animatedMessages, setAnimatedMessages] = useState<number[]>([]);
   const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([
     {
@@ -34,7 +35,6 @@ const ChatBot = () => {
 
   const sendToAI = async (userMsg: string) => {
     setLoading(true);
-
     setMessages((prev) => [
       ...prev,
       { role: "user", content: userMsg },
@@ -44,10 +44,25 @@ const ChatBot = () => {
       } as ChatCompletionMessageParam,
     ]);
     setPendingMsgIdx(messages.length + 2);
-
     try {
       const response = await ragAction(userMsg, messages);
-      const aiReply = response.choices?.[0]?.message?.content || "";
+      let aiReply = response.choices?.[0]?.message?.content || "";
+      let nextStepsArr: string[] = [];
+      if (aiReply.includes("=")) {
+        const [main, suggestions] = aiReply.split("=");
+        if (main) aiReply = main.trim();
+        if (suggestions) {
+          try {
+            const arrMatch = suggestions.match(/\[(.*)\]/);
+
+            if (arrMatch) {
+              nextStepsArr = JSON.parse(arrMatch[0].replace(/([\w\s.,!?'-]+)(?=,|\])/g, '"$1"').replace(/""/g, '"'));
+            }
+          } catch {
+            // Intentionally Empty
+          }
+        }
+      }
       setMessages((prev) => {
         const newMsgs = prev.map((msg, idx) =>
           idx === prev.length - 1
@@ -60,6 +75,7 @@ const ChatBot = () => {
         setAnimatedMessages((anim) => [...anim, newMsgs.length - 1]);
         return newMsgs;
       });
+      setNextSteps(nextStepsArr);
     } catch (_err) {
       setMessages((prev) => {
         const newMsgs = prev.map((msg, idx) =>
@@ -73,6 +89,7 @@ const ChatBot = () => {
         setAnimatedMessages((anim) => [...anim, newMsgs.length - 1]);
         return newMsgs;
       });
+      setNextSteps([]);
     } finally {
       setLoading(false);
       setPendingMsgIdx(null);
@@ -97,7 +114,7 @@ const ChatBot = () => {
     >
       <div
         className={cn(
-          "absolute right-0 bottom-14 h-[calc(100vh-350px)] w-[400px] overflow-hidden rounded-xl bg-white shadow transition-opacity duration-500 ease-in-out",
+          "absolute right-0 bottom-14 h-[calc(100vh-200px)] w-[400px] overflow-hidden rounded-xl bg-white shadow transition-opacity duration-500 ease-in-out",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
@@ -117,11 +134,12 @@ const ChatBot = () => {
               >
                 <ChevronLeft className="size-5" />
               </Button>
-              <div className="size-9 shrink-0 rounded-full bg-primary p-2">
-                <Image src={DMLogo} alt="dm-logo" className="size-full" />
+              <div className="flex w-full items-center justify-start gap-2.5">
+                <Image src={DMLogo} alt="dm-logo" className="size-9" />
+                <span className="font-semibold">Chat with Digibot</span>
               </div>
             </div>
-            <div className="flex h-[447px] w-full flex-col items-start justify-start gap-3.5 overflow-y-auto px-5 pt-5">
+            <div className="flex h-[627px] w-full flex-col items-start justify-start gap-3.5 overflow-y-auto px-5 pt-5">
               {messages.length === 0 ? (
                 <span className="text-muted-foreground text-sm">No messages yet.</span>
               ) : (
@@ -144,18 +162,18 @@ const ChatBot = () => {
                         <div
                           className={cn("w-fit max-w-full rounded-lg px-4 py-2 text-sm", {
                             "bg-muted text-black": msg.role === "assistant",
-                            "bg-blue-500 text-white": msg.role === "user",
+                            "bg-[#6BB64A] text-white": msg.role === "user",
                           })}
                         >
                           {isLastAssistantLoading ? (
-                            <div className="flex items-center">
-                              <div className="mx-1 h-2 w-2 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot" />
+                            <div className="flex items-center gap-1 p-1.5">
+                              <div className="size-1.5 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot" />
                               <div
-                                className="mx-1 h-2 w-2 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot"
+                                className="size-1.5 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot"
                                 style={{ animationDelay: "0.1s" }}
                               />
                               <div
-                                className="mx-1 h-2 w-2 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot"
+                                className="size-1.5 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot"
                                 style={{ animationDelay: "0.3s" }}
                               />
                             </div>
@@ -180,6 +198,22 @@ const ChatBot = () => {
                       </div>
                     );
                   })}
+                  {nextSteps.length > 0 && !loading && (
+                    <div className="flex w-full flex-wrap gap-2">
+                      {nextSteps.map((step, i) => (
+                        <span
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            sendToAI(step);
+                          }}
+                          key={i}
+                          className="rounded-md border px-4 py-2 font-semibold text-sm shadow transition-colors duration-200 ease-in-out hover:border-[#6BB64A] hover:text-[#6BB64A]"
+                        >
+                          {step}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <div ref={messagesEndRef}></div>
                 </div>
               )}
@@ -187,9 +221,9 @@ const ChatBot = () => {
             <div className="w-full p-5">
               <form
                 className={cn(
-                  "flex w-full flex-col items-center justify-center gap-2 rounded-xl border p-2.5 shadow transition-colors duration-200 ease-in-out",
+                  "flex w-full items-center justify-center gap-2 rounded-xl border p-2.5 shadow transition-colors duration-200 ease-in-out",
                   {
-                    "ring-2 ring-blue-500": inputFocused && !loading,
+                    "ring-2 ring-[#6BB64A]": inputFocused && !loading,
                   },
                 )}
                 onSubmit={(e) => {
@@ -199,9 +233,9 @@ const ChatBot = () => {
                   setMessage("");
                 }}
               >
-                <Textarea
+                <Input
                   placeholder="Message..."
-                  className="resize-none border-none shadow-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
+                  className="flex-1 resize-none border-none shadow-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
                   onFocus={(e) => {
                     setInputFocused(true);
                     e.stopPropagation();
@@ -212,18 +246,16 @@ const ChatBot = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   disabled={loading}
                 />
-                <div className="flex w-full items-center justify-end">
-                  <Button
-                    size="icon"
-                    type="submit"
-                    variant="default"
-                    className="rounded-full"
-                    disabled={message === "" || loading}
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ArrowUp className="size-5" />
-                  </Button>
-                </div>
+                <Button
+                  size="icon"
+                  type="submit"
+                  variant="default"
+                  className="rounded-full"
+                  disabled={message === "" || loading}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <ArrowUp className="size-5" />
+                </Button>
               </form>
             </div>
           </div>
@@ -263,31 +295,34 @@ const ChatBot = () => {
                 <ChevronRight className="ml-2 size-5" />
               </div>
             </div>
-            <div className="flex max-h-full w-full flex-wrap items-start justify-start gap-2 overflow-y-auto px-8 pt-16 pb-8">
-              {[
-                "What is DigiMark",
-                "Our Services",
-                "How We Work",
-                "Why Partner With Us",
-                "Pricing",
-                "Case Studies",
-                "Get a Free Consultation",
-                "FAQs",
-                "Our Tech Stack",
-                "Our Engagement Model",
-              ].map((item, idx) => (
-                <span
-                  key={idx}
-                  onClick={async (e) => {
-                    e.stopPropagation();
-                    setShowChat(true);
-                    await sendToAI(item);
-                  }}
-                  className="rounded-md border px-4 py-2 font-semibold text-[14px] leading-[14px] shadow transition-colors duration-200 ease-in-out hover:border-blue-500 hover:text-blue-500"
-                >
-                  {item}
-                </span>
-              ))}
+            <div className="flex max-h-full w-full flex-col items-start justify-start gap-5 px-8 pt-16 pb-8">
+              <span className="w-full text-left font-bold text-xl">Quick Questions</span>
+              <div className="flex max-h-full w-full flex-wrap items-start justify-start gap-2 overflow-y-auto">
+                {[
+                  "What is DigiMark",
+                  "Our Services",
+                  "How We Work",
+                  "Why Partner With Us",
+                  "Pricing",
+                  "Case Studies",
+                  "Get a Free Consultation",
+                  "FAQs",
+                  "Our Tech Stack",
+                  "Our Engagement Model",
+                ].map((item, idx) => (
+                  <span
+                    key={idx}
+                    onClick={async (e) => {
+                      e.stopPropagation();
+                      setShowChat(true);
+                      await sendToAI(item);
+                    }}
+                    className="rounded-md border px-4 py-2 font-semibold text-[14px] leading-[14px] shadow transition-colors duration-200 ease-in-out hover:border-[#6BB64A] hover:text-[#6BB64A]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         )}
