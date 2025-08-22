@@ -36,6 +36,7 @@ import Test4 from "@/assets/img/test/test4.png";
 import Test5 from "@/assets/img/test/test5.png";
 import Test6 from "@/assets/img/test/test6.png";
 import TrustedOne from "@/assets/img/trusted1.svg";
+import TrustedTen from "@/assets/img/trusted10.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
 import TrustedFour from "@/assets/img/trusted4.svg";
@@ -44,7 +45,6 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
-import TrustedTen from "@/assets/img/trusted10.svg";
 
 export const trusted = [
   {
@@ -103,14 +103,16 @@ export const howItWorks = [
     title: "Design & Development",
     ring1: Test3,
     ring2: Test4,
-    description: "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
+    description:
+      "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
   },
   {
     id: 3,
     title: "Deployment & Support",
     ring1: Test5,
     ring2: Test6,
-    description: "Post-launch, we provide continuous support and optimization to ensure sustained success.",
+    description:
+      "Post-launch, we provide continuous support and optimization to ensure sustained success.",
   },
 ];
 
@@ -292,7 +294,8 @@ export const testimonials = [
     social_handle: "@damienmagician",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Denim,
-    description: "The most impressive thing about them was their willingness to go the extra mile.",
+    description:
+      "The most impressive thing about them was their willingness to go the extra mile.",
   },
   {
     id: 2,
@@ -326,7 +329,8 @@ export const testimonials = [
     social_handle: "foundersnetwork.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Calum,
-    description: "They are giving the best IT services, maintaining scalability and reliability.",
+    description:
+      "They are giving the best IT services, maintaining scalability and reliability.",
   },
   {
     id: 6,
@@ -334,7 +338,8 @@ export const testimonials = [
     social_handle: "jeremyredman.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Jermy,
-    description: "They were on me for every task and stayed compliant with any deadlines throughout.",
+    description:
+      "They were on me for every task and stayed compliant with any deadlines throughout.",
   },
 ];
 
@@ -374,7 +379,7 @@ export const industries = [
 ];
 
 export const SYSTEM_PROMPT = `
-You are a Retrieval-Augmented Generation (RAG) AI assistant designed to support users specifically in the software development domain. Your role is to provide clear, accurate, concise (50 words or less) and helpful responses by intelligently combining retrieved context from uploaded documents with your internal domain knowledge.
+You are an helpful AI assistant designed to support users specifically in the software development domain. Your role is to provide clear, accurate, concise (50 words or less) and helpful responses by intelligently combining retrieved context from uploaded documents with your internal domain knowledge.
 
 Guidelines:
 1. Primary Source: Use the retrieved context to answer user queries. Always prioritize context over internal knowledge when available.
@@ -408,6 +413,10 @@ Have a great day! <replace-with-wave-emoji>
 No need to always show the message block. Only show it when you think its needed or when you feel the user has terminated the conversation.
 
 15. The response must always be in markdown. A clear hierarchy of text must be visible. Bullet-points must be used where needed with proper indentation wherever necessary.
+16. Whenever someone asks for the Digimark, then give them a short introduction about the company in 50 words or less.
+17. Whenever someone asks for the services, give them the list of services Digimark provides in bullet points.
+18. Whenever someone asks for the pricing, give them the pricing of the services Digimark provides in bullet points.
+19. *Make sure to engage the user in the end of your response with 3 relevant questions they can ask you next. Format them as numeric bullets.*
 `;
 
 export const AI_CONTEXT = `
