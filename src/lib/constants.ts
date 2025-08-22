@@ -426,8 +426,17 @@ What is DigiMark | Our Services | How We Work |  Why Partner With Us | Pricing |
 
 
 What is DigiMark Developers?
-Digimark Developers is a global AI consulting and software development firm, proudly serving businesses since 2017. With over 8 years of experience, we specialize in transforming ideas into powerful digital solutions that accelerate growth and drive innovation. Our expertise spans AI MVP development, AI-powered SaaS solutions, AI agent development, custom chatbot creation, and end-to-end custom software and mobile app development. We also offer strategic technology consultation and results-driven digital marketing services to help businesses stay ahead in a rapidly evolving digital landscape.
-Our streamlined process ensures fast, accurate, and scalable outcomes. To date, we've successfully delivered over 400 projects, launched more than 10 proprietary products, and earned the trust of 250+ clients worldwide. With a 4.9-star rating and a 90%+ customer retention rate, Digimark Developers empowers organizations to leverage AI, scale technology, and achieve sustainable success.
+DigiMark Developers is a global AI & software development firm, trusted by 250+ clients worldwide :earth_africa:. We specialize in AI, SaaS, apps, and automation, helping businesses grow faster :rocket:.
+
+Why work with us?
+- 24/7 dedicated project coordinator :technologist:
+- Local presence in USA & Canada :us::flag-ca:
+- Transparent process (no hidden costs) :white_check_mark:
+- 90%+ client retention :100:
+
+How We Work
+We work in 2-week sprints, share live updates, and keep everything transparent :sparkles:. You'll always know what's happening with your project.
+
 What services do you offer?
 We help businesses grow with expert tech & AI solutions.
  Here's what we offer:
@@ -1137,7 +1146,7 @@ export const initialMessages = [
 export const FAQS_LIST = [
   {
     id: 1,
-    question: "What is DigiMark Developers?",
+    question: "What is DigiMark?",
     answer: [
       "DigiMark Developers is a full-cycle technology partner delivering end-to-end digital solutions globally. We specialize in UI/UX design, custom software engineering, AI-powered SaaS and MVP development, mobile application solutions, intelligent chatbot and AI agent integration, deployment services, and performance-driven digital marketing",
       "From product research to launch and beyond, we act as a true partner aligning with your goals, adapting to your needs, and delivering measurable impact. With 400+ successful projects and a 95% retention rate, we're trusted to turn ideas into real-world growth.",
@@ -1152,7 +1161,8 @@ export const FAQS_LIST = [
   },
   {
     id: 3,
-    question: "What does “end-to-end digital solutions” mean for our business with DigiMark?",
+    question:
+      "What does “end-to-end digital solutions” mean for our business with DigiMark?",
     answer: [
       "With DigiMark, “end-to-end” means we cover everything from initial strategy to final launch and beyond. We manage market research, UX/UI design, development, deployment, and ongoing optimization under one roof. This holistic approach ensures all parts of your digital project work together seamlessly, saving time and maximizing results.",
     ],
@@ -1166,7 +1176,8 @@ export const FAQS_LIST = [
   },
   {
     id: 5,
-    question: "What measurable results can we expect from partnering with DigiMark?",
+    question:
+      "What measurable results can we expect from partnering with DigiMark?",
     answer: [
       "Partnering with DigiMark means expecting measurable improvements, not just promises. Our clients typically see faster growth in leads and revenue, thanks to more efficient operations and smarter marketing strategies. We provide clear reporting on key metrics, so you always see how our solutions are driving results and supporting your business goals.",
     ],
@@ -1194,7 +1205,8 @@ export const FAQS_LIST = [
   },
   {
     id: 9,
-    question: "How do you handle data privacy and compliance in AI development?",
+    question:
+      "How do you handle data privacy and compliance in AI development?",
     answer: [
       "We are committed to upholding the highest industry standards and regulatory requirements, including GDPR and HIPAA. Our AI models are developed with robust data anonymization techniques and secure handling protocols to ensure full compliance and safeguard user privacy at every stage.",
     ],
