@@ -1,4 +1,4 @@
-import { Info, Plus, Sparkles } from "lucide-react";
+import { Info, Plus } from "lucide-react";
 
 import { whoWeAre } from "@/lib/constants";
 import MaxWidthWrapper from "../max-width-wrapper";
@@ -38,11 +38,11 @@ const WhoWeAre = () => {
             We are a <span className="font-bold">trusted partner</span> for both
             <span className="font-bold"> funded startups</span> and
             <span className="font-bold"> growth companies</span>. Our focus is simple:
-            <span className="font-bold">&nbsp; build solutions that drive results</span>. Whether it's a
+            <span className="font-bold">&nbsp;build solutions that drive results</span>. Whether it's a
             <span className="font-bold"> custom SaaS platform</span>, an intelligent
             <span className="font-bold"> AI-powered chatbot</span>, a user-friendly
             <span className="font-bold"> mobile app</span>, or&nbsp;
-            <span className="font-bold"> automation tools</span>, that save time and money we deliver technology that
+            <span className="font-bold">automation tools</span>, that save time and money we deliver technology that
             moves your business forward.
           </p>
         </div>
@@ -50,12 +50,12 @@ const WhoWeAre = () => {
           <Info className="mt-1 size-4 shrink-0" />
           <p>
             We pride ourselves on&nbsp;
-            <span className="font-bold">&nbsp; transparent communication, fast turnaround</span>, and long-term
+            <span className="font-bold">&nbsp;transparent communication, fast turnaround</span>, and long-term
             partnerships built on trust. From&nbsp;
-            <span className="font-bold"> UI/UX design</span> to
+            <span className="font-bold">UI/UX design</span> to
             <span className="font-bold"> cloud engineering</span>, we align every solution with your business goals
             ensuring you get not just a product, but a&nbsp;
-            <span className="font-bold"> competitive advantage</span>.
+            <span className="font-bold">competitive advantage</span>.
           </p>
         </div>
       </div>
@@ -98,12 +98,12 @@ const WhoWeAre = () => {
             {whoWeAre.slice(0, 4).map((item) => (
               <div key={item.id} className="col-span-1 aspect-square w-full p-2.5">
                 <div className="flex aspect-square w-full flex-col items-center justify-center gap-5 rounded-xl border bg-white p-5 shadow">
-                  <div className="relative size-16 rounded-lg border border-gray-300 bg-[#F4F4F4] p-5 shadow">
-                    <div className="absolute top-2 left-2 size-[4px] rounded-full bg-gray-300" />
-                    <div className="absolute top-2 right-2 size-[4px] rounded-full bg-gray-300" />
-                    <Sparkles className="size-full text-black/85" />
-                    <div className="absolute bottom-2 left-2 size-[4px] rounded-full bg-gray-300" />
-                    <div className="absolute right-2 bottom-2 size-[4px] rounded-full bg-gray-300" />
+                  <div className="relative flex size-16 items-center justify-center rounded-lg border border-gray-300 bg-black/75 py-5 shadow">
+                    <div className="absolute top-2 left-2 size-[4px] rounded-full bg-gray-500" />
+                    <div className="absolute top-2 right-2 size-[4px] rounded-full bg-gray-500" />
+                    <span className="w-full text-center font-bold text-[20px] text-white">{item.number}</span>
+                    <div className="absolute bottom-2 left-2 size-[4px] rounded-full bg-gray-500" />
+                    <div className="absolute right-2 bottom-2 size-[4px] rounded-full bg-gray-500" />
                   </div>
                   <span className="w-full text-center font-medium text-[14px] text-black/85 leading-[16px]">
                     {item.name}

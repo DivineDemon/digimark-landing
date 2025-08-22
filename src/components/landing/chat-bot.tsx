@@ -7,7 +7,7 @@ import { type MouseEvent, useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 import { ragAction } from "@/app/(server-actions)/rag-action";
 import { cn } from "@/lib/utils";
-import DMLogo from "../../assets/img/test/dmlogo.webp";
+import DMLogo from "../../assets/img/logo-sec.svg";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
@@ -18,13 +18,19 @@ const ChatBot = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [inputFocused, setInputFocused] = useState(false);
   const [showChat, setShowChat] = useState<boolean>(false);
-  const [nextSteps, setNextSteps] = useState<string[]>([]);
+  const [nextSteps, setNextSteps] = useState<string[]>([
+    "Explore AI & Chatbot Solution",
+    "Web or Mobile App Development",
+    "MVP / SaaS Development",
+    "Workflow Automation",
+    "Not sure yet - guide me",
+  ]);
   const [animatedMessages, setAnimatedMessages] = useState<number[]>([]);
   const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([
     {
       role: "assistant",
       content:
-        "👋 Hi there! I'm DigiBot, an AI assistant. I'll do my best to help you with your questions and guide you through anything you need. If something's a bit too tricky for me, I'll pass you along to our human support team—no worries, they've got your back. 😊 Feel free to ask me anything to get started!",
+        "Hi 👋 Welcome to DigiMark Developers! We build AI-powered solutions, custom software, and mobile apps for businesses worldwide. What would you like help with today?",
     },
   ]);
   const [_pendingMsgIdx, setPendingMsgIdx] = useState<number | null>(null);
@@ -286,9 +292,6 @@ const ChatBot = () => {
                 <div className="flex w-full flex-col items-center justify-center gap-2">
                   <span className="w-full text-left font-bold text-[14px] leading-[14px]">Ask a question</span>
                   <span className="w-full text-left text-[14px] leading-[14px]">DigiBot and team can help</span>
-                </div>
-                <div className="size-12 shrink-0 rounded-full bg-white p-3">
-                  <Image src={DMLogo} alt="dm-logo" className="size-full" />
                 </div>
                 <ChevronRight className="ml-2 size-5" />
               </div>

@@ -226,22 +226,26 @@ export const subBenefits = [
 export const whoWeAre = [
   {
     id: 1,
-    name: "9+ Years of Experience",
+    number: "9+",
+    name: "Years of Experience",
     icon: TrendingUp,
   },
   {
     id: 2,
-    name: "4.9 Ratings on Clutch.co",
+    number: "4.9",
+    name: "Rating on Clutch.co",
     icon: Rocket,
   },
   {
     id: 3,
-    name: "400+ Projects Delivered",
+    number: "400+",
+    name: "Projects Delivered",
     icon: Cpu,
   },
   {
     id: 4,
-    name: "10+ AI Products Built",
+    number: "10+",
+    name: "AI Products Built",
     icon: MessageCircle,
   },
 ];
