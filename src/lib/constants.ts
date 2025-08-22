@@ -375,7 +375,7 @@ You are a Retrieval-Augmented Generation (RAG) AI assistant designed to support 
 Guidelines:
 1. Primary Source: Use the retrieved context to answer user queries. Always prioritize context over internal knowledge when available.
 2. Domain Restriction: If the context is insufficient, rely only on your internal knowledge strictly within the software industry. Avoid topics outside this domain.
-3. Tone & Style: Keep your tone conversational and professional. Be concise — responses should not exceed 50 words.
+3. Tone & Style: Keep your tone friendly and engaging. Always ends with a clear next step (consultation, pricing, or case study, contact info share or get). Be concise — responses should not exceed 50 words.
 4. Honesty: If you don't know the answer or if context is missing, admit it clearly rather than guessing.
 5. Engagement: At the end of each response, suggest relevant follow-up messages that the user can ask you (in first-person) to keep the conversation flowing naturally Return these follow-up messages separately as an array of strings. Use '=' as a delimiter to separate the JSON from your response.
 6. Context Awareness: Maintain continuity by remembering relevant details from the chat history to provide coherent answers.
@@ -386,6 +386,24 @@ Guidelines:
 11. Whenever you wanted to ask something from user, formate it as the numeric bullets in the end of response.
 12. Make sure to give your response in the perfect markdown formated.
 13. When its not needed, do not add any questions. But when needed and you're adding the questions. Make sure to format them as the bullet points.
+14. The universal ending message block must be similar to this:
+Universal Closing Block (for any path)
+That's all from me for now :blush:
+If you'd like, you can:
+
+<replace-with-date-emoji> Book a free consultation
+
+<replace-with-moneybag-emoji> Check our pricing
+
+<replace-with-open_file_folder-emoji> Explore case studies
+
+Or just come back anytime — I'll be here :rocket:
+
+Have a great day! <replace-with-wave-emoji>
+
+No need to always show the message block. Only show it when you think its needed or when you feel the user has terminated the conversation.
+
+15. The response must always be in markdown. A clear hierarchy of text must be visible. Bullet-points must be used where needed with proper indentation wherever necessary.
 `;
 
 export const AI_CONTEXT = `
@@ -1099,4 +1117,78 @@ export const initialMessages = [
   "What services do you offer?",
   "How can I contact support?",
   "What are your business hours?",
+];
+
+export const FAQS_LIST = [
+  {
+    id: 1,
+    question: "What is DigiMark Developers?",
+    answer: [
+      "DigiMark Developers is a full-cycle technology partner delivering end-to-end digital solutions globally. We specialize in UI/UX design, custom software engineering, AI-powered SaaS and MVP development, mobile application solutions, intelligent chatbot and AI agent integration, deployment services, and performance-driven digital marketing",
+      "From product research to launch and beyond, we act as a true partner aligning with your goals, adapting to your needs, and delivering measurable impact. With 400+ successful projects and a 95% retention rate, we're trusted to turn ideas into real-world growth.",
+    ],
+  },
+  {
+    id: 2,
+    question: "How does DigiMark help grow our business and increase sales?",
+    answer: [
+      "DigiMark uses data-driven marketing and AI-powered insights to target your ideal customers and boost conversions. Our digital campaigns are optimized for maximum ROI - from personalized content to automated outreach - ensuring every marketing dollar works harder. The result is more qualified leads and a clear lift in sales, allowing you to focus on scaling your business..",
+    ],
+  },
+  {
+    id: 3,
+    question: "What does “end-to-end digital solutions” mean for our business with DigiMark?",
+    answer: [
+      "With DigiMark, “end-to-end” means we cover everything from initial strategy to final launch and beyond. We manage market research, UX/UI design, development, deployment, and ongoing optimization under one roof. This holistic approach ensures all parts of your digital project work together seamlessly, saving time and maximizing results.",
+    ],
+  },
+  {
+    id: 4,
+    question: "What types of AI solutions do you offer?",
+    answer: [
+      "Digimark Developers offers a range of AI solutions including chatbot development, generative AI, computer vision, predictive analytics, and data engineering. We also provide AI PoC and MVP development to validate ideas quickly for industries like healthcare, fintech, retail, EdTech, and hospitality, helping businesses automate, personalize, and optimize operations.",
+    ],
+  },
+  {
+    id: 5,
+    question: "What measurable results can we expect from partnering with DigiMark?",
+    answer: [
+      "Partnering with DigiMark means expecting measurable improvements, not just promises. Our clients typically see faster growth in leads and revenue, thanks to more efficient operations and smarter marketing strategies. We provide clear reporting on key metrics, so you always see how our solutions are driving results and supporting your business goals.",
+    ],
+  },
+  {
+    id: 6,
+    question: "Can you handle market research and user testing?",
+    answer: [
+      "Absolutely. Thorough market research and user testing are integral to our process, ensuring the product surpasses market and user expectations, driving success from the start.",
+    ],
+  },
+  {
+    id: 7,
+    question: "What types of AI solutions can you build for my business?",
+    answer: [
+      "We create a range of AI solutions tailored to your needs, from predictive analytics and natural language processing tools to computer vision systems and AI-driven automation. Each solution is customized to address your specific challenges and integrate seamlessly with your existing infrastructure",
+    ],
+  },
+  {
+    id: 8,
+    question: "How secure & scalable are the AI systems you develop?",
+    answer: [
+      "Security is built into everything we do from strong encryption and access controls to staying compliant with data protection standards. Our AI systems are also built to grow with your business, easily scaling to handle more users, data, or tasks without slowing down",
+    ],
+  },
+  {
+    id: 9,
+    question: "How do you handle data privacy and compliance in AI development?",
+    answer: [
+      "We are committed to upholding the highest industry standards and regulatory requirements, including GDPR and HIPAA. Our AI models are developed with robust data anonymization techniques and secure handling protocols to ensure full compliance and safeguard user privacy at every stage.",
+    ],
+  },
+  {
+    id: 10,
+    question: "Do you provide Post launch support?",
+    answer: [
+      "Certainly. Our team provides continuous support and maintenance to ensure your AI solutions operate at peak performance. We also offer regular updates and scalability enhancements to align with the evolving needs of your business.",
+    ],
+  },
 ];

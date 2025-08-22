@@ -27,7 +27,7 @@ const Hero = () => {
         </div>
         <div className="col-span-1 flex w-full flex-col items-center justify-center gap-10">
           <div className="aspect-square h-[400px] border-y border-l p-1 sm:w-[90%] sm:rounded-l-2xl md:ml-auto">
-            <div className="h-full w-full rounded-l-2xl border-y border-l px-4 md:pr-0">
+            <div className="h-full w-full rounded-l-2xl border-y border-l">
               <Image
                 src={TestHome}
                 alt="test-hero"

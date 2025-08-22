@@ -114,7 +114,7 @@ const ChatBot = () => {
     >
       <div
         className={cn(
-          "absolute right-0 bottom-14 h-[calc(100vh-200px)] w-[400px] overflow-hidden rounded-xl bg-white shadow transition-opacity duration-500 ease-in-out",
+          "absolute right-0 bottom-14 h-[calc(100vh-200px)] w-[400px] overflow-hidden rounded-xl bg-white shadow-[0px_0px_20px_15px_#00000024] transition-opacity duration-500 ease-in-out",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
@@ -207,7 +207,7 @@ const ChatBot = () => {
                             sendToAI(step);
                           }}
                           key={i}
-                          className="rounded-md border px-4 py-2 font-semibold text-sm shadow transition-colors duration-200 ease-in-out hover:border-[#6BB64A] hover:text-[#6BB64A]"
+                          className="rounded-md border border-[#6BB64A] px-4 py-2 font-semibold text-[#6BB64A] text-sm shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white"
                         >
                           {step}
                         </span>
@@ -273,7 +273,7 @@ const ChatBot = () => {
                 <Image src={DMLogo} alt="dm-logo" className="mb-3.5 size-14" />
                 <span className="mb-1.5 w-full text-left font-bold text-[36px] leading-[36px]">Need any help ?</span>
                 <span className="w-full text-left font-medium text-[14px] leading-[14px]">
-                  We're just a message away!
+                  We're here to make things easier for you! 🚀
                 </span>
               </div>
               <div
@@ -281,23 +281,21 @@ const ChatBot = () => {
                   e.stopPropagation();
                   setShowChat(true);
                 }}
-                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg border bg-white p-5 shadow transition-transform duration-300 ease-in-out hover:scale-105"
+                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-[#1D4354] p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
               >
                 <div className="flex w-full flex-col items-center justify-center gap-2">
                   <span className="w-full text-left font-bold text-[14px] leading-[14px]">Ask a question</span>
-                  <span className="w-full text-left text-[14px] text-muted-foreground leading-[14px]">
-                    AI Agent and team can help
-                  </span>
+                  <span className="w-full text-left text-[14px] leading-[14px]">DigiBot and team can help</span>
                 </div>
-                <div className="size-12 shrink-0 rounded-full bg-primary p-3">
+                <div className="size-12 shrink-0 rounded-full bg-white p-3">
                   <Image src={DMLogo} alt="dm-logo" className="size-full" />
                 </div>
                 <ChevronRight className="ml-2 size-5" />
               </div>
             </div>
-            <div className="flex max-h-full w-full flex-col items-start justify-start gap-5 px-8 pt-16 pb-8">
-              <span className="w-full text-left font-bold text-xl">Quick Questions</span>
-              <div className="flex max-h-full w-full flex-wrap items-start justify-start gap-2 overflow-y-auto">
+            <div className="flex max-h-full w-full flex-col items-start justify-start">
+              <span className="w-full px-8 pt-16 text-left font-bold text-xl">Quick Questions</span>
+              <div className="flex max-h-full w-full flex-wrap items-start justify-start gap-2 overflow-y-auto px-8 py-5">
                 {[
                   "What is DigiMark",
                   "Our Services",
@@ -317,7 +315,7 @@ const ChatBot = () => {
                       setShowChat(true);
                       await sendToAI(item);
                     }}
-                    className="rounded-md border px-4 py-2 font-semibold text-[14px] leading-[14px] shadow transition-colors duration-200 ease-in-out hover:border-[#6BB64A] hover:text-[#6BB64A]"
+                    className="rounded-md bg-[#6BB64A] px-4 py-2 font-semibold text-[14px] text-white leading-[14px] shadow-md transition-transform duration-200 ease-in-out hover:scale-105"
                   >
                     {item}
                   </span>

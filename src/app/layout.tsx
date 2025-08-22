@@ -1,5 +1,5 @@
 import { type Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 import "@/assets/css/globals.css";
 import Navbar from "@/components/navbar";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.webp" }],
 };
 
-const raleway = Raleway({
+const raleway = Roboto({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
