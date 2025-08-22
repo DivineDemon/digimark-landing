@@ -5,7 +5,6 @@ import { ArrowUp, BotMessageSquare, ChevronLeft, ChevronRight } from "lucide-rea
 import Image from "next/image";
 import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
-import remarkGfm from "remark-gfm";
 import { ragAction } from "@/app/(server-actions)/rag-action";
 import { cn } from "@/lib/utils";
 import DMLogo from "../../assets/img/logo-sec.svg";
@@ -17,8 +16,6 @@ const ChatBot = () => {
   const [message, setMessage] = useState<string>("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [inputFocused, setInputFocused] = useState(false);
-  const [showChat, setShowChat] = useState<boolean>(false);
   const [nextSteps, setNextSteps] = useState<string[]>([
     "Explore AI & Chatbot Solution",
     "Web or Mobile App Development",
@@ -26,15 +23,26 @@ const ChatBot = () => {
     "Workflow Automation",
     "Not sure yet - guide me",
   ]);
+  const [inputFocused, setInputFocused] = useState(false);
+  const [showChat, setShowChat] = useState<boolean>(false);
   const [animatedMessages, setAnimatedMessages] = useState<number[]>([]);
-  const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([
-    {
-      role: "assistant",
-      content:
-        "Hi 👋 Welcome to DigiMark Developers! We build AI-powered solutions, custom software, and mobile apps for businesses worldwide. What would you like help with today?",
-    },
-  ]);
+  const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([]);
   const [_pendingMsgIdx, setPendingMsgIdx] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (showChat && messages.length === 0) {
+      const timer = setTimeout(() => {
+        setMessages([
+          {
+            role: "assistant",
+            content:
+              "Hi 👋 Welcome to DigiMark Developers! We build AI-powered solutions, custom software, and mobile apps for businesses worldwide. What would you like help with today?",
+          },
+        ]);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showChat]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -113,22 +121,20 @@ const ChatBot = () => {
     setIsOpen((prev) => !prev);
   };
 
-  console.log(JSON.stringify(messages, null, 2));
-
   return (
-    <div
-      className="fixed right-5 bottom-5 z-[51] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3 md:right-10 md:bottom-10"
-      onClick={handleToggle}
-      aria-expanded={isOpen}
-    >
+    <>
+      {isOpen && (
+        <div className="fixed inset-0 z-[49] bg-black/10" onClick={() => setIsOpen(false)} aria-hidden="true" />
+      )}
       <div
         className={cn(
-          "-right-2.5 absolute bottom-14 h-[calc(100vh-200px)] w-[380px] overflow-hidden rounded-xl bg-white shadow-[0px_0px_20px_15px_#00000024] transition-opacity duration-500 ease-in-out md:right-0 md:w-[400px]",
+          "fixed right-5 bottom-14 z-[50] h-[calc(100vh-200px)] w-[380px] overflow-hidden rounded-xl bg-white shadow-[0px_0px_20px_15px_#00000024] transition-opacity duration-500 ease-in-out md:right-10 md:bottom-28 md:w-[400px]",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
           },
         )}
+        onClick={(e) => e.stopPropagation()}
       >
         {showChat ? (
           <div className="flex h-full w-full flex-col items-start justify-start">
@@ -150,7 +156,17 @@ const ChatBot = () => {
             </div>
             <div className="flex h-[627px] w-full flex-col items-start justify-start gap-3.5 overflow-y-auto px-5 pt-5">
               {messages.length === 0 ? (
-                <span className="text-muted-foreground text-sm">No messages yet.</span>
+                <div className="flex items-center gap-1 rounded-md bg-gray-200 p-1.5 px-5 py-2.5">
+                  <div className="size-1.5 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot" />
+                  <div
+                    className="size-1.5 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot"
+                    style={{ animationDelay: "0.1s" }}
+                  />
+                  <div
+                    className="size-1.5 animate-[fadeDots_0.8s_infinite] rounded-full bg-black shadow-dot"
+                    style={{ animationDelay: "0.3s" }}
+                  />
+                </div>
               ) : (
                 <div className="flex h-full max-h-full w-full flex-col items-start justify-start gap-3.5 overflow-y-auto">
                   {messages.map((msg, idx) => {
@@ -198,7 +214,31 @@ const ChatBot = () => {
                                   backgroundColor: "transparent",
                                   color: msg.role === "assistant" ? "black" : "white",
                                 }}
-                                remarkPlugins={[remarkGfm]}
+                                components={{
+                                  ul: ({ children }) => (
+                                    <ul
+                                      style={{
+                                        paddingLeft: 20,
+                                        listStyleType: "disc",
+                                        margin: 0,
+                                      }}
+                                    >
+                                      {children}
+                                    </ul>
+                                  ),
+                                  ol: ({ children }) => (
+                                    <ol
+                                      style={{
+                                        paddingLeft: 20,
+                                        listStyleType: "decimal",
+                                        margin: 0,
+                                      }}
+                                    >
+                                      {children}
+                                    </ol>
+                                  ),
+                                  li: ({ children }) => <li style={{ marginBottom: 4 }}>{children}</li>,
+                                }}
                               />
                               {isLastAssistant && nextSteps.length > 0 && !loading && (
                                 <div className="flex w-full flex-wrap gap-2 pt-2.5">
@@ -342,12 +382,18 @@ const ChatBot = () => {
           </div>
         )}
       </div>
-      <BotMessageSquare
-        className={cn("size-full text-white transition-all duration-500 ease-in-out", {
-          "rotate-[360deg]": isOpen,
-        })}
-      />
-    </div>
+      <div
+        className="fixed right-5 bottom-5 z-[51] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3 md:right-10 md:bottom-10"
+        onClick={handleToggle}
+        aria-expanded={isOpen}
+      >
+        <BotMessageSquare
+          className={cn("size-full text-white transition-all duration-500 ease-in-out", {
+            "rotate-[360deg]": isOpen,
+          })}
+        />
+      </div>
+    </>
   );
 };
 

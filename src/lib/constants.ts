@@ -36,7 +36,6 @@ import Test4 from "@/assets/img/test/test4.png";
 import Test5 from "@/assets/img/test/test5.png";
 import Test6 from "@/assets/img/test/test6.png";
 import TrustedOne from "@/assets/img/trusted1.svg";
-import TrustedTen from "@/assets/img/trusted10.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
 import TrustedFour from "@/assets/img/trusted4.svg";
@@ -45,6 +44,7 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
+import TrustedTen from "@/assets/img/trusted10.svg";
 
 export const trusted = [
   {
@@ -103,16 +103,14 @@ export const howItWorks = [
     title: "Design & Development",
     ring1: Test3,
     ring2: Test4,
-    description:
-      "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
+    description: "Our team designs intuitive interfaces and develops scalable solutions tailored to your needs.",
   },
   {
     id: 3,
     title: "Deployment & Support",
     ring1: Test5,
     ring2: Test6,
-    description:
-      "Post-launch, we provide continuous support and optimization to ensure sustained success.",
+    description: "Post-launch, we provide continuous support and optimization to ensure sustained success.",
   },
 ];
 
@@ -294,8 +292,7 @@ export const testimonials = [
     social_handle: "@damienmagician",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Denim,
-    description:
-      "The most impressive thing about them was their willingness to go the extra mile.",
+    description: "The most impressive thing about them was their willingness to go the extra mile.",
   },
   {
     id: 2,
@@ -329,8 +326,7 @@ export const testimonials = [
     social_handle: "foundersnetwork.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Calum,
-    description:
-      "They are giving the best IT services, maintaining scalability and reliability.",
+    description: "They are giving the best IT services, maintaining scalability and reliability.",
   },
   {
     id: 6,
@@ -338,8 +334,7 @@ export const testimonials = [
     social_handle: "jeremyredman.com",
     social_logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     client_image: Jermy,
-    description:
-      "They were on me for every task and stayed compliant with any deadlines throughout.",
+    description: "They were on me for every task and stayed compliant with any deadlines throughout.",
   },
 ];
 
@@ -1204,8 +1199,7 @@ export const FAQS_LIST = [
   },
   {
     id: 3,
-    question:
-      "What does “end-to-end digital solutions” mean for our business with DigiMark?",
+    question: "What does “end-to-end digital solutions” mean for our business with DigiMark?",
     answer: [
       "With DigiMark, “end-to-end” means we cover everything from initial strategy to final launch and beyond. We manage market research, UX/UI design, development, deployment, and ongoing optimization under one roof. This holistic approach ensures all parts of your digital project work together seamlessly, saving time and maximizing results.",
     ],
@@ -1219,8 +1213,7 @@ export const FAQS_LIST = [
   },
   {
     id: 5,
-    question:
-      "What measurable results can we expect from partnering with DigiMark?",
+    question: "What measurable results can we expect from partnering with DigiMark?",
     answer: [
       "Partnering with DigiMark means expecting measurable improvements, not just promises. Our clients typically see faster growth in leads and revenue, thanks to more efficient operations and smarter marketing strategies. We provide clear reporting on key metrics, so you always see how our solutions are driving results and supporting your business goals.",
     ],
@@ -1248,8 +1241,7 @@ export const FAQS_LIST = [
   },
   {
     id: 9,
-    question:
-      "How do you handle data privacy and compliance in AI development?",
+    question: "How do you handle data privacy and compliance in AI development?",
     answer: [
       "We are committed to upholding the highest industry standards and regulatory requirements, including GDPR and HIPAA. Our AI models are developed with robust data anonymization techniques and secure handling protocols to ensure full compliance and safeguard user privacy at every stage.",
     ],
