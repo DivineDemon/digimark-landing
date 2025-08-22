@@ -114,13 +114,13 @@ const ChatBot = () => {
 
   return (
     <div
-      className="fixed right-10 bottom-10 z-[1] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3"
+      className="fixed right-5 bottom-5 z-[51] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3 md:right-10 md:bottom-10"
       onClick={handleToggle}
       aria-expanded={isOpen}
     >
       <div
         className={cn(
-          "absolute right-0 bottom-14 h-[calc(100vh-200px)] w-[400px] overflow-hidden rounded-xl bg-white shadow-[0px_0px_20px_15px_#00000024] transition-opacity duration-500 ease-in-out",
+          "-right-2.5 absolute bottom-14 h-[calc(100vh-200px)] w-[380px] overflow-hidden rounded-xl bg-white shadow-[0px_0px_20px_15px_#00000024] transition-opacity duration-500 ease-in-out md:right-0 md:w-[400px]",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
@@ -151,6 +151,7 @@ const ChatBot = () => {
               ) : (
                 <div className="flex h-full max-h-full w-full flex-col items-start justify-start gap-3.5 overflow-y-auto">
                   {messages.map((msg, idx) => {
+                    const isLastAssistant = msg.role === "assistant" && idx === messages.length - 1;
                     const isLastAssistantLoading =
                       loading &&
                       idx === messages.length - 1 &&
@@ -186,6 +187,22 @@ const ChatBot = () => {
                           ) : (
                             <span className={shouldAnimate ? "animate-fadein" : undefined}>
                               <Markdown>{msg.content as string}</Markdown>
+                              {isLastAssistant && nextSteps.length > 0 && !loading && (
+                                <div className="flex w-full flex-wrap gap-2 pt-2.5">
+                                  {nextSteps.map((step, i) => (
+                                    <span
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        sendToAI(step);
+                                      }}
+                                      key={i}
+                                      className="rounded-md border border-[#6BB64A] p-2 font-semibold text-[#6BB64A] text-[12px] text-sm leading-[12px] shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white"
+                                    >
+                                      {step}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
                             </span>
                           )}
                         </div>
@@ -204,22 +221,6 @@ const ChatBot = () => {
                       </div>
                     );
                   })}
-                  {nextSteps.length > 0 && !loading && (
-                    <div className="flex w-full flex-wrap gap-2">
-                      {nextSteps.map((step, i) => (
-                        <span
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            sendToAI(step);
-                          }}
-                          key={i}
-                          className="rounded-md border border-[#6BB64A] px-4 py-2 font-semibold text-[#6BB64A] text-sm shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white"
-                        >
-                          {step}
-                        </span>
-                      ))}
-                    </div>
-                  )}
                   <div ref={messagesEndRef}></div>
                 </div>
               )}
@@ -227,7 +228,7 @@ const ChatBot = () => {
             <div className="w-full p-5">
               <form
                 className={cn(
-                  "flex w-full items-center justify-center gap-2 rounded-xl border p-2.5 shadow transition-colors duration-200 ease-in-out",
+                  "flex w-full items-center justify-center gap-2 rounded-xl p-2.5 shadow ring-2 ring-black/25 transition-colors duration-200 ease-in-out",
                   {
                     "ring-2 ring-[#6BB64A]": inputFocused && !loading,
                   },

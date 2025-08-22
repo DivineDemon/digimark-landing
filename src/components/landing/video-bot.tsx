@@ -24,14 +24,14 @@ const VideoBot = () => {
 
   return (
     <div
-      className="fixed bottom-10 left-10 z-[1] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3"
+      className="fixed bottom-5 left-5 z-[1] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3 md:bottom-10 md:left-10"
       onClick={handleToggle}
       aria-expanded={isOpen}
       aria-label={isOpen ? "Close video bot" : "Open video bot"}
     >
       <div
         className={cn(
-          "absolute bottom-14 left-0 size-96 overflow-hidden rounded-xl border shadow transition-opacity duration-500 ease-in-out",
+          "-left-[17px] absolute bottom-14 size-96 overflow-hidden rounded-xl border shadow transition-opacity duration-500 ease-in-out md:left-0",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
