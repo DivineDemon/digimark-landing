@@ -1,10 +1,11 @@
 "use client";
 
+import MDEditor from "@uiw/react-md-editor";
 import { ArrowUp, BotMessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
-import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { ragAction } from "@/app/(server-actions)/rag-action";
 import { cn } from "@/lib/utils";
 import DMLogo from "../../assets/img/logo-sec.svg";
@@ -112,6 +113,8 @@ const ChatBot = () => {
     setIsOpen((prev) => !prev);
   };
 
+  console.log(JSON.stringify(messages, null, 2));
+
   return (
     <div
       className="fixed right-5 bottom-5 z-[51] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3 md:right-10 md:bottom-10"
@@ -161,9 +164,9 @@ const ChatBot = () => {
                     return (
                       <div
                         key={idx}
-                        className={cn("flex w-fit max-w-3/4 flex-col items-start justify-start gap-1.5", {
-                          "ml-auto": msg.role === "user",
-                          "mr-auto": msg.role === "assistant",
+                        className={cn("flex flex-col items-start justify-start gap-1.5", {
+                          "ml-auto w-fit max-w-3/4": msg.role === "user",
+                          "mr-auto w-full": msg.role === "assistant",
                         })}
                       >
                         <div
@@ -186,7 +189,17 @@ const ChatBot = () => {
                             </div>
                           ) : (
                             <span className={shouldAnimate ? "animate-fadein" : undefined}>
-                              <Markdown>{msg.content as string}</Markdown>
+                              <MDEditor.Markdown
+                                source={msg.content as string}
+                                style={{
+                                  fontWeight: 400,
+                                  fontSize: "14px",
+                                  lineHeight: "18px",
+                                  backgroundColor: "transparent",
+                                  color: msg.role === "assistant" ? "black" : "white",
+                                }}
+                                remarkPlugins={[remarkGfm]}
+                              />
                               {isLastAssistant && nextSteps.length > 0 && !loading && (
                                 <div className="flex w-full flex-wrap gap-2 pt-2.5">
                                   {nextSteps.map((step, i) => (
@@ -196,7 +209,7 @@ const ChatBot = () => {
                                         sendToAI(step);
                                       }}
                                       key={i}
-                                      className="rounded-md border border-[#6BB64A] p-2 font-semibold text-[#6BB64A] text-[12px] text-sm leading-[12px] shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white"
+                                      className="rounded-md border border-[#6BB64A] p-2 font-semibold text-[#6BB64A] text-[14px] text-sm leading-[14px] shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white"
                                     >
                                       {step}
                                     </span>
