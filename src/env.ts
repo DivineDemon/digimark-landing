@@ -5,9 +5,7 @@ export const env = createEnv({
   server: {
     DATABASE_URL: z.string().url(),
     NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
-    OPENAI_API_KEY: z.string().regex(/^sk-[a-zA-Z0-9]{48}$/, {
-      message: "Invalid OpenAI API key format.",
-    }),
+    OPENAI_API_KEY: z.string(),
   },
   client: {},
   runtimeEnv: {
