@@ -36,6 +36,7 @@ import Test4 from "@/assets/img/test/test4.png";
 import Test5 from "@/assets/img/test/test5.png";
 import Test6 from "@/assets/img/test/test6.png";
 import TrustedOne from "@/assets/img/trusted1.svg";
+import TrustedTen from "@/assets/img/trusted10.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
 import TrustedFour from "@/assets/img/trusted4.svg";
@@ -44,7 +45,6 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
-import TrustedTen from "@/assets/img/trusted10.svg";
 
 export const trusted = [
   {
@@ -425,7 +425,7 @@ You are an AI assistant for **Digimark Developers**. Chat with visitors, answer 
 
 10. **“Digimark” Asked** → Give a ≤50-word company intro.
 11. **“Services” Asked** → Bullet list of services.
-12. **“Pricing” Asked** → Bullet list of prices.
+12. **“Pricing” Asked** → Do not provide any type of pricing, but tell the user that pricings can be finalised over the meeting depending upon the scope of work.
 13. **Universal Closing Block** (show only when wrapping up or user ends):
 
 That's all from me for now 😊
@@ -445,6 +445,8 @@ Have a great day! 👋
 15. **Questions Formatting**
     Only ask when needed; format as **numbered bullets**.
 
+16. Response should not include "—" at all.
+
 ---
 
 ### Minimal Format Example
@@ -462,717 +464,127 @@ Yes—Digimark delivers HIPAA-ready architectures (encryption, audit logs, BAAs,
 export const AI_CONTEXT = `
 What is DigiMark | Our Services | How We Work |  Why Partner With Us | Pricing | Case Studies | Get a Free Consultation | FAQs | Our Tech Stack | Our Engagement Model 
 
-
-What is DigiMark Developers?
-DigiMark Developers is a global AI & software development firm, trusted by 250+ clients worldwide :earth_africa:. We specialize in AI, SaaS, apps, and automation, helping businesses grow faster :rocket:.
-
-Why work with us?
-- 24/7 dedicated project coordinator :technologist:
-- Local presence in USA & Canada :us::flag-ca:
-- Transparent process (no hidden costs) :white_check_mark:
-- 90%+ client retention :100:
-
-How We Work
-We work in 2-week sprints, share live updates, and keep everything transparent :sparkles:. You'll always know what's happening with your project.
-
-What services do you offer?
-We help businesses grow with expert tech & AI solutions.
- Here's what we offer:
-1️⃣ Software Development
-Custom Web Applications
-SaaS Platforms
-E-commerce Solutions
-
-
-2️⃣ Mobile App Development
-iOS & Android Apps
-React Native & Cross-Platform Apps
-
-
-3️⃣ Artificial Intelligence Solutions
-AI Chatbots
-AI Voice Agents
-AI-Powered SaaS Tools
-Workflow Automation
-Machine Learning Models
-Computer Vision
-AI Consulting & MVP Development
-
-
-4️⃣ Cloud & Backend Services
-AWS & Cloud Solutions
-
-
-API Development & Integration
-
-
-5️⃣ Digital Marketing
-SEO & Social Media Marketing
-
-
-Branding & Online Presence
-
-
- How We Work: 
-
- We deliver projects with full transparency and client collaboration:
-1. Kickoff & Planning - Define goals, timelines, and priorities. You get a shared roadmap (SRS/WBS) and a dedicated full-time project coordinator who updates you regularly and is available anytime.
- 2. Two-Week Sprints - Predictable progress with mid-sprint updates, demos, and real-time tracking via our portal.
- 3. Change Management - All changes go through documented approval, with clear impacts on time & cost.
- 4. Regular Meetings - Pre-planned agendas, progress demos every Friday, and documented next steps.
- 5. QA & Bug Tracking - Dedicated portal, priority fixes, and bi-weekly summaries.
- 6. Delivery & Support - Final walkthrough, all credentials handed over, and 30-day priority post-launch support.
-
-
-
-Why Partner With Us
-Stakeholders work with us because:
-✅ Transparency First - Real-time portals, bi-weekly demos, and zero hidden tasks.
-✅ 24/7 Dedicated Coordinator - A full-time project coordinator updates you regularly and is available anytime for questions or changes.
-✅ Local Presence in USA & Canada - We are a registered company in both USA and Canada, with a local director available to work closely with you so you can feel more comfortable and confident throughout the project.
-✅ Proven Process - SLA/MSA-backed timelines, quality, and communication standards.
-✅ Controlled Changes - No hidden costs, clear approvals.
-✅ True Partnership - We adapt to your workflow and goals, not the other way around.
-
-Pricing 
-Chatbot using no code(Best for Small Businesses and Startups)
-
-Key Features
-Limited customization and design flexibility
-Uses rule-based logic (predefined questions and answers)
-Pre-designed templates for common use cases
-User input and data collection via forms and send it to Google Sheets, Airtable, or a CRM
-CRM and email marketing tool integrations
-Live chat handover to human agents
-Support for multiple languages
-Analytics and performance tracking dashboard
-Automated alerts and notifications
-Easy website embedding and chatbot widget customization
-Multi-channel deployment (Website, WhatsApp, Facebook Messenger, Instagram, Telegram)
-Platform to Use
-Tidio, ChatBot.com, ManyChat ,LandBot, Chatfuel, Voiceflow, Botpress, Make.com, 
-
-What is this For: 
-Perfect for local shops, freelancers, small service businesses, or anyone just starting who needs basic customer support automation without spending a lot.
-
-Pricing
-Monthly: $20 to $150
-One-time setup : $300 to $800
-Timeline
-Timeline: 3 to 5 Business days
-
-
-
-Custom Chatbot with RAG/ Voice ChatBot
-Key Features
-Uses Natural Language Processing (NLP) to understand complex queries
-
-Real-time document retrieval using vector search (PDFs, websites, databases)
-
-GPT-powered dynamic response generation with context awareness
-
-Supports multilingual question answering and contextual understanding
-
-Custom knowledge base ingestion with automatic updates
-
-Long-term memory for user context tracking and personalization
-
-Can be deployed across multiple channels (website, app, WhatsApp, social media)
-
-Highly customizable UI, voice, tone, and behavior aligned to your brand.
-
-API integrations (CRMs, ERPs, calendars, etc.), payment gateways, HR tools, and APIs
-Supports high-level security standards, compliance (GDPR, HIPAA), and user privacy
-
-Offers 24/7 support, uptime guarantees, and dedicated account managers
-
-Live agent handoff and ticketing system compatibility
-
-Built-in analytics dashboard for user insights and performance tracking
-Platform to Use
-GPT-4, LangChain, Pinecone, Supabase, PostgreSQL, OpenAI Assistants API, FastAPI, ChromaDB, Bedrock, hugging face, claude, grok, gemini
-
-Ideal For: 
-Our custom RAG-based chatbots are ideal for Enterprises, SaaS companies, and E-commerce platforms needing intelligent support, document Q&A, and process automation. 
-
-They serve industries like Law, Finance, Healthcare, and Education by securely retrieving answers from contracts, clinical guidelines, courseware, or internal documentation. These bots are tailored for each use case from customer support and compliance to internal tools and product discovery.
-Pricing:
-$4000 - $6000
-Timeline:
-4 weeks - 8 weeks
-AI Agent
-AI Voice Calling Agent using No Code/Low-Code AI Voice Agent
-Key Features
-Inbound & outbound AI voice agents with voicemail detection
-
-
-Personalized conversations with variables (name, order, intent)
-
-
-Multi-agent squads for sales, support & follow-ups
-
-
-CRM syncing (Go High-Level, Airtable, Sheets)
-
-
-Call summaries, recording, transcription & sentiment analysis
-
-
-Workflow automation for tasks, alerts, and pipeline updates
-
-
-Multilingual support
-
-
-Delivered in 5-10 days
-
-Best For (Use Cases by Business Type):
-Small businesses & startups, Local service providers, E-commerce sellers, Real estate agents, Freelancers or agencies
-Platforms to use
-n8n, Synthflow ai,, Go High-Level, Airtable, etc, Vapi AI, Bland AI, Make.com, Airtable, Google Sheets, Relevance AI, Twilio
-Timeline: 
-Delivered in 5-10 days
-Pricing: 
-Starting from $500 - $1,000 (one-time setup)
-
-Custom AI Calling Agent / Custom AI Voice Agent (Advanced)
-Key Features
-Fully tailored voice agents with dynamic scripting logic
-
-
-Custom API integrations & workflow orchestration
-
-
-Smart call routing, AI memory, lead scoring
-
-
-Self-hosted or enterprise-compliant deployment
-
-
-Real-time dashboard with analytics & monitoring
-
-
-Deep integration with CRMs, ERPs, and backend systems
-
-
-Setup of multiple AI agents collaborating across departments
-
-
-Ongoing optimization, SLA-based support
-Best For (Use Cases by Business Type):
-Mid-to-large sales teams, Call centers, Healthcare clinics, Banks/insurance, Enterprise SaaS companies, Logistics/freight businesses, etc.
-Tools/Tech Stack:
-Python, React/Next.js, OpenAI, Vapi, Twilio, LangChain, Relevance AI, n8n, PostgreSQL/Firebase, Custom Dashboards, ElevenLabs, Pinecode, Supabase, PostgreSQL
-Timeline:
-4 weeks to 6 weeks
-Pricing:
-Starting at $3,500+ (based on scope)
-
-Workflow Automation
-🚀 2. Growth Automation Plan
-Price:  $100 - $200
-Best for: Businesses managing multiple apps/systems
-Tools: Make.com / Zapier / Airtable / Go High-Level / n8n, ManyChat
-Includes:
-Up to 5 automated workflows
-
-
-Multi-platform integrations (Airtable, Slack, WhatsApp, CRM, email)
-
-
-Filtered logic, conditional routing, multi-step flows
-
-
-Error monitoring setup
-
-
-Monthly reports to Google Sheets
-
-
-3 - 5 day delivery
-
-
-2 revisions
-
-
-Use Cases:
-Lead flows: FB Lead Ad → CRM → WhatsApp → Email
-Lead Flows: Google Search → CRM → WhatsApp/Email → Calendar
-
-
-Order fulfillment automation (e.g., Shopify → Email → Inventory update)
-
-
-Internal task assignment: Form fill → Trello/ClickUp → Email notification
-
-
-Auto-invoice generator or subscription tracker
-
-🧠 3. Custom Automation System (Advanced)
-💰 Price: $500+ (custom quote)
- Best for: Scaling businesses needing deep automation & integrations
- Tools: n8n, Make, Custom APIs, Webhooks, Python scripts
-Time: 10 - 14 days
-Includes:
-Unlimited workflows (based on scope)
-
-
-Custom logic, advanced filters, and fallback rules
-
-
-API integrations with internal systems or third-party apps
-
-
-Multi-system orchestration (CRM ↔ Slack ↔ Email ↔ VoIP ↔ AI agent)
-
-
-Automated document creation, task routing, data backup
-
-
-Real-time alerting & dashboards
-
-
-Delivery based on scope
-
-
-SLA and ongoing maintenance option
-
-
-Use Cases:
-Sales + support pipeline automation (lead → contact → task → email → report)
-
-
-AI voice agent → CRM + booking + summary automation
-
-
-Payment sync: Stripe → invoice → email → CRM → WhatsApp
-
-
-HR onboarding workflows
-
-Mobile App Development (Feature-Wise Pricing)
-
-Key Features
-- User Authentication & Profile Management
-
-- Push Notifications & Alerts
-
-- Real-time Chat or Messaging
-
-- Location Services & Maps Integration
-
-- Payment Gateway Integration (Stripe, PayPal, etc.)
-
-- Admin Dashboard (Web-based)
-
-- Camera/File Upload Functionality
-
-- Social Media Integration (Login & Sharing)
-
-- Custom Animations & Transitions
-
-- Offline Mode & Local Storage
-
-- In-app Purchases or Subscriptions
-
-- Analytics & Crash Reporting Integration
-
-Platforms & Tech Stack
-We develop apps for both iOS and Android using React Native, Flutter, or native stacks like Swift and Kotlin. Backend options include Node.js, Firebase, and Django.
-What is This For?
-Ideal for startups, local service apps, on-demand delivery, booking platforms, or any digital product that needs a high-performance mobile app.
-Pricing
-Basic App (3-4 Features): $4,000 - $6,000
-Standard App (5-7 Features): $6,000 - $10,000
-Advanced App (8+ Features or Custom Backend): $12,000 - $20,000+
-Timeline
-4 to 10 Weeks (Depending on features and platform support)
-
-AI-Powered SaaS Tools (Feature-Wise Pricing)
-Key Features
-- User Authentication & Access Control
-
-- Smart AI Assistant (GPT-based chat, summarization, etc.)
-
-- Interactive Analytics Dashboard
-
-- Custom Frontend UI (Responsive, branded)
-
-- Admin Panel for Management
-
-- 3rd-Party API Integrations (Stripe, Twilio, Firebase, etc.)
-
-- Automated Email Notifications
-
-- Secure File Handling and Storage
-
-- Custom AI Model Integration (optional)
-
-- Real-Time Messaging or Internal Chat System
-
-Platforms & Tech Stack
-We use modern technologies like React, Next.js, Node.js, Django, PostgreSQL, OpenAI APIs, Pinecone, and services like AWS, Vercel, or Firebase for scalable deployment.
-
-What is This For?
-Ideal for startups, SaaS founders, or digital product owners who want to launch smart, scalable AI-powered tools fast - without hiring a full in-house team.
-
-
-Pricing
-Small Tool (3-4 Features): $4,000 - $6,000
-Medium Tool (5-7 Features): $6,000 - $10,000
-Advanced Tool (8+ Features with AI): $12,000 - $20,000+
-Timeline
-4 to 10 Weeks (Based on features and complexity)
-
-Custom Web Application Development (Feature-Wise Pricing)
-
-Key Services Covered
-SaaS MVP Development (Admin panel, auth, billing)
-
-
-Full-Stack Web Apps with custom workflows
-
-
-API Development & Integrations
-
-
-Cloud Apps on AWS, Firebase, or Supabase
-
-
-Responsive UI/UX (React, Next.js)
-
-
-Real-Time Features (Chat, notifications)
-
-
-Payment Integration (Stripe, PayPal, etc.)
-
-
-Analytics & Monitoring Tools
-
-
-File Uploads & Media Management
-
-
-Role-Based Access & Admin Control
-
-
-Platforms & Tech Stack
-We develop modern, scalable, and maintainable web apps using:
-* Frontend: React.js, Next.js
-* Backend: Django, FastAPI, Node.js
-* Databases: PostgreSQL, MongoDB, Supabase
-* Auth & Billing: Firebase Auth, Stripe, Supabase Auth
-* Cloud/Hosting: AWS, Vercel, Heroku, Firebase
-
-What is This For?
-Ideal for startups launching SaaS products, internal business tools, management dashboards, and digital platforms that require a solid backend, secure authentication, and user-friendly interfaces.
-
-Pricing
-* Basic App (3-4 Features / MVP-Lite): $3,000 - $5,000
-* Standard App (5-7 Features / Full MVP): $5,000 - $9,000
-* Advanced App (8+ Features / Complex Logic or Multi-Tier Roles): $10,000 - $18,000+
-
-Timeline
-4 to 12 Weeks (Depending on feature set, backend complexity, and integrations)
-
-
-Our Engagement Model
-At DigiMark Developers, we offer three flexible engagement models to fit your project's scope, timeline, and resource needs:
-Project Outsourcing
- We manage end-to-end delivery which include planning, development, testing, and deployment so you can focus on growth. Ideal for MVPs, SaaS platforms, mobile apps, and AI solutions.
-
-
-Individual Hiring
- Augment your team with on-demand experts. Hire vetted developers, designers, or AI engineers to fill skill gaps or scale quickly, with full transparency and control.
-
-
-Dedicated Team
- Embed a long-term, scalable tech squad that operates as an extension of your in-house team aligned to your goals, culture, and workflows.
-
-
-All models include:
-Transparent communication & detailed reporting
-
-
-Weekly sprint reviews & milestone tracking
-
-
-Secure code ownership & IP protection
-
-
-Flexible billing (hourly, fixed-price, or monthly retainer)
-
-
-Get a Free Consultation
-Example: Adaptive Chat Flow (Full Script)
-⚡ Scenario: A visitor is interested in AI chatbot solutions but isn't sure how it works. The chatbot guides them, collects their data, and schedules a free consultation.
-🔹 User clicks: “Get a Free Consultation”
-🤖 Ava (Chatbot):
- Hey! 👋 I'm Ava from Digimark Developers.
- What do you need help with?
-🔹 AI / Chatbot
- 🔹 Web or Mobile App
- 🔹 MVP / SaaS
- 🔹 Workflow Automation
- 🔹 Not sure
-
-🧑 User:
- AI / Chatbot
-
-🤖 Ava:
- Nice. What's the goal?
-(e.g. “Qualify leads”, “24/7 support”, “WhatsApp booking”)
-
-🧑 User:
- Qualify leads automatically
-
-🤖 Ava:
- Got it! That's one of our most requested solutions.
- Tried anything before?
-
-🧑 User:
- Yes, I tried ManyChat.
-
-🤖 Ava:
- Cool. We build smarter bots — NLP-based and tailored to your business.
- Let's book your free session.
-Let's get you booked in for a quick call with one of our experts.
-📅 Pick a time here:
- 👉 https://calendly.com/digimark-developers
-
-🧑 User:
- Booked ✅
-OR
-
-
-Your name and email, please?
-
-🧑 User:
- Muhammad | muhammad@leadflow.com
-
-🤖 Ava:
-Booked! ✅
-📅 Tuesday, Aug 13 - 3:00 PM EST
-📍 Meet link sent to your email.
-While you wait, want to check out:
-🔹 A quick case study
- 🔹 Our pricing & process
- 🔹 I’m good for now
-
-🧑 User:
- Case study
-
-🤖 Ava:
- Here you go 👉
- 📄 AI Bot Case Study - 3x Leads
-Looking forward to chatting! And if you ever have questions, I'm always here to help. 👋
-Our Teck Stack
-🤖 DigiMARK:
- We work with a future-ready tech stack, especially around Generative AI and modern web/app solutions. Here's a quick look:
-🧠 Generative AI:
- OpenAI, LangChain, Llama, Pinecone, Vector DBs, GPT-4 APIs, RAG pipelines
-💻 Frontend:
- React, Next.js, Angular, Tailwind
-⚙️ Backend:
- Node.js, Python (FastAPI, Flask), Express, Laravel
-📱 Mobile:
- React Native, Flutter, Swift
-☁️ Cloud & DevOps:
- AWS, Firebase, Docker, Vercel, Supabase
-🗃️ Databases:
- PostgreSQL, MongoDB, MySQL, Redis
-🔌 Integrations:
- Stripe, Twilio, WhatsApp, Zapier, GHL, Calendly, and more
-
-Anything specific you're planning to build? I'd love to hear your idea. 👇✨
-
-FAQs
-🔧 General Services
-What services do you offer?
-
-
-Do you build custom software or only templates?
-
-
-Can you help with both frontend and backend?
-
-
-Do you offer MVP development for startups?
-
-
-Do you offer white-label development?
-
-
-
-🤖 AI & Generative AI
-What kind of AI solutions do you build?
-
-
-Do you work with GPT or build custom AI models?
-
-
-What's RAG and how does it help my business?
-
-
-Can you build a chatbot trained on my company data?
-
-
-How do you ensure AI solutions are scalable and secure?
-
-
-
-🛠️ Tech & Development
-What tech stack do you use?
-
-
-Do you build web and mobile apps?
-
-
-How do you manage app performance and speed?
-
-
-Can you integrate third-party APIs?
-
-
-
-📅 Process & Delivery
-How does your development process work?
-
-
-How long does it take to complete a project?
-
-
-Can I see a sample timeline or delivery roadmap?
-
-
-Do you follow Agile or fixed-scope models?
-
-
-
-💰 Pricing & Engagement
-How do you price your services?
-
-
-Do you offer hourly, fixed, or milestone-based pricing?
-
-
-Is there a minimum project size or budget?
-
-
-Do you offer free consultations?
-
-
-
-👥 Team & Support
-Who will I be working with on my project?
-
-
-Do you provide dedicated developers or full teams?
-
-
-Will I get post-launch support or maintenance?
-
-
-What time zones do you work in?
-
-
-
-🧾 Legal & Ownership
-Will I own the code after the project ends?
-
-
-Do you sign NDAs or contracts?
-
-
-How do you handle data privacy and security?
-
-
-
-🧠 Decision Support
-I'm not technical — can you still help me?
-
-
-Can you improve an existing system or codebase?
-
-
-I have an idea — where should I start?
-
-
-How do I know if my project is feasible?
-💼 About Services
-What services do you offer?
-
-
-Do you build AI or chatbot solutions?
-
-
-Can you help with MVP or SaaS products?
-
-
-Do you support both web and mobile development?
-
-
-Do you offer white-label partnerships?
-
-
-
-🛠️ Process & Requirements
-How do you gather project requirements?
- → We create SRS documents, work breakdown structures, and hold a kickoff meeting to align everything.
-
-
-What's your development process like?
- → We run weekly sprints, share sprint boards, hold client sync calls every Monday, and deliver updates every Friday.
-
-
-How do you manage bugs or issues?
- → Bugs are tracked in a shared log, handled quickly by our team, and reviewed during our internal QA and client review.
-
-
-
-🧑‍💻 Working Model
-What's your working mode?
- → We follow Agile with coordinated weekly sprints. Coordinators manage delivery, developers focus on execution, and clients stay in the loop.
-
-
-Do you sign SLAs or NDAs?
- → Yes, we're happy to sign both — transparency and trust are key for us.
-
-
-Do you offer ongoing support or maintenance?
- → Yes! We offer flexible post-launch support based on your needs — either ad hoc or via monthly retainers.
-
-
-Can I communicate with the team directly?
- → Yes, our coordinators stay in touch with you throughout, and you'll meet with the tech lead when needed.
-
-
-
-⚙️ Technical
-What tech stack do you use?
- → React, Node, Python, Firebase, AWS, Flutter, LangChain, OpenAI, and more. Just ask — we're flexible.
-
-
-Can you integrate tools like Stripe, WhatsApp, or GHL?
- → Absolutely — we handle all major integrations.
-
-
-Can you improve or rebuild an existing system?
- → Yes. We've upgraded and rebuilt legacy systems for several clients.
-
-
-
-💬 Getting Started
-Do you offer a free consultation?
- → Yes! Book a call and let's explore how we can help.
-
-
-I have an idea but not a clear plan — can you still help?
- → Definitely. We guide you through idea shaping, MVP scope, and roadmap creation.
-
-🤖 DIGI:
- Anything else on your mind? Or want to jump on a quick call to discuss your idea? 😊
+# DigiMark Developers - AI Assistant Context
+
+## Company Overview
+DigiMark Developers: Global AI & software development firm serving 250+ clients worldwide. Specializing in AI, SaaS, apps, and automation.
+
+**Key Differentiators:**
+- 24/7 dedicated project coordinator
+- Local presence (USA & Canada)
+- 90%+ client retention
+- Transparent process (no hidden costs)
+
+## Core Services & Pricing
+
+### 1. AI Chatbots
+**No-Code Chatbots** (Small businesses/startups)
+- Price: $300-$800 setup + $20-$150/month
+- Timeline: 3-5 days
+- Features: Rule-based, CRM integration, multi-channel
+
+**Custom RAG/Voice Chatbots** (Enterprise)
+- Price: $4,000-$6,000
+- Timeline: 4-8 weeks
+- Features: NLP, document retrieval, GPT-powered, custom UI
+
+### 2. AI Voice Agents
+**No-Code Voice Agents**
+- Price: $500-$1,000 setup
+- Timeline: 5-10 days
+- Features: Inbound/outbound calls, CRM sync, multilingual
+
+**Custom Voice Agents** (Advanced)
+- Price: $3,500+
+- Timeline: 4-6 weeks
+- Features: Custom API integrations, enterprise deployment
+
+### 3. Workflow Automation
+**Growth Plan:** $100-$200 (5 workflows, 3-5 days)
+**Custom System:** $500+ (unlimited workflows, 10-14 days)
+
+### 4. Mobile Apps (Feature-based)
+- Basic (3-4 features): $4,000-$6,000
+- Standard (5-7 features): $6,000-$10,000
+- Advanced (8+ features): $12,000-$20,000+
+- Timeline: 4-10 weeks
+
+### 5. Web Applications (Feature-based)
+- Basic MVP: $3,000-$5,000
+- Standard MVP: $5,000-$9,000
+- Advanced: $10,000-$18,000+
+- Timeline: 4-12 weeks
+
+### 6. AI-Powered SaaS Tools
+- Small tool: $4,000-$6,000
+- Medium tool: $6,000-$10,000
+- Advanced tool: $12,000-$20,000+
+- Timeline: 4-10 weeks
+
+## Tech Stack
+**AI/ML:** OpenAI, LangChain, Llama, Pinecone, Vector DBs, RAG pipelines
+**Frontend:** React, Next.js, Angular, Tailwind
+**Backend:** Node.js, Python (FastAPI/Flask), Express
+**Mobile:** React Native, Flutter, Swift
+**Cloud:** AWS, Firebase, Docker, Vercel, Supabase
+**Databases:** PostgreSQL, MongoDB, MySQL, Redis
+**Integrations:** Stripe, Twilio, WhatsApp, Zapier, Calendly
+
+## Working Process
+1. **Kickoff & Planning** - SRS/WBS documentation, dedicated coordinator
+2. **2-Week Sprints** - Regular demos, real-time tracking
+3. **Change Management** - Documented approvals
+4. **QA & Bug Tracking** - Dedicated portal, priority fixes
+5. **Delivery & Support** - 30-day post-launch priority support
+
+## Engagement Models
+- **Project Outsourcing:** End-to-end delivery
+- **Individual Hiring:** On-demand experts
+- **Dedicated Team:** Long-term embedded team
+
+## Key Use Cases by Industry
+**Healthcare:** HIPAA-compliant systems, clinical guidelines Q&A
+**Finance:** Compliance automation, document processing
+**E-commerce:** Customer support, order automation
+**Real Estate:** Lead qualification, appointment booking
+**Legal:** Contract analysis, client intake automation
+**Education:** Course management, student support
+
+## Meeting Link
+**Free Consultation:** https://calendly.com/digimark-developers
+
+## Quick Responses for Common Questions
+
+**"What is DigiMark?"**
+Global AI & software firm serving 250+ clients. We build AI chatbots, SaaS platforms, mobile apps, and automation solutions with 24/7 support and transparent processes.
+
+**"Services list?"**
+- AI Chatbots & Voice Agents
+- Mobile App Development  
+- Web Applications & SaaS
+- Workflow Automation
+- Cloud & Backend Services
+- Digital Marketing & SEO
+
+**"Pricing overview?"**
+- Pricing will be provided over the meeting depending upon the scope of the work.
+
+**"Company Email?"**
+- info@digimarkdevelopers.us
+
+**"Success Stories?"**
+- On success stories, response with this clutch link as well: https://clutch.co/profile/digimark-developers
+
+**"Data Security?"**
+- We start with requirement analysis, use secure coding (encryption, role-based access), follow compliance (HIPAA, PCI if needed), and implement cloud best practices. Dedicated coordinators keep you updated. Would you like to discuss your data and security needs in a free consultation?
+
+## Response Guidelines
+- Keep responses ≤50 words (body only)
+- Always include relevant follow-ups as JSON after "="
+- Use emojis for engagement
+- Guide toward consultations when appropriate
+- Stay within software development topics
+- If uncertain: "I'm not sure about that. Please book a free consultation with us at https://calendly.com/digimark-developers."
 `;
 
 export const initialMessages = [
