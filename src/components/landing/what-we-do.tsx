@@ -1,10 +1,10 @@
 import { HelpCircle, Plus } from "lucide-react";
 
-import { subBenefits } from "@/lib/constants";
+import { services } from "@/lib/constants";
 
 import MaxWidthWrapper from "../max-width-wrapper";
 
-const SubBenefits = () => {
+const WhatWeDo = () => {
   return (
     <MaxWidthWrapper className="py-20" isBottomBorder={true}>
       <div className="mb-10 flex w-full flex-col items-center justify-center gap-5">
@@ -54,7 +54,7 @@ const SubBenefits = () => {
             <Plus className="size-full text-muted-foreground" />
           </div>
           <div className="col-span-1 aspect-square w-full p-2.5" />
-          {subBenefits.slice(0, 4).map((item) => (
+          {services.slice(0, 4).map((item) => (
             <div key={item.id} className="col-span-1 aspect-square w-full p-2.5">
               <div className="flex aspect-square w-full flex-col items-center justify-center gap-5 rounded-xl border bg-white p-5 shadow">
                 <div className="relative size-16 rounded-lg border border-gray-300 bg-[#F4F4F4] p-5 shadow">
@@ -89,7 +89,7 @@ const SubBenefits = () => {
             <Plus className="size-full text-muted-foreground" />
           </div>
           <div className="col-span-1 aspect-square w-full p-2.5" />
-          {subBenefits.slice(4, 8).map((item) => (
+          {services.slice(4, 8).map((item) => (
             <div key={item.id} className="col-span-1 aspect-square w-full p-2.5">
               <div className="flex aspect-square w-full flex-col items-center justify-center gap-5 rounded-xl border bg-white p-5 shadow">
                 <div className="relative size-16 rounded-lg border border-gray-300 bg-[#F4F4F4] p-5 shadow">
@@ -108,7 +108,7 @@ const SubBenefits = () => {
           <div className="col-span-1 aspect-square w-full p-2.5" />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:hidden">
-          {subBenefits.map((item) => (
+          {services.map((item) => (
             <div key={item.id} className="col-span-1 aspect-square w-full p-2.5">
               <div className="flex aspect-square w-full flex-col items-center justify-center gap-5 rounded-xl border bg-white p-1 shadow lg:p-5">
                 <div className="relative size-16 rounded-lg border border-gray-300 bg-[#F4F4F4] p-5 shadow">
@@ -130,4 +130,4 @@ const SubBenefits = () => {
   );
 };
 
-export default SubBenefits;
+export default WhatWeDo;

@@ -1,9 +1,8 @@
 import { UserCheck } from "lucide-react";
 
 import { testimonials } from "@/lib/constants";
-
+import TestimonialCard from "../cards/testimonial-card";
 import MaxWidthWrapper from "../max-width-wrapper";
-import TestimonialCard from "./testimonial-card";
 
 const WallOfLove = () => {
   return (

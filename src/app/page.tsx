@@ -1,6 +1,8 @@
+import ChatBot from "@/components/bots/chat-bot";
+import VideoBot from "@/components/bots/video-bot";
 import Footer from "@/components/footer";
 import Benefits from "@/components/landing/benefits";
-import ChatBot from "@/components/landing/chat-bot";
+import CaseStudies from "@/components/landing/case-studies";
 import ContactUs from "@/components/landing/contact-us";
 import CTA from "@/components/landing/cta";
 import { FAQS } from "@/components/landing/faqs";
@@ -8,11 +10,10 @@ import Hero from "@/components/landing/hero";
 import HowItWorks from "@/components/landing/how-it-works";
 import Industries from "@/components/landing/industries";
 import KeyBenefit from "@/components/landing/key-benefit";
-import SubBenefits from "@/components/landing/sub-benefits";
 import Team from "@/components/landing/team";
 import Trusted from "@/components/landing/trusted";
-import VideoBot from "@/components/landing/video-bot";
 import WallOfLove from "@/components/landing/wall-of-love";
+import WhatWeDo from "@/components/landing/what-we-do";
 import WhoWeAre from "@/components/landing/who-we-are";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -23,10 +24,10 @@ const Page = () => {
       <Trusted />
       <WhoWeAre />
       <Benefits />
-      <SubBenefits />
+      <WhatWeDo />
       <HowItWorks />
       <Industries />
-      {/* Case Studies */}
+      <CaseStudies />
       <WallOfLove />
       <Team />
       <KeyBenefit />

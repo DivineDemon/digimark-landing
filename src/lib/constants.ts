@@ -180,7 +180,7 @@ export const benefits = [
   },
 ];
 
-export const subBenefits = [
+export const services = [
   {
     id: 1,
     name: "AI POC & MVP ",

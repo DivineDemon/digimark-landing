@@ -1,9 +1,8 @@
 import { Flame } from "lucide-react";
 
 import { howItWorks } from "@/lib/constants";
-
+import HowItWorksCard from "../cards/how-it-works-card";
 import MaxWidthWrapper from "../max-width-wrapper";
-import HowItWorksCard from "./how-it-works-card";
 
 const HowItWorks = () => {
   return (

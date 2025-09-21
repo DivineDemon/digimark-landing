@@ -28,6 +28,10 @@ const config = {
         hostname: "images.pexels.com",
         protocol: "https",
       },
+      {
+        hostname: "framerusercontent.com",
+        protocol: "https",
+      },
     ],
   },
 };
