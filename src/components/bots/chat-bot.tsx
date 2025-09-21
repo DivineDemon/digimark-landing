@@ -1,7 +1,7 @@
 "use client";
 
 import MDEditor from "@uiw/react-md-editor";
-import { ArrowUp, BotMessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUp, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
@@ -383,11 +383,13 @@ const ChatBot = () => {
         )}
       </div>
       <div
-        className="fixed right-5 bottom-5 z-[51] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-3 md:right-10 md:bottom-10"
+        className="fixed right-5 bottom-5 z-[51] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-2.5 md:right-10 md:bottom-10"
         onClick={handleToggle}
         aria-expanded={isOpen}
       >
-        <BotMessageSquare
+        <Image
+          src={DMLogo}
+          alt="dm-logo"
           className={cn("size-full text-white transition-all duration-500 ease-in-out", {
             "rotate-[360deg]": isOpen,
           })}
