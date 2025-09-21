@@ -6,15 +6,16 @@ import { Button } from "./ui/button";
 
 interface CustomButtonProps {
   children: ReactNode;
+  type?: "button" | "submit" | "reset" | undefined;
   variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined;
   size?: "default" | "sm" | "lg" | "icon" | null | undefined;
   className?: string;
 }
 
-const CustomButton = ({ size, variant, children, className }: CustomButtonProps) => {
+const CustomButton = ({ size, type, variant, children, className }: CustomButtonProps) => {
   return (
     <Button
-      type="button"
+      type={type || "button"}
       size={size}
       variant={variant}
       className={cn(

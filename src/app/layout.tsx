@@ -1,5 +1,5 @@
 import { type Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import "@/assets/css/globals.css";
 import Navbar from "@/components/navbar";
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.webp" }],
 };
 
-const raleway = Roboto({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={cn("bg-[#F4F4F4] antialiased", raleway.className)}>
+    <html lang="en" className={cn("bg-[#F4F4F4] antialiased", poppins.className)}>
       <body>
         <TRPCReactProvider>
           <Navbar />

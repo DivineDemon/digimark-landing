@@ -25,7 +25,6 @@ export async function ragAction(query: string, chatHistory: ChatCompletionMessag
     messages,
   });
 
-  // Only return plain objects
   return {
     choices: response.choices,
     usage: response.usage,
