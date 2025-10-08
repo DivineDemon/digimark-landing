@@ -358,7 +358,6 @@ const ChatBot = () => {
                   "Our Services",
                   "How We Work",
                   "Why Partner With Us",
-                  "Pricing",
                   "Case Studies",
                   "Get a Free Consultation",
                   "FAQs",
