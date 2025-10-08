@@ -17,31 +17,43 @@ const Hero = () => {
             Boost Your Business with ROI Driven Solutions
           </span>
           <span className="w-full text-left text-muted-foreground">
-            Empowering SMEs with tailored SaaS development, AI integrations, and end-to-end automation to drive growth
-            and efficiency.
+            Empowering SMEs with tailored SaaS development, AI integrations, and
+            end-to-end automation to drive growth and efficiency.
           </span>
-          <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mt-5 mb-2.5 w-full">
-            <Image src={CalendlyIcon} alt="calendly-icon" width={16} height={16} className="size-8" />
+          <CustomLink
+            href="https://calendly.com/digimark-developers"
+            size="lg"
+            className="mt-5 mb-2.5 w-full"
+          >
+            <Image
+              src={CalendlyIcon}
+              alt="calendly-icon"
+              width={16}
+              height={16}
+              className="size-8"
+            />
             <span>Get Started</span>
           </CustomLink>
         </div>
         <div className="col-span-1 flex w-full flex-col items-center justify-center gap-10">
-          <div className="aspect-square h-[400px] border-y border-l p-1 sm:w-[90%] sm:rounded-l-2xl md:ml-auto">
-            <div className="h-full w-full rounded-l-2xl border-y border-l">
+          <div className="w-full sm:w-[90%] md:ml-auto aspect-square sm:aspect-auto h-[300px] sm:h-[400px] border-y border-l p-1 sm:rounded-l-2xl">
+            <div className="h-full w-full border-y border-l rounded-lg sm:rounded-l-2xl overflow-hidden">
               <Image
                 src={TestHome}
                 alt="test-hero"
-                className="h-full w-full object-cover object-right sm:rounded-l-2xl"
+                className="h-full w-full object-cover object-center sm:object-right"
               />
             </div>
           </div>
-          <div className="ml-auto flex w-3/4 items-center justify-end">
+
+          <div className="mx-auto mt-5 flex w-full items-center justify-center sm:ml-auto sm:w-3/4 sm:justify-end">
             <ClutchBadge
               data={{
                 rating: 4.9,
                 reviewsCount: 11,
                 links: {
-                  reviewsCount: "https://www.clutch.co/profile/digimark-developers",
+                  reviewsCount:
+                    "https://www.clutch.co/profile/digimark-developers",
                   logo: "https://clutch.co/logos/digimark-developers.svg",
                   stars: "https://clutch.co/stars/4.9.svg",
                 },
