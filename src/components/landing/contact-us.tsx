@@ -16,14 +16,17 @@ const ContactUs = () => {
 
   return (
     <MaxWidthWrapper className="h-fit" isTopAccent>
-      <div className="grid h-full w-full grid-cols-2 divide-x rounded-3xl border bg-white shadow">
-        <div className="relative col-span-1 w-full rounded-l-3xl bg-gradient-to-b bg-neutral-900 from-[#2c2c30] to-[#1d1d20]">
+      <div className="grid h-full w-full grid-cols-1 lg:grid-cols-2 divide-x rounded-3xl border bg-white shadow">
+        {/* LEFT SECTION (Hidden on mobile) */}
+        <div className="relative hidden w-full rounded-l-3xl bg-gradient-to-b from-[#2c2c30] to-[#1d1d20] lg:col-span-1 lg:flex">
           <div className="absolute inset-0 z-[1] flex flex-col items-center justify-between gap-20 rounded-l-3xl p-10">
             <div className="flex w-full flex-col items-center justify-center gap-2 text-white">
-              <span className="w-full text-left font-bold text-[30px] leading-[30px]">Get in Touch with Us.</span>
+              <span className="w-full text-left font-bold text-[30px] leading-[30px]">
+                Get in Touch with Us.
+              </span>
               <span className="w-full text-left text-[14px] leading-[20px]">
-                Let&apos;s build something great together. Fill out the form on the right, and we&apos;ll get back to
-                you ASAP.
+                Let&apos;s build something great together. Fill out the form on
+                the right, and we&apos;ll get back to you ASAP.
               </span>
             </div>
             <div className="flex w-full flex-col items-center justify-center gap-2.5 rounded-lg border border-white/25 bg-white/10 p-5 text-white shadow backdrop-blur-sm">
@@ -37,14 +40,18 @@ const ContactUs = () => {
                 <div className="flex size-8 items-center justify-center rounded-full border p-2">
                   <Mail className="size-4" />
                 </div>
-                <span className="flex-1 text-left">info@digimarkdevelopers.us</span>
+                <span className="flex-1 text-left">
+                  info@digimarkdevelopers.us
+                </span>
               </div>
             </div>
           </div>
           <div className="-top-32 -right-32 absolute z-0 size-64 rounded-full bg-white/20 blur-[50px]" />
           <div className="-bottom-24 -left-24 absolute z-0 size-80 rounded-full bg-white/20 blur-[50px]" />
         </div>
-        <form className="col-span-1 flex w-full flex-col items-center justify-center gap-7.5 p-10">
+
+        {/* RIGHT SECTION (Form - Always Visible) */}
+        <form className="col-span-1 flex w-full flex-col items-center justify-center gap-7.5 p-6 sm:p-10">
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <Label htmlFor="fullName" className="w-full text-left">
               Full Name
