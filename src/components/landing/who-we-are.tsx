@@ -20,7 +20,7 @@ const WhoWeAre = () => {
           to building innovative digital solutions that empower businesses to thrive in the digital age.
         </span>
       </div>
-      <div className="mx-auto my-10 flex w-3/4 flex-col items-center justify-center gap-4 rounded-lg border bg-white p-8 shadow">
+      <div className="mx-auto my-10 flex w-full flex-col items-center justify-center gap-4 rounded-lg border bg-white p-6 shadow sm:w-3/4 sm:p-8">
         <div className="flex w-full items-start justify-start gap-2">
           <Info className="mt-1 size-4 shrink-0" />
           <p>
