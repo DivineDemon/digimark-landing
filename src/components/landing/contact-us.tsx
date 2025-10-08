@@ -7,12 +7,48 @@ import MaxWidthWrapper from "../max-width-wrapper";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
+import { sendEmail } from "public/utils/helpers";
 
 const ContactUs = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!name.trim()) newErrors.name = "Name is required";
+
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    if (!phone.trim()) {
+      newErrors.phone = "Contact Number is required";
+    } else if (!/^\d+$/.test(phone)) {
+      newErrors.phone = "Contact Number must be numeric";
+    }
+
+    if (!message.trim()) newErrors.message = "Message is required";
+
+    return newErrors;
+  };
+
+  const handleSubmit = () => {
+  const formErrors = validateForm();
+
+  if (Object.keys(formErrors).length === 0) {
+    sendEmail(name, email, phone, message, setLoading);
+  } else {
+    setErrors(formErrors);
+  }
+};
+
 
   return (
     <MaxWidthWrapper className="h-fit" isTopAccent>
@@ -51,7 +87,13 @@ const ContactUs = () => {
         </div>
 
         {/* RIGHT SECTION (Form - Always Visible) */}
-        <form className="col-span-1 flex w-full flex-col items-center justify-center gap-7.5 p-6 sm:p-10">
+        <form 
+          onSubmit={(e)=>{
+              e.preventDefault();
+              handleSubmit();
+          }}
+          className="col-span-1 flex w-full flex-col items-center justify-center gap-7.5 p-6 sm:p-10"
+        >
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <Label htmlFor="fullName" className="w-full text-left">
               Full Name
@@ -61,8 +103,9 @@ const ContactUs = () => {
               placeholder="Enter your Full Name"
               className="w-full placeholder:text-[#8E8E8E]"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {setName(e.target.value);if (errors.name) setErrors({ ...errors, name: "" });}}
             />
+            {errors.name && <p className="error">{errors.name}</p>}
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <Label htmlFor="email" className="w-full text-left">
@@ -73,7 +116,7 @@ const ContactUs = () => {
               placeholder="Enter your Email"
               className="w-full placeholder:text-[#8E8E8E]"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {setEmail(e.target.value); if(errors.email) setErrors({...errors,email:""})}}
             />
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-2">
@@ -84,7 +127,7 @@ const ContactUs = () => {
               type="text"
               placeholder="Enter your Phone Number"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => {setPhone(e.target.value); if(errors.phone) setErrors({...errors,phone:""})}}
               className="w-full placeholder:text-[#8E8E8E]"
             />
           </div>
@@ -95,11 +138,11 @@ const ContactUs = () => {
             <Textarea
               placeholder="Enter your Inquiry"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) => {setMessage(e.target.value); if(errors.message) setErrors({...errors,message:""})}}
               className="h-56 w-full resize-none p-5 placeholder:text-[#8E8E8E]"
             />
           </div>
-          <CustomButton type="submit" size="lg" className="w-full">
+          <CustomButton type="submit" size="lg" className="w-full cursor-pointer">
             <Send />
             Send Inquiry
           </CustomButton>
