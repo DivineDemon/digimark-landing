@@ -81,19 +81,30 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
               className="col-span-2 h-full w-full object-cover"
             />
             <Image
-              src={caseItem.image}
+              src={caseItem.image2}
               alt={`${caseItem.title} secondary image`}
               width={1000}
               height={1000}
               className="col-span-1 h-full w-full object-cover"
             />
             <Image
-              src={caseItem.image}
+              src={caseItem.image3}
               alt={`${caseItem.title} secondary image`}
               width={1000}
               height={1000}
               className="col-span-1 h-full w-full object-cover"
             />
+          </div>
+          {/* Text Sections */}
+          <div className="flex flex-col w-full gap-10 p-8">
+            {caseItem.sections.map((section, idx) => (
+              <div key={idx} className="flex flex-col gap-4">
+                <h2 className="text-2xl font-semibold">{section.title}</h2>
+                <p className="text-muted-foreground whitespace-pre-line leading-relaxed text-sm">
+                  {section.content.trim()}
+                </p>
+              </div>
+            ))}
           </div>
 
           {/* FOOTER */}

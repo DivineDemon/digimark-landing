@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import CaseCard from "../cards/case-card";
 import MaxWidthWrapper from "../max-width-wrapper";
 
+
 const CaseStudies = () => {
   const [current, setCurrent] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);

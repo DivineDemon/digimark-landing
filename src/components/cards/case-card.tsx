@@ -1,5 +1,6 @@
 "use client";
 
+import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { useState } from "react";
 import CaseSheet from "./case-sheet";
@@ -8,11 +9,11 @@ interface CaseCardProps {
   id: number;
   title: string;
   description: string;
-  image: string;
-  logo: string;
+  mainImg: StaticImageData;
+  logo: StaticImageData;
 }
 
-const CaseCard: React.FC<CaseCardProps> = ({ id, title, description, image, logo }) => {
+const CaseCard: React.FC<CaseCardProps> = ({ id, title, description, mainImg, logo }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -22,7 +23,7 @@ const CaseCard: React.FC<CaseCardProps> = ({ id, title, description, image, logo
         onClick={() => setOpen(true)}
       >
         <Image
-          src={image}
+          src={mainImg}
           alt={title}
           width={1000}
           height={1000}
@@ -35,7 +36,7 @@ const CaseCard: React.FC<CaseCardProps> = ({ id, title, description, image, logo
               alt={`${title} logo`}
               width={500}
               height={500}
-              className="aspect-square size-10 rounded-md object-cover"
+              className={`aspect-square size-10 rounded-md object-contain ${title === "Setter AI" ? "invert" : ""}`}
             />
             <div className="flex w-full flex-col items-center justify-center gap-2 text-white hidden sm:block">
               <span className="w-full text-left font-semibold text-[14px] leading-[14px]">

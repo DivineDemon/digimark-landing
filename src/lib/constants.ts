@@ -25,10 +25,18 @@ import PaypalIcon from "@/assets/icons/paypal.svg";
 import SalesforceIcon from "@/assets/icons/salesforce.svg";
 import SupabaseIcon from "@/assets/icons/supabase.svg";
 import Annabela from "@/assets/img/annabel.png";
+import bookkeepaImgOne from "@/assets/img/bokkeepa/bookkeepa-img-1.png";
+import bookkeepaImgTwo from "@/assets/img/bokkeepa/bookkeepa-img-2.png";
+import bookkeepaImgThree from "@/assets/img/bokkeepa/bookkeepa-img-3.png";
+import bookkeepaMain from "@/assets/img/bokkeepa/bookkeepa-main.png";
 import Calum from "@/assets/img/claum.png";
 import Denim from "@/assets/img/damien.png";
 import Employee from "@/assets/img/dd.png";
 import Jermy from "@/assets/img/jermy.png";
+import setterAIImgOne from "@/assets/img/setterAI/setterai-img-1.png";
+import setterAIImgTwo from "@/assets/img/setterAI/setterai-img-2.png";
+import setterAIImgThree from "@/assets/img/setterAI/setterai-img-3.png";
+import setteraiMain from "@/assets/img/setterAI/setterai-main.png";
 import Shagor from "@/assets/img/shagor.png";
 import Test1 from "@/assets/img/test/test1.png";
 import Test2 from "@/assets/img/test/test2.png";
@@ -46,6 +54,9 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
+import bookeepa from "@/assets/logo/bookeepa-logo.png";
+import setterAiLogo from "@/assets/logo/setterai-logo.png";
+
 
 export const trusted = [
   {
@@ -696,37 +707,65 @@ export const teamMembers = [
   },
 ];
 
-// casesData.ts
 export const casesData = [
   {
     id: 1,
     title: "Setter AI",
     description: "Never Miss a Lead Again.",
-    image: "https://framerusercontent.com/images/EGCY2shnjWtz3nE6PtBundg6vkM.jpg",
-    logo: "https://framerusercontent.com/images/X49sY7TciBHxTW2UK1BaMcxis.jpg",
-    header: "Never Miss a Lead Again. Book More Sales Calls. Follow up leads in 10 seconds - with 15-52% lead-to-booking rate.",
-    header_desc: "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate."
+    image: setterAIImgOne,
+    image2: setterAIImgTwo,
+    image3: setterAIImgThree,
+    mainImg: setteraiMain,
+    logo: setterAiLogo,
+    header:
+      "Never Miss a Lead Again. Book More Sales Calls. Follow up leads in 10 seconds — with up to 52% lead-to-booking rate.",
+    header_desc:
+      "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate.",
+
+    // Case study content sections
+    sections: [
+      {
+        title: "Overview",
+        content: `TrySetter is a SaaS startup offering AI-automated appointment booking solutions. Their platform automates lead engagement over WhatsApp, SMS, and web widgets, helping businesses instantly qualify leads and schedule sales calls without human agents. The platform needed to manage high-volume lead traffic efficiently and reliably, especially for clients generating 30,000+ leads per month. Clients using the platform have reported up to 52% lead-to-booking conversion rates, 30% fewer no-shows through automated reminders, and a 3x increase in sales meetings booked per week.`,
+      },
+      {
+        title: "Challenges & Expectations",
+        content: `The traditional sales engagement process was slowing things down. Relying on SDRs to manually respond, qualify, and schedule meetings meant long delays and lost leads. For high-traffic companies, this delay caused missed opportunities and higher costs. Setter AI needed to create a fast, flexible, all-in-one solution usable by any business, regardless of size or technical ability.`,
+      },
+      {
+        title: "The Solution",
+        content: `We built Setter AI — an intelligent, autonomous lead engagement platform automating the entire outreach process. It instantly responds to inbound leads across WhatsApp, Instagram, Facebook, LinkedIn, SMS, and web chat. Integrated with Calendly, it auto-schedules meetings based on availability, automates reminders, and smartly routes complex queries to humans when needed.`,
+      },
+      {
+        title: "Final Conclusion & Results",
+        content: `Setter AI became the always-on sales assistant businesses didn’t know they needed — responsive, reliable, and conversion-focused. One client saw a 38% increase in monthly pipeline value in just 60 days. Another improved client acquisition by 25% using WhatsApp automation. Setter AI now powers faster responses, higher conversions, and scalable growth.`,
+      },
+    ],
   },
   {
     id: 2,
     title: "Bookkeepa",
     description: "Take Control of Your Finances. Save Time. Stay Stress Free.",
-    image: "https://framerusercontent.com/images/EGCY2shnjWtz3nE6PtBundg6vkM.jpg",
-    logo: "https://framerusercontent.com/images/X49sY7TciBHxTW2UK1BaMcxis.jpg",
+    image: bookkeepaImgOne,
+    image2: bookkeepaImgTwo,
+    image3: bookkeepaImgThree,
+    mainImg: bookkeepaMain,
+    logo: bookeepa,
     header: "",
-    header_desc: "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate.",
+    header_desc: "",
+    sections: [], // Empty, handled gracefully
   },
   {
     id: 3,
     title: "Google",
     description: "Building AI-driven tools for accessibility",
-    image: "https://framerusercontent.com/images/EGCY2shnjWtz3nE6PtBundg6vkM.jpg",
-    logo: "https://framerusercontent.com/images/X49sY7TciBHxTW2UK1BaMcxis.jpg",
+    image: setterAIImgOne,
+    image2: bookkeepaImgTwo,
+    image3: bookkeepaImgThree,
+    mainImg: bookkeepaMain,
+    logo: setterAiLogo,
     header: "",
-    header_desc: "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate.",
+    header_desc: "",
+    sections: [], // Empty, handled gracefully
   },
 ];
-
-
-
-
