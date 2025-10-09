@@ -1,12 +1,12 @@
 "use client";
 
+import { ragAction } from "@/app/(server-actions)/rag-action";
+import { cn } from "@/lib/utils";
 import MDEditor from "@uiw/react-md-editor";
 import { ArrowUp, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
-import { ragAction } from "@/app/(server-actions)/rag-action";
-import { cn } from "@/lib/utils";
 import DMLogo from "../../assets/img/logo-sec.svg";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -82,9 +82,9 @@ const ChatBot = () => {
         const newMsgs = prev.map((msg, idx) =>
           idx === prev.length - 1
             ? ({
-                role: "assistant",
-                content: aiReply,
-              } as ChatCompletionMessageParam)
+              role: "assistant",
+              content: aiReply,
+            } as ChatCompletionMessageParam)
             : msg,
         );
         setAnimatedMessages((anim) => [...anim, newMsgs.length - 1]);
@@ -96,9 +96,9 @@ const ChatBot = () => {
         const newMsgs = prev.map((msg, idx) =>
           idx === prev.length - 1
             ? ({
-                role: "assistant",
-                content: "Sorry, something went wrong.",
-              } as ChatCompletionMessageParam)
+              role: "assistant",
+              content: "Sorry, something went wrong.",
+            } as ChatCompletionMessageParam)
             : msg,
         );
         setAnimatedMessages((anim) => [...anim, newMsgs.length - 1]);
@@ -146,6 +146,7 @@ const ChatBot = () => {
                   e.stopPropagation();
                   setShowChat(false);
                 }}
+                className="cursor-pointer"
               >
                 <ChevronLeft className="size-5" />
               </Button>
@@ -249,7 +250,7 @@ const ChatBot = () => {
                                         sendToAI(step);
                                       }}
                                       key={i}
-                                      className="rounded-md border border-[#6BB64A] p-2 font-semibold text-[#6BB64A] text-[14px] text-sm leading-[14px] shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white"
+                                      className="rounded-md border border-[#6BB64A] p-2 font-semibold text-[#6BB64A] text-[14px] text-sm leading-[14px] shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white cursor-pointer"
                                     >
                                       {step}
                                     </span>
@@ -343,7 +344,7 @@ const ChatBot = () => {
                 }}
                 className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-[#1D4354] p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
               >
-                <div className="flex w-full flex-col items-center justify-center gap-2">
+                <div className="flex w-full flex-col items-center justify-center gap-2 cursor-pointer">
                   <span className="w-full text-left font-bold text-[14px] leading-[14px]">Ask a question</span>
                   <span className="w-full text-left text-[14px] leading-[14px]">DigiBot and team can help</span>
                 </div>
@@ -371,7 +372,7 @@ const ChatBot = () => {
                       setShowChat(true);
                       await sendToAI(item);
                     }}
-                    className="rounded-md bg-[#6BB64A] px-4 py-2 font-semibold text-[14px] text-white leading-[14px] shadow-md transition-transform duration-200 ease-in-out hover:scale-105"
+                    className="rounded-md bg-[#6BB64A] px-4 py-2 font-semibold text-[14px] text-white leading-[14px] shadow-md transition-transform duration-200 ease-in-out hover:scale-105 cursor-pointer"
                   >
                     {item}
                   </span>
