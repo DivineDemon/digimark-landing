@@ -27,7 +27,7 @@ const Team = () => {
               <Image
                 src={member.image}
                 alt={`${member.name} photo`}
-                className=" size-full object-cover"
+                className="size-full object-cover object-[50%_5%]"
               />
             </div>
             <span className="mt-2.5 w-full text-center font-semibold text-[20px] sm:text-[24px]">
