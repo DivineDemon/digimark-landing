@@ -722,7 +722,6 @@ export const casesData = [
     header_desc:
       "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate.",
 
-    // Case study content sections
     sections: [
       {
         title: "Overview",
@@ -742,6 +741,7 @@ export const casesData = [
       },
     ],
   },
+
   {
     id: 2,
     title: "Bookkeepa",
@@ -751,14 +751,35 @@ export const casesData = [
     image3: bookkeepaImgThree,
     mainImg: bookkeepaMain,
     logo: bookeepa,
-    header: "",
-    header_desc: "",
-    sections: [], // Empty, handled gracefully
+    header:
+      "Take Control of Your Finances. Save Time. Stay Stress Free.",
+    header_desc:
+      "Bookkeepa simplifies financial management for business owners by automating bookkeeping, receipt scanning, and expense tracking — all from your phone.",
+
+    sections: [
+      {
+        title: "Overview",
+        content: `Bookkeepa is a mobile-first bookkeeping application designed to simplify financial management for business owners who lack the time or accounting expertise to keep their books up to date. The platform automates income and expense tracking, receipt scanning, and report generation, allowing users to manage their finances in real time from any device. Its goal is to eliminate the stress of spreadsheets and manual data entry by providing a tool as intuitive as a messaging app yet powerful enough to support businesses handling hundreds of transactions each month. Users have reported saving up to 65% of the time they previously spent on bookkeeping, increasing transaction updates by 78%, and achieving faster financial readiness for loans and tax submissions.`,
+      },
+      {
+        title: "Challenges & Expectations",
+        content: `Before adopting Bookkeepa, many small business owners struggled with inconsistent record-keeping and time-consuming manual bookkeeping processes. Receipts were often misplaced, expenses went untracked, and most users only updated their books once a month, leading to poor cash flow visibility and missed tax deductions. Traditional accounting tools were too complex, expensive, or inflexible for their needs. The challenge was to design a solution that was simple enough for non-accountants, fast enough to record transactions in seconds, accessible on the go, and accurate enough to eliminate manual errors. The expectation was clear — to create a financial companion that made bookkeeping effortless, reliable, and even enjoyable.`,
+      },
+      {
+        title: "The Solution",
+        content: `To meet these needs, we built Bookkeepa as an intelligent, cross-platform mobile application that takes care of the most time-consuming parts of the job, so you can focus on what really matters. We integrated AI-automated OCR to instantly capture and categorize receipts and invoices, reducing manual entry to a few taps. Real-time dashboards display cash flow trends, profit and loss statements, and monthly spending patterns at a glance. The platform supports multiple businesses under one account, offers custom year-start settings, and provides offline functionality for uninterrupted access. Hosted on AWS for performance and reliability, Bookkeepa ensures secure storage and retrieval of financial data. The UI focuses on minimalism, speed, and usability, enabling even first-time users to manage their books with confidence.`,
+      },
+      {
+        title: "Final Conclusion & Results",
+        content: `Bookkeepa has turned bookkeeping from a boring chore into a quick and stress-free task. Acting as a “pocket accountant,” the app works 24/7 to keep finances organized and accessible. One retail business reduced its weekly bookkeeping time from five hours to just 45 minutes, freeing up valuable time to focus on growth. A freelance consultant saw a 30% improvement in on-time tax submissions. An online fashion store automated 90% of its invoice processing, saved $3,200 per quarter in penalties, and improved net profit by 14% within three months. Since launch, Bookkeepa has helped hundreds of small businesses streamline workflows, improve transaction accuracy, and gain lender-ready financial reports instantly. Bookkeepa isn’t just a bookkeeping tool — it’s your financial partner for growth.`,
+      },
+    ],
   },
+
   {
     id: 3,
     title: "Google",
-    description: "Building AI-driven tools for accessibility",
+    description: "Building AI-driven tools for accessibility.",
     image: setterAIImgOne,
     image2: bookkeepaImgTwo,
     image3: bookkeepaImgThree,
@@ -766,6 +787,6 @@ export const casesData = [
     logo: setterAiLogo,
     header: "",
     header_desc: "",
-    sections: [], // Empty, handled gracefully
+    sections: [],
   },
 ];

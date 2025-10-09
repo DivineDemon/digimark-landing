@@ -36,7 +36,7 @@ const CaseCard: React.FC<CaseCardProps> = ({ id, title, description, mainImg, lo
               alt={`${title} logo`}
               width={500}
               height={500}
-              className={`aspect-square size-10 rounded-md object-contain ${title === "Setter AI" ? "invert" : ""}`}
+              className={`aspect-square size-10 rounded-md object-contain`}
             />
             <div className="flex w-full flex-col items-center justify-center gap-2 text-white hidden sm:block">
               <span className="w-full text-left font-semibold text-[14px] leading-[14px]">

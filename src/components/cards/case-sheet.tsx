@@ -34,7 +34,7 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
             alt={`${caseItem.title} logo`}
             width={500}
             height={500}
-            className="aspect-square size-10 shrink-0 rounded-md object-cover"
+            className={`aspect-square size-10 shrink-0 rounded-md object-cover ${caseItem.title === "Setter AI" ? "invert" : ""}`}
           />
           <div className="flex flex-1 flex-col items-center justify-center">
             <SheetTitle className="w-full text-left">{caseItem.title}</SheetTitle>
