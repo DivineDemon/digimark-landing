@@ -696,3 +696,37 @@ export const teamMembers = [
   },
 ];
 
+// casesData.ts
+export const casesData = [
+  {
+    id: 1,
+    title: "Setter AI",
+    description: "Never Miss a Lead Again.",
+    image: "https://framerusercontent.com/images/EGCY2shnjWtz3nE6PtBundg6vkM.jpg",
+    logo: "https://framerusercontent.com/images/X49sY7TciBHxTW2UK1BaMcxis.jpg",
+    header: "Never Miss a Lead Again. Book More Sales Calls. Follow up leads in 10 seconds - with 15-52% lead-to-booking rate.",
+    header_desc: "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate."
+  },
+  {
+    id: 2,
+    title: "Bookkeepa",
+    description: "Take Control of Your Finances. Save Time. Stay Stress Free.",
+    image: "https://framerusercontent.com/images/EGCY2shnjWtz3nE6PtBundg6vkM.jpg",
+    logo: "https://framerusercontent.com/images/X49sY7TciBHxTW2UK1BaMcxis.jpg",
+    header: "",
+    header_desc: "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate.",
+  },
+  {
+    id: 3,
+    title: "Google",
+    description: "Building AI-driven tools for accessibility",
+    image: "https://framerusercontent.com/images/EGCY2shnjWtz3nE6PtBundg6vkM.jpg",
+    logo: "https://framerusercontent.com/images/X49sY7TciBHxTW2UK1BaMcxis.jpg",
+    header: "",
+    header_desc: "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate.",
+  },
+];
+
+
+
+
