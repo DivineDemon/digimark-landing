@@ -31,13 +31,15 @@ import bookkeepaImgThree from "@/assets/img/bokkeepa/bookkeepa-img-3.png";
 import bookkeepaMain from "@/assets/img/bokkeepa/bookkeepa-main.png";
 import Calum from "@/assets/img/claum.png";
 import Denim from "@/assets/img/damien.png";
-import Employee from "@/assets/img/dd.png";
 import Jermy from "@/assets/img/jermy.png";
 import setterAIImgOne from "@/assets/img/setterAI/setterai-img-1.png";
 import setterAIImgTwo from "@/assets/img/setterAI/setterai-img-2.png";
 import setterAIImgThree from "@/assets/img/setterAI/setterai-img-3.png";
 import setteraiMain from "@/assets/img/setterAI/setterai-main.png";
 import Shagor from "@/assets/img/shagor.png";
+import memberOne from "@/assets/img/team/member-1.jpeg";
+import memberTwo from "@/assets/img/team/member-2.jpeg";
+import memberThree from "@/assets/img/team/member-3.jpeg";
 import Test1 from "@/assets/img/test/test1.png";
 import Test2 from "@/assets/img/test/test2.png";
 import Test3 from "@/assets/img/test/test3.png";
@@ -683,28 +685,18 @@ export const teamMembers = [
   {
     name: "Jane Doe",
     designation: "Executive Sales Manager",
-    image: Employee,
+    image: memberOne,
   },
   {
-    name: "John Smith",
+    name: "Sofia",
     designation: "Senior Developer",
-    image: Employee,
+    image: memberTwo,
   },
   {
     name: "Emily Johnson",
     designation: "Product Designer",
-    image: Employee,
-  },
-  {
-    name: "Michael Brown",
-    designation: "Marketing Head",
-    image: Employee,
-  },
-  {
-    name: "Sarah Davis",
-    designation: "Project Manager",
-    image: Employee,
-  },
+    image: memberThree,
+  }
 ];
 
 export const casesData = [
