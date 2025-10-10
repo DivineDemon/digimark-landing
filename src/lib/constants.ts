@@ -700,6 +700,11 @@ export const teamMembers = [
     name: "Emily Johnson",
     designation: "Product Designer",
     image: memberThree,
+  },
+  {
+    name: "Emily Johnson",
+    designation: "Product Designer",
+    image: memberThree,
   }
 ];
 
@@ -882,4 +887,41 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     ],
     tagList: ["Music", "Mobile App", "EdTech", "Coaching"]
   },
+  {
+    id: 4,
+    title: "Petluvs App",
+    description: "Allows enthusiasts to connect with other pet lovers.",
+    image: vocalCoachImgOne,
+    image2: vocalCoachImgTwo,
+    image3: vocalCoachImgThree,
+    mainImg: vocalCoachMain,
+    logo: bookeepa,
+    header: "Allows enthusiasts to connect with other pet lovers.",
+    header_desc: "Allows enthusiasts to connect with other pet lovers..",
+    sections: [
+      {
+        title: "Overview",
+        content: `There is no doubt that Pets bring happiness into our lives and eventually become our family. Having a pet requires lots of effort, like ensuring pets' health and safety with complete attention and love. This is how PetLuv comes in. PetLuv is an advanced mobile application specially made to serve pet owners worldwide and offers pet rescue as well.
+This application has multiple features and helps pet owners to connect and share experiences.  Moreover, this also provides the facility for pet adoption and makes you engage with reliable pet sitters and caregivers for mental relaxation. PetLuv tends to encourage connections and increase the well-being of pets and owners.`,
+        listTitle: "",
+        list: []
+      },
+      {
+        title: "Challenges & Expectations",
+        content: "",
+        listTitle: "",
+        list: [
+          "There was no platform for the people who wished to access pets but were unable to find a trusted source. Finding reliable sources is such a hassle and often people find it hard too. However, our client wanted to make an application through which people can get things done easily.",
+          "Busy schedules make it hard to keep our pets clean and happy.  They also need space to play with other pets, but that can be tough to find.",
+          "Recognizing the stress of finding reliable pet care and timely veterinary attention, our client expects an application that empowers pet owners to locate trusted pet sitters and connect with nearby veterinarians for immediate care, all in one convenient platform.",
+          "Our client expected an application that aims to offer an easy solution for pet owners to get numerous services for their pets like finding good breeders, groomers, pet sitters, and veterinarians.",
+          "The client expected an application that is also user-friendly and easily accessible so that people with diverse backgrounds can comprehend the interface and all.",
+          "Imagine a place for pet lovers to hang out, share stories and swap tips on how to keep them happy and healthy. It's all about creating a transparent and awesome community for pet people!"
+        ]
+      }
+    ],
+    tagList: ["React Native", "Social", "Market Place"]
+  },
+
+
 ];

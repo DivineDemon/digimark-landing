@@ -53,17 +53,17 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
         {/* BODY */}
         <div className="flex h-full w-full flex-col items-start justify-start overflow-y-auto">
           <div className="flex w-full flex-col items-center justify-center gap-5 p-10">
-            <span className="w-full text-left font-light text-[48px] leading-[60px]">
+            <span className="w-full text-left font-light text-3xl md:text-4xl">
               {caseItem.header}
             </span>
             <span className="mr-auto w-full max-w-prose text-pretty text-left text-muted-foreground text-sm">
               {caseItem.header_desc}
             </span>
-            <div className="flex w-full items-start justify-start gap-2">
+            <div className="flex flex-wrap w-full items-start justify-start gap-2">
               {caseItem.tagList.map((item, idx) => (
                 <span
                   key={idx}
-                  className="rounded-full bg-gray-200 px-4 py-2 text-[12px] text-gray-600 leading-[12px]"
+                  className="rounded-full w-fit shrink-0 bg-gray-200 px-4 py-2 text-[12px] text-gray-600 leading-[12px]"
                 >
                   {item}
                 </span>

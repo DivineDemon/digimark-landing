@@ -20,14 +20,14 @@ const Team = () => {
           dedicated to delivering exceptional digital solutions that drive results for our clients.
         </span>
       </div>
-      <div className="mx-auto my-14 grid w-full max-w-5xl grid-cols-2 gap-10 sm:grid-cols-3">
+      <div className="mx-auto my-14 flex w-full md:w-1/2 max-w-5xl items-center justify-around flex-wrap gap-10 ">
         {teamMembers.map((member, idx) => (
           <div key={idx} className="flex flex-col items-center justify-center">
             <div className="flex size-28 shrink-0 items-center justify-end overflow-hidden rounded-full bg-white shadow">
               <Image
                 src={member.image}
                 alt={`${member.name} photo`}
-                className="size-full object-center"
+                className="size-full object-top object-cover"
               />
             </div>
             <span className="mt-2.5 w-full text-center font-semibold text-[20px] sm:text-[24px]">
