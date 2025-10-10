@@ -56,6 +56,10 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
+import vocalCoachMain from "@/assets/img/vocal-coach/vocalCoach-main.png";
+import vocalCoachImgOne from "@/assets/img/vocal-coach/vocalCoach-mg-1.png";
+import vocalCoachImgTwo from "@/assets/img/vocal-coach/vocalCoach-mg-2.png";
+import vocalCoachImgThree from "@/assets/img/vocal-coach/vocalCoach-mg-3.png";
 import bookeepa from "@/assets/logo/bookeepa-logo.png";
 import setterAiLogo from "@/assets/logo/setterai-logo.png";
 
@@ -717,19 +721,41 @@ export const casesData = [
     sections: [
       {
         title: "Overview",
-        content: `TrySetter is a SaaS startup offering AI-automated appointment booking solutions. Their platform automates lead engagement over WhatsApp, SMS, and web widgets, helping businesses instantly qualify leads and schedule sales calls without human agents. The platform needed to manage high-volume lead traffic efficiently and reliably, especially for clients generating 30,000+ leads per month. Clients using the platform have reported up to 52% lead-to-booking conversion rates, 30% fewer no-shows through automated reminders, and a 3x increase in sales meetings booked per week.`,
-      },
-      {
+        content: `TrySetter is a SaaS startup offering AI-automated appointment booking solutions. Their platform automates lead engagement over WhatsApp, SMS, and web widgets, helping businesses instantly qualify leads and schedule sales calls without human agents. The platform needed to manage high-volume lead traffic efficiently and reliably, especially for clients generating 30,000+ leads per month.
+Clients using the platform have reported up to 52% lead-to-booking conversion rates, 30% fewer no-shows through automated reminders, and a 3x increase in sales meetings booked per week. It’s an all-in-one sales automation tool that boosts pipeline performance while lowering operational costs`,
+      }, {
         title: "Challenges & Expectations",
-        content: `The traditional sales engagement process was slowing things down. Relying on SDRs to manually respond, qualify, and schedule meetings meant long delays and lost leads. For high-traffic companies, this delay caused missed opportunities and higher costs. Setter AI needed to create a fast, flexible, all-in-one solution usable by any business, regardless of size or technical ability.`,
+        content: "",
+        listTitle: "",
+        list: [
+          "The traditional sales engagement process was slowing things down. Relying on sales development reps (SDRs) to manually respond, qualify, and schedule meetings meant businesses were facing long delays and losing leads",
+          "For high-traffic companies, the gap between inquiry and response often resulted in missed opportunities, which required more staff, more cost, and more time.",
+          "On top of that, not every business had the budget or tech resources to implement complex sales automation stacks. Setter AI needed to offer a simple, all-in-one solution that any business, regardless of team size or technical knowledge, could use to automate and grow their lead engagement process.",
+          "The objective was clear to create a system that’s fast, flexible, and powerful, whether you're handling 50 or 50,000 leads a month.",
+        ],
       },
       {
         title: "The Solution",
-        content: `We built Setter AI — an intelligent, autonomous lead engagement platform automating the entire outreach process. It instantly responds to inbound leads across WhatsApp, Instagram, Facebook, LinkedIn, SMS, and web chat. Integrated with Calendly, it auto-schedules meetings based on availability, automates reminders, and smartly routes complex queries to humans when needed.`,
+        content: ``,
+        listTitle: "",
+        list: [
+          "To address the challenges faced by TrySetter and its clients, we built Setter AI, an intelligent, autonomous lead engagement platform designed to automate the entire sales outreach process.",
+          "The platform instantly responds to inbound leads across multiple channels, including WhatsApp, Instagram, Facebook, LinkedIn, SMS, and website chat, ensuring no opportunity is missed, even outside working hours.",
+          "It's an AI engine synced with Calendly to auto-schedule meetings based on user availability. Setter AI also automates follow-ups and reminders to minimize no-shows and increase attendance.",
+          "For more complex queries, the system intelligently routes conversations to human agents without interrupting the flow.",
+          "The result is a user-friendly automation platform that accelerates the lead-to-meeting journey, improves response rates and conversions, and allows sales teams to scale efficiently without increasing their headcount."
+        ]
       },
       {
         title: "Final Conclusion & Results",
-        content: `Setter AI became the always-on sales assistant businesses didn’t know they needed — responsive, reliable, and conversion-focused. One client saw a 38% increase in monthly pipeline value in just 60 days. Another improved client acquisition by 25% using WhatsApp automation. Setter AI now powers faster responses, higher conversions, and scalable growth.`,
+        content: ``,
+        listTitle: "",
+        list: [
+          "Setter AI became the digital sales assistant that businesses didn’t know they needed, 24/7 working, always responsive, and always converting.",
+          "One early client, a high-volume service provider, saw a 38% increase in monthly pipeline value within just 60 days, without hiring a single new SDR. Another reported a 25% improvement in client acquisition by automating initial lead conversations through WhatsApp.",
+          "Setter AI has since become an essential growth tool for busy teams looking to scale their outreach without increasing their headcount.",
+          "With faster responses, higher conversion rates, and more booked calls, Setter AI proves that smart automation isn’t just efficient, it’s transformative. By bridging the gap between interest and action, it boosts both revenue and customer satisfaction.",
+        ],
       },
     ],
   },
@@ -770,15 +796,20 @@ export const casesData = [
 
   {
     id: 3,
-    title: "Google",
-    description: "Building AI-driven tools for accessibility.",
-    image: setterAIImgOne,
-    image2: bookkeepaImgTwo,
-    image3: bookkeepaImgThree,
-    mainImg: bookkeepaMain,
+    title: "The Vocal Coach",
+    description: "Sing your best with the ultimate vocal lesson app.",
+    image: vocalCoachImgOne,
+    image2: vocalCoachImgTwo,
+    image3: vocalCoachImgThree,
+    mainImg: vocalCoachMain,
     logo: setterAiLogo,
-    header: "",
-    header_desc: "",
-    sections: [],
+    header: "Sing your best with the ultimate vocal lesson app. The Vocal Coach",
+    header_desc: "Sing your best with the ultimate vocal lesson app.",
+    sections: [
+      {
+        title: "Overview",
+        content: "Learning music can be tough because it's hard to fit into practice regularly without proper guidance. We have come up with the solution “The Vocal Coach” to help people improve their singing voices. It includes vocal exercises, warm-ups, and tips on vocal health. Users can also create a personalized workout plan and track their progress. This app includes video tutorials and reminders to practice. Users can create custom workout routines. The app is led by Annabel Williams, a vocal coach who has worked with celebrities like Kelly Clarkson and Jessie J.",
+      }
+    ],
   },
 ];

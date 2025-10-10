@@ -96,7 +96,7 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
             />
           </div>
           {/* Text Sections */}
-          <div className="flex flex-col w-full gap-10 p-8">
+          {/* <div className="flex flex-col w-full gap-10 p-8">
             {caseItem.sections.map((section, idx) => (
               <div key={idx} className="flex flex-col gap-4">
                 <h2 className="text-2xl font-semibold">{section.title}</h2>
@@ -105,7 +105,37 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
+          {caseItem.sections.map((section, idx) => (
+            <div key={idx} className="flex flex-col w-full gap-10 p-8">
+              <h2 className="text-2xl font-semibold">{section.title}</h2>
+              {
+                section.content &&
+                <p className="text-muted-foreground whitespace-pre-line leading-relaxed text-sm">
+                  {section.content.trim()}
+                </p>
+              }
+
+              {/* ✅ Render list if present */}
+              {section.list && section.list.length > 0 && (
+                <>
+                  {section.listTitle && (
+                    <h3 className="font-semibold text-base">{section.listTitle}</h3>
+                  )}
+                  <ul className="">
+                    {section.list.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="mt-[6px] size-[6px] shrink-0 rounded-full bg-gray-500"></span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+
+              )}
+            </div>
+          ))}
+
 
           {/* FOOTER */}
           <div className="flex w-full flex-col items-center justify-center gap-5 p-10">
