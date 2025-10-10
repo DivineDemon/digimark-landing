@@ -60,7 +60,7 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
               {caseItem.header_desc}
             </span>
             <div className="flex w-full items-start justify-start gap-2">
-              {["Brand", "Product", "Web"].map((item, idx) => (
+              {caseItem.tagList.map((item, idx) => (
                 <span
                   key={idx}
                   className="rounded-full bg-gray-200 px-4 py-2 text-[12px] text-gray-600 leading-[12px]"
@@ -115,8 +115,6 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
                   {section.content.trim()}
                 </p>
               }
-
-              {/* ✅ Render list if present */}
               {section.list && section.list.length > 0 && (
                 <>
                   {section.listTitle && (
@@ -124,7 +122,7 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
                   )}
                   <ul className="">
                     {section.list.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground mt-1">
                         <span className="mt-[6px] size-[6px] shrink-0 rounded-full bg-gray-500"></span>
                         <span>{item}</span>
                       </li>

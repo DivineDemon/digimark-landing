@@ -758,6 +758,8 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
         ],
       },
     ],
+    tagList: ["AI Automation", "Sales Engagement", "SaaS", "Lead Generation", "Web Platform"]
+
   },
 
   {
@@ -824,6 +826,8 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
         ],
       },
     ],
+    tagList: ["Fintech", "AI Automation", "Mobile App", "Bookkeeping", "SaaS"]
+
   },
 
   {
@@ -841,7 +845,41 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
       {
         title: "Overview",
         content: "Learning music can be tough because it's hard to fit into practice regularly without proper guidance. We have come up with the solution “The Vocal Coach” to help people improve their singing voices. It includes vocal exercises, warm-ups, and tips on vocal health. Users can also create a personalized workout plan and track their progress. This app includes video tutorials and reminders to practice. Users can create custom workout routines. The app is led by Annabel Williams, a vocal coach who has worked with celebrities like Kelly Clarkson and Jessie J.",
+      },
+      {
+        title: "Challenges & Expectations",
+        content: "",
+        listTitle: "",
+        list: [
+          "Busy schedules limit users' practice time, while a lack of affordable training resources restricts people from accessing advanced musical learning.",
+          "The way we currently handle things manually, like scheduling lessons and keeping track of payments and progress, takes up a lot of time and makes it hard to enroll more students.",
+          "A lot of people struggle to find good virtual vocal coaching options. That's why our client wants to create a platform that connects users with vocal instructors online. This way, you can learn from the comfort of your own home, without having to worry about geographical barriers.",
+          "There are 3 levels - easy, medium, and hard, so you go at your own pace. You can easily select your favorite exercises and make yourself workout",
+          "Client wants to design a user-friendly mobile application, so people can learn music with ease. This way, we can help more people and grow our business at the same time!",
+        ],
+      },
+      {
+        title: "The Solution",
+        content: "",
+        listTitle: "",
+        list: [
+          "We assisted our client by keeping in mind all the pain points & expectations. The “vocal coach” app makes scheduling flexible for training, as users will be able to book their sessions at any time according to their feasibility.",
+          "Users can take virtual training sessions even if the expert is not available, they can continue practicing with the personal online vocal coach, which includes warm-ups, exercises, and video tutorials.",
+          "The app provides multi-levels of advanced training and performance evaluations.",
+          "The app provides complete guidance to the users to achieve their singing ambitions.",
+        ]
+      },
+      {
+        title: "Final Conclusion & Results",
+        content: "",
+        listTitle: "",
+        list: [
+          "This app is like having a singing coach in your pocket! It reminds you to practice with a built-in calendar, so you can pick which days work for you. It's a personal trainer for your voice. Just like going to the gym, the more you practice, the faster you'll improve. No more excuses – this app keeps you on track to become a better singer!",
+          "This application has numerous useful features like warm-up and development exercises to strengthen and develop your voice, with high-quality produced backing tracks and multi-level exercise comes with a video tutorial to help you. ",
+          "The customized plans helped “Annabel Williams” the coaching expert to attract aspiring singers towards the plan. Additionally, the “Vocal Coach” app made it possible to widen the brand reach by making the platform fully trusted for vocal training. Users started achieving their goals without any hassle and as a result, there was a high percentage of satisfied users which helped in the enhancement of retention rates.",
+        ]
       }
     ],
+    tagList: ["Music", "Mobile App", "EdTech", "Coaching"]
   },
 ];
