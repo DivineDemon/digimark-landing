@@ -32,6 +32,10 @@ import bookkeepaMain from "@/assets/img/bokkeepa/bookkeepa-main.png";
 import Calum from "@/assets/img/claum.png";
 import Denim from "@/assets/img/damien.png";
 import Jermy from "@/assets/img/jermy.png";
+import petluvsImgOne from "@/assets/img/petluvs/petluvs-img-1.png";
+import petluvsImgTwo from "@/assets/img/petluvs/petluvs-img-2.png";
+import petluvsImgThree from "@/assets/img/petluvs/petluvs-img-3.png";
+import petluvsMain from "@/assets/img/petluvs/petluvs-main.png";
 import setterAIImgOne from "@/assets/img/setterAI/setterai-img-1.png";
 import setterAIImgTwo from "@/assets/img/setterAI/setterai-img-2.png";
 import setterAIImgThree from "@/assets/img/setterAI/setterai-img-3.png";
@@ -40,6 +44,7 @@ import Shagor from "@/assets/img/shagor.png";
 import memberOne from "@/assets/img/team/member-1.jpeg";
 import memberTwo from "@/assets/img/team/member-2.jpeg";
 import memberThree from "@/assets/img/team/member-3.jpeg";
+import memberFour from "@/assets/img/team/member-4.jpg";
 import Test1 from "@/assets/img/test/test1.png";
 import Test2 from "@/assets/img/test/test2.png";
 import Test3 from "@/assets/img/test/test3.png";
@@ -61,8 +66,9 @@ import vocalCoachImgOne from "@/assets/img/vocal-coach/vocalCoach-mg-1.png";
 import vocalCoachImgTwo from "@/assets/img/vocal-coach/vocalCoach-mg-2.png";
 import vocalCoachImgThree from "@/assets/img/vocal-coach/vocalCoach-mg-3.png";
 import bookeepa from "@/assets/logo/bookeepa-logo.png";
+import petluvsLogo from "@/assets/logo/petluvs-logo.png";
 import setterAiLogo from "@/assets/logo/setterai-logo.png";
-
+import vocalLogo from "@/assets/logo/vocal-coach-logo.png";
 
 export const trusted = [
   {
@@ -702,9 +708,9 @@ export const teamMembers = [
     image: memberThree,
   },
   {
-    name: "Emily Johnson",
-    designation: "Product Designer",
-    image: memberThree,
+    name: "Grace Miller",
+    designation: "Marketing Specialist",
+    image: memberFour,
   }
 ];
 
@@ -843,7 +849,7 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     image2: vocalCoachImgTwo,
     image3: vocalCoachImgThree,
     mainImg: vocalCoachMain,
-    logo: setterAiLogo,
+    logo: vocalLogo,
     header: "Sing your best with the ultimate vocal lesson app. The Vocal Coach",
     header_desc: "Sing your best with the ultimate vocal lesson app.",
     sections: [
@@ -891,11 +897,11 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     id: 4,
     title: "Petluvs App",
     description: "Allows enthusiasts to connect with other pet lovers.",
-    image: vocalCoachImgOne,
-    image2: vocalCoachImgTwo,
-    image3: vocalCoachImgThree,
-    mainImg: vocalCoachMain,
-    logo: bookeepa,
+    image: petluvsImgOne,
+    image2: petluvsImgTwo,
+    image3: petluvsImgThree,
+    mainImg: petluvsMain,
+    logo: petluvsLogo,
     header: "Allows enthusiasts to connect with other pet lovers.",
     header_desc: "Allows enthusiasts to connect with other pet lovers..",
     sections: [
