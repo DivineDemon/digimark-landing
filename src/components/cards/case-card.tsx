@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { useState } from "react";
@@ -8,51 +9,93 @@ import CaseSheet from "./case-sheet";
 interface CaseCardProps {
   id: number;
   title: string;
-  description: string;
+  header: string;
+  header_desc: string;
   mainImg: StaticImageData;
   logo: StaticImageData;
+  tagList: string[];
 }
 
-const CaseCard: React.FC<CaseCardProps> = ({ id, title, description, mainImg, logo }) => {
+const CaseCard: React.FC<CaseCardProps> = ({
+  id,
+  title,
+  header,
+  header_desc,
+  mainImg,
+  logo,
+  tagList,
+}) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <div
-        className="relative col-span-1 h-full w-full cursor-pointer overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-4xl shadow-md"
+        className="group relative flex flex-col overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl bg-white shadow-md transition-transform hover:-translate-y-1 hover:shadow-lg h-[580px] sm:h-[620px] md:h-[660px] cursor-pointer"
         onClick={() => setOpen(true)}
       >
-
-        <Image
-          src={mainImg}
-          alt={title}
-          width={1000}
-          height={1000}
-          className="z-[0] aspect-[9/16] h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-b from-transparent via-transparent to-black p-5">
-          <div className="flex w-full items-center justify-center gap-3.5">
+        {/* Top Image Section (40%) with top padding */}
+        <div className="relative h-[40%] w-full overflow-hidden pt-3 sm:pt-4 md:pt-5 px-3">
+          <div className="rounded-2xl overflow-hidden h-full w-full">
             <Image
-              src={logo}
-              alt={`${title} logo`}
-              width={500}
-              height={500}
-              className="aspect-square size-10 rounded-md object-contain"
+              src={mainImg}
+              alt={title}
+              width={1000}
+              height={1000}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="flex w-full flex-col items-center justify-center gap-2 text-white hidden sm:block">
-              <span className="w-full text-left font-semibold text-[14px] leading-[14px]">
-                {title}
-              </span>
-              <span className="hidden w-full text-left text-[14px] text-gray-400 leading-[14px] sm:block">
-                {description}
-              </span>
+          </div>
+        </div>
+
+        {/* Content Section (60%) */}
+        <div className="flex flex-col justify-between h-[60%] p-6 md:p-8 space-y-4">
+          <div className="flex flex-col gap-4 overflow-hidden">
+            {/* Title */}
+            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+
+            {/* Header */}
+            <span className=" text-lg md:text-2xl leading-snug text-gray-900 font-semibold">
+              {header}
+            </span>
+
+            {/* Header Description */}
+            <span className="text-sm text-muted-foreground leading-relaxed">
+              {header_desc}
+            </span>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-2">
+              {tagList.slice(0, 3).map((item, idx) => (
+                <span
+                  key={idx}
+                  className="rounded font-semibold bg-gray-100 px-3 py-1.5 text-[10px] text-gray-600"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
+
+          {/* Button */}
+          <div className="mt-4">
+  <button
+    className="group flex w-full items-center justify-between rounded-md border border-[#505692] px-4 text-sm font-medium text-[#505692] transition-all hover:bg-[#505692] hover:text-white h-12"
+    type="button"
+  >
+    <span>View Case Study</span>
+    <span className="h-full w-px bg-[#505692] transition-colors group-hover:bg-white" />
+    <ArrowRight className="w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
+  </button>
+</div>
+
+
+
+
+
+
         </div>
       </div>
 
-
-      {/* Modal or sheet */}
+      {/* Modal / Sheet */}
       <CaseSheet open={open} setOpen={setOpen} caseId={id} />
     </>
   );

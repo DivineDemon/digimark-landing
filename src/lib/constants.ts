@@ -28,18 +28,18 @@ import Annabela from "@/assets/img/annabel.png";
 import bookkeepaImgOne from "@/assets/img/bokkeepa/bookkeepa-img-1.png";
 import bookkeepaImgTwo from "@/assets/img/bokkeepa/bookkeepa-img-2.png";
 import bookkeepaImgThree from "@/assets/img/bokkeepa/bookkeepa-img-3.png";
-import bookkeepaMain from "@/assets/img/bokkeepa/bookkeepa-main.png";
+import bookkeepaMain from "@/assets/img/carousel/bookkeepa-c2.png";
 import Calum from "@/assets/img/claum.png";
 import Denim from "@/assets/img/damien.png";
 import Jermy from "@/assets/img/jermy.png";
 import petluvsImgOne from "@/assets/img/petluvs/petluvs-img-1.png";
 import petluvsImgTwo from "@/assets/img/petluvs/petluvs-img-2.png";
 import petluvsImgThree from "@/assets/img/petluvs/petluvs-img-3.png";
-import petluvsMain from "@/assets/img/petluvs/petluvs-main.png";
+import petluvsMain from "@/assets/img/carousel/petluvs-c3.png";
 import setterAIImgOne from "@/assets/img/setterAI/setterai-img-1.png";
 import setterAIImgTwo from "@/assets/img/setterAI/setterai-img-2.png";
 import setterAIImgThree from "@/assets/img/setterAI/setterai-img-3.png";
-import setteraiMain from "@/assets/img/setterAI/setterai-main.png";
+import setteraiMain from "@/assets/img/carousel/setter-ai-c1.png";
 import Shagor from "@/assets/img/shagor.png";
 import memberOne from "@/assets/img/team/member-1.jpeg";
 import memberTwo from "@/assets/img/team/member-2.jpeg";
@@ -62,7 +62,7 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
-import vocalCoachMain from "@/assets/img/vocal-coach/vocalCoach-main.png";
+import vocalCoachMain from "@/assets/img/carousel/vocal-couch-c4.png";
 import vocalCoachImgOne from "@/assets/img/vocal-coach/vocalCoach-mg-1.png";
 import vocalCoachImgTwo from "@/assets/img/vocal-coach/vocalCoach-mg-2.png";
 import vocalCoachImgThree from "@/assets/img/vocal-coach/vocalCoach-mg-3.png";
@@ -733,9 +733,9 @@ export const casesData = [
     mainImg: setteraiMain,
     logo: setterAiLogo,
     header:
-      "Never Miss a Lead Again. Book More Sales Calls. Follow up leads in 10 seconds — with up to 52% lead-to-booking rate.",
+      "Never Miss a Lead Again. Book More Sales Calls.",
     header_desc:
-      "Say goodbye to missed leads with Setter AI and achieve up to 52% lead-to-booking rate.",
+      "Setter AI automates lead follow-ups and booking through WhatsApp, web, & social media.",
 
     sections: [
       {
@@ -791,9 +791,9 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     mainImg: bookkeepaMain,
     logo: bookeepa,
     header:
-      "Take Control of Your Finances. Save Time. Stay Stress Free.",
+      "Easy Bookkeeping for Your Business",
     header_desc:
-      "Bookkeepa simplifies financial management for business owners by automating bookkeeping, receipt scanning, and expense tracking — all from your phone.",
+      "Bookkeepa automates and simlifies financial management for growing business.",
 
     sections: [
       {
@@ -858,8 +858,8 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     image3: vocalCoachImgThree,
     mainImg: vocalCoachMain,
     logo: vocalLogo,
-    header: "Sing your best with the ultimate vocal lesson app. The Vocal Coach",
-    header_desc: "Sing your best with the ultimate vocal lesson app.",
+    header: "VOCAL WARM UP APP IN THE WORLD",
+    header_desc: "The Vocal Coach app by Annabel Williams offers vocal training, warm-ups, and progress tracking",
     sections: [
       {
         title: "Overview",
@@ -910,8 +910,8 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     image3: petluvsImgThree,
     mainImg: petluvsMain,
     logo: petluvsLogo,
-    header: "Allows enthusiasts to connect with other pet lovers.",
-    header_desc: "Allows enthusiasts to connect with other pet lovers..",
+    header: "Find Local Pet Friendly Hotels",
+    header_desc: "Petluvs is a mobile app conneting pet owners and enthusiasts in a safe community.",
     sections: [
       {
         title: "Overview",
