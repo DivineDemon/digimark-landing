@@ -20,9 +20,9 @@ const Team = () => {
           dedicated to delivering exceptional digital solutions that drive results for our clients.
         </span>
       </div>
-      <div className="mx-auto my-14 flex w-full md:w-1/2 max-w-5xl items-center justify-around flex-wrap gap-10 ">
+      <div className="mx-auto my-14 flex w-full md:w-3/5 max-w-4xl items-center justify-around flex-wrap  ">
         {teamMembers.map((member, idx) => (
-          <div key={idx} className="flex flex-col items-center justify-center">
+          <div key={idx} className="flex flex-col items-center justify-center mt-2 py-3">
             <div className="flex size-28 shrink-0 items-center justify-end overflow-hidden rounded-full bg-white shadow">
               <Image
                 src={member.image}
@@ -30,10 +30,10 @@ const Team = () => {
                 className="size-full object-top object-cover"
               />
             </div>
-            <span className="mt-2.5 w-full text-center font-semibold text-[20px] sm:text-[24px]">
+            <span className="mt-2.5 w-full text-center font-semibold text-[18px] sm:text-[22px]">
               {member.name}
             </span>
-            <span className="w-full text-center text-[13px] sm:text-[14px] text-muted-foreground">
+            <span className="w-3/4 text-center text-[10px] sm:text-[14px] text-muted-foreground">
               {member.designation}
             </span>
           </div>

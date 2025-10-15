@@ -45,6 +45,7 @@ import memberOne from "@/assets/img/team/member-1.jpeg";
 import memberTwo from "@/assets/img/team/member-2.jpeg";
 import memberThree from "@/assets/img/team/member-3.jpeg";
 import memberFour from "@/assets/img/team/member-4.jpg";
+import memberFive from "@/assets/img/team/member-5.jpg";
 import Test1 from "@/assets/img/test/test1.png";
 import Test2 from "@/assets/img/test/test2.png";
 import Test3 from "@/assets/img/test/test3.png";
@@ -693,25 +694,32 @@ export const FAQS_LIST = [
 
 export const teamMembers = [
   {
-    name: "Jane Doe",
-    designation: "Executive Sales Manager",
+    name: "Calem Kay",
+    designation: "Business Development Manager",
     image: memberOne,
   },
   {
-    name: "Sofia",
-    designation: "Senior Developer",
+    name: "Azee Shah",
+    designation: " Technical Delivery Manager",
+    image: memberFive,
+  },
+  {
+    name: "Kathy",
+    designation: "Client Success Director",
     image: memberTwo,
   },
+  
   {
-    name: "Emily Johnson",
-    designation: "Product Designer",
+    name: "Daniel Coburn",
+    designation: "Head of Global Partnerships",
+    image: memberFour,
+  },
+  
+  {
+    name: "Stefania Fleck",
+    designation: "Growth & Partnerships Manager",
     image: memberThree,
   },
-  {
-    name: "Grace Miller",
-    designation: "Marketing Specialist",
-    image: memberFour,
-  }
 ];
 
 export const casesData = [
