@@ -75,21 +75,21 @@ const CaseCard: React.FC<CaseCardProps> = ({
             </div>
           </div>
 
-          {/* Button */}
           <div className="mt-4">
-  <button
-    className="group flex w-full items-center justify-between rounded-md border border-[#505692] px-4 text-sm font-medium text-[#505692] transition-all hover:bg-[#505692] hover:text-white h-12"
-    type="button"
-  >
-    <span>View Case Study</span>
-    <span className="h-full w-px bg-[#505692] transition-colors group-hover:bg-white" />
-    <ArrowRight className="w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
-  </button>
-</div>
+            <button
+              type="button"
+              className="group relative flex items-center justify-center w-full h-12 rounded-md border border-[#505692] px-4 text-sm font-medium text-[#505692] transition-all hover:bg-[#505692] hover:text-white cursor-pointer"
+            >
+              {/* Text — hidden on mobile */}
+              <span className="hidden sm:inline">View Case Study</span>
 
+              {/* Vertical border — hidden on mobile */}
+              <span className="hidden sm:block absolute right-12 top-0 bottom-0 w-px bg-[#505692] transition-colors group-hover:bg-white" />
 
-
-
+              {/* Arrow — slightly smaller on desktop */}
+              <ArrowRight className="w-6 h-6 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 group-hover:text-white sm:absolute sm:right-4" />
+            </button>
+          </div>
 
 
         </div>
