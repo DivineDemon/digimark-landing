@@ -29,17 +29,18 @@ import bookkeepaImgOne from "@/assets/img/bokkeepa/bookkeepa-img-1.png";
 import bookkeepaImgTwo from "@/assets/img/bokkeepa/bookkeepa-img-2.png";
 import bookkeepaImgThree from "@/assets/img/bokkeepa/bookkeepa-img-3.png";
 import bookkeepaMain from "@/assets/img/carousel/bookkeepa-c2.png";
+import petluvsMain from "@/assets/img/carousel/petluvs-c3.png";
+import setteraiMain from "@/assets/img/carousel/setter-ai-c1.png";
+import vocalCoachMain from "@/assets/img/carousel/vocal-couch-c4.png";
 import Calum from "@/assets/img/claum.png";
 import Denim from "@/assets/img/damien.png";
 import Jermy from "@/assets/img/jermy.png";
 import petluvsImgOne from "@/assets/img/petluvs/petluvs-img-1.png";
 import petluvsImgTwo from "@/assets/img/petluvs/petluvs-img-2.png";
 import petluvsImgThree from "@/assets/img/petluvs/petluvs-img-3.png";
-import petluvsMain from "@/assets/img/carousel/petluvs-c3.png";
 import setterAIImgOne from "@/assets/img/setterAI/setterai-img-1.png";
 import setterAIImgTwo from "@/assets/img/setterAI/setterai-img-2.png";
 import setterAIImgThree from "@/assets/img/setterAI/setterai-img-3.png";
-import setteraiMain from "@/assets/img/carousel/setter-ai-c1.png";
 import Shagor from "@/assets/img/shagor.png";
 import memberOne from "@/assets/img/team/member-1.jpeg";
 import memberTwo from "@/assets/img/team/member-2.jpeg";
@@ -62,7 +63,6 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
-import vocalCoachMain from "@/assets/img/carousel/vocal-couch-c4.png";
 import vocalCoachImgOne from "@/assets/img/vocal-coach/vocalCoach-mg-1.png";
 import vocalCoachImgTwo from "@/assets/img/vocal-coach/vocalCoach-mg-2.png";
 import vocalCoachImgThree from "@/assets/img/vocal-coach/vocalCoach-mg-3.png";
@@ -693,6 +693,24 @@ export const FAQS_LIST = [
 ];
 
 export const teamMembers = [
+  
+  {
+    name: "Katarzyna Helma",
+    designation: "Client Success Director",
+    image: memberTwo,
+  },
+
+  {
+    name: "Daniel Coburn",
+    designation: "Head of Global Partnerships",
+    image: memberFour,
+  },
+
+  {
+    name: "Stefania Fleck",
+    designation: "Growth & Partnerships Manager",
+    image: memberThree,
+  },
   {
     name: "Calem Kay",
     designation: "Business Development Manager",
@@ -702,23 +720,6 @@ export const teamMembers = [
     name: "Azee Shah",
     designation: " Technical Delivery Manager",
     image: memberFive,
-  },
-  {
-    name: "Kathy",
-    designation: "Client Success Director",
-    image: memberTwo,
-  },
-  
-  {
-    name: "Daniel Coburn",
-    designation: "Head of Global Partnerships",
-    image: memberFour,
-  },
-  
-  {
-    name: "Stefania Fleck",
-    designation: "Growth & Partnerships Manager",
-    image: memberThree,
   },
 ];
 
