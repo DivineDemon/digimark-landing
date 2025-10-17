@@ -694,21 +694,19 @@ export const FAQS_LIST = [
 
 export const teamMembers = [
   {
-    name: "Katarzyna Helma",
-    designation: "Client Success Director",
-    image: memberTwo,
-  },
-
-  {
     name: "Daniel Coburn",
     designation: "Head of Global Partnerships",
     image: memberFour,
   },
-
   {
     name: "Stefania Fleck",
     designation: "Growth & Partnerships Manager",
     image: memberThree,
+  },
+  {
+    name: "Katarzyna Helma",
+    designation: "Client Success Director",
+    image: memberTwo,
   },
   {
     name: "Calem Kay",

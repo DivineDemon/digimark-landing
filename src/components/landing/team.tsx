@@ -24,7 +24,11 @@ const Team = () => {
         {teamMembers.map((member, idx) => (
           <div key={idx} className="mt-2 flex flex-col items-center justify-center py-3">
             <div className="flex size-28 shrink-0 items-center justify-end overflow-hidden rounded-full bg-white shadow">
-              <Image src={member.image} alt={`${member.name} photo`} className="size-full object-cover object-top" />
+              <Image
+                src={member.image}
+                alt={`${member.name} photo`}
+                className="size-full object-cover object-top antialiased"
+              />
             </div>
             <span className="mt-2.5 w-full text-center font-semibold text-[18px] sm:text-[22px]">{member.name}</span>
             <span className="w-3/4 text-center text-[10px] text-muted-foreground sm:text-[14px]">
