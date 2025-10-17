@@ -120,6 +120,25 @@ const ChatBot = () => {
     }
     setIsOpen((prev) => !prev);
   };
+useEffect(() => {
+  const handleScrollLock = () => {
+    if (isOpen && window.innerWidth < 768) {
+      document.body.style.overflow = "hidden"; // stop background scroll on mobile
+    } else {
+      document.body.style.overflow = ""; // restore scroll
+    }
+  };
+
+  handleScrollLock(); // run on isOpen change
+  window.addEventListener("resize", handleScrollLock); // handle viewport changes
+
+  return () => {
+    document.body.style.overflow = "";
+    window.removeEventListener("resize", handleScrollLock);
+  };
+}, [isOpen]);
+
+
 
   return (
     <>
