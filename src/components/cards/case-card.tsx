@@ -30,7 +30,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
   return (
     <>
       <div
-        className="group relative flex flex-col overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl bg-white shadow-md transition-transform hover:-translate-y-1 hover:shadow-lg h-[580px] sm:h-[620px] md:h-[660px] cursor-pointer"
+        className="group relative flex flex-col overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl bg-white shadow-md transition-transform hover:-translate-y-1 hover:shadow-lg h-[580px] sm:h-[620px] md:h-[660px] cursor-pointer mb-2"
         onClick={() => setOpen(true)}
       >
         {/* Top Image Section (40%) with top padding */}
@@ -63,7 +63,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
             </span>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-2">
+            <div className="flex flex-wrap gap-2 my-auto">
               {tagList.slice(0, 3).map((item, idx) => (
                 <span
                   key={idx}
@@ -80,16 +80,17 @@ const CaseCard: React.FC<CaseCardProps> = ({
               type="button"
               className="group relative flex items-center justify-center w-full h-12 rounded-md border border-[#505692] px-4 text-sm font-medium text-[#505692] transition-all hover:bg-[#505692] hover:text-white cursor-pointer"
             >
-              {/* Text — hidden on mobile */}
-              <span className="hidden sm:inline">View Case Study</span>
+              {/* Text — now always visible */}
+              <span>View Case Study</span>
 
-              {/* Vertical border — hidden on mobile */}
-              <span className="hidden sm:block absolute right-12 top-0 bottom-0 w-px bg-[#505692] transition-colors group-hover:bg-white" />
+              {/* Vertical border — now always visible */}
+              <span className="absolute right-12 top-0 bottom-0 w-px bg-[#505692] transition-colors group-hover:bg-white" />
 
-              {/* Arrow — slightly smaller on desktop */}
-              <ArrowRight className="w-6 h-6 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 group-hover:text-white sm:absolute sm:right-4" />
+              {/* Arrow — always visible and aligned properly */}
+              <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1 group-hover:text-white absolute right-4" />
             </button>
           </div>
+
 
 
         </div>

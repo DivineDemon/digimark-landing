@@ -13,11 +13,12 @@ const CaseStudies = () => {
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // 🧠 Dynamically set how many cards per slide (2 on mobile, 3 on desktop)
+  // Dynamically set how many cards per slide (1 on mobile, 2 on tablet, 3 on desktop)
   useEffect(() => {
     const updateCardsPerSlide = () => {
-      if (window.innerWidth < 640) setCardsPerSlide(2); // mobile
-      else setCardsPerSlide(3); // tablet and desktop
+      if (window.innerWidth < 431) setCardsPerSlide(1); // mobile
+      else if (window.innerWidth <= 768) setCardsPerSlide(2); // tablet
+      else setCardsPerSlide(3); // desktop
     };
     updateCardsPerSlide();
     window.addEventListener("resize", updateCardsPerSlide);
@@ -26,7 +27,7 @@ const CaseStudies = () => {
 
   const totalSlides = Math.ceil(casesData.length / cardsPerSlide);
 
-  // 🕐 Auto-slide interval (no flicker)
+  //  Auto-slide interval (no flicker)
   useEffect(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
 
@@ -39,7 +40,7 @@ const CaseStudies = () => {
     return () => clearInterval(intervalRef.current!);
   }, [isPaused, totalSlides]);
 
-  // Get cards for slide index
+  // Get cards for each slide
   const getCardsForSlide = (slideIdx: number) => {
     const start = slideIdx * cardsPerSlide;
     let cards = casesData.slice(start, start + cardsPerSlide);
@@ -82,9 +83,11 @@ const CaseStudies = () => {
             <div
               key={slideIdx}
               className={`grid w-full flex-shrink-0 gap-6 px-2.5 ${
-                cardsPerSlide === 2
+                cardsPerSlide === 1
+                  ? "grid-cols-1"
+                  : cardsPerSlide === 2
                   ? "grid-cols-2"
-                  : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                  : "grid-cols-3"
               }`}
             >
               {getCardsForSlide(slideIdx).map((caseItem) => (
