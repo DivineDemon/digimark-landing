@@ -18,7 +18,7 @@ export const sendEmail = (
   if (typeof setLoading === "function") {
     setLoading(true);
   }
-
+  
   // Choose service ID based on email domain
   const serviceID =
     (email.includes("gmail")
