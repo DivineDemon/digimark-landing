@@ -1,8 +1,8 @@
 "use client";
 
-import { casesData } from "@/lib/constants";
 import { Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { casesData } from "@/lib/constants";
 import CaseCard from "../cards/case-card";
 import MaxWidthWrapper from "../max-width-wrapper";
 
@@ -16,8 +16,10 @@ const CaseStudies = () => {
   // Dynamically set how many cards per slide (1 on mobile, 2 on tablet, 3 on desktop)
   useEffect(() => {
     const updateCardsPerSlide = () => {
-      if (window.innerWidth < 431) setCardsPerSlide(1); // mobile
-      else if (window.innerWidth <= 768) setCardsPerSlide(2); // tablet
+      if (window.innerWidth < 431)
+        setCardsPerSlide(1); // mobile
+      else if (window.innerWidth <= 768)
+        setCardsPerSlide(2); // tablet
       else setCardsPerSlide(3); // desktop
     };
     updateCardsPerSlide();
@@ -54,17 +56,16 @@ const CaseStudies = () => {
     <MaxWidthWrapper className="pt-20" isBottomBorder>
       {/* === Header Section === */}
       <div className="mb-10 flex flex-col items-center justify-center gap-5 text-center">
-        <span className="mx-auto flex items-center rounded-full border bg-white px-3 py-1.5 text-xs font-medium shadow">
+        <span className="mx-auto flex items-center rounded-full border bg-white px-3 py-1.5 font-medium text-xs shadow">
           <Briefcase className="mr-2 size-4" />
           Case Studies
         </span>
 
-        <h2 className="text-4xl sm:text-5xl font-semibold">Success Stories</h2>
+        <h2 className="font-semibold text-4xl sm:text-5xl">Success Stories</h2>
 
-        <p className="max-w-2xl px-4 text-sm sm:text-base text-muted-foreground">
-          Discover how DigiMark Developers has helped businesses transform their ideas
-          into impactful digital solutions. Explore real-world examples of our work in
-          AI, software development, automation, and more.
+        <p className="max-w-2xl px-4 text-muted-foreground text-sm sm:text-base">
+          Discover how DigiMark Developers has helped businesses transform their ideas into impactful digital solutions.
+          Explore real-world examples of our work in AI, software development, automation, and more.
         </p>
       </div>
 
@@ -83,11 +84,7 @@ const CaseStudies = () => {
             <div
               key={slideIdx}
               className={`grid w-full flex-shrink-0 gap-6 px-2.5 ${
-                cardsPerSlide === 1
-                  ? "grid-cols-1"
-                  : cardsPerSlide === 2
-                  ? "grid-cols-2"
-                  : "grid-cols-3"
+                cardsPerSlide === 1 ? "grid-cols-1" : cardsPerSlide === 2 ? "grid-cols-2" : "grid-cols-3"
               }`}
             >
               {getCardsForSlide(slideIdx).map((caseItem) => (
@@ -99,16 +96,14 @@ const CaseStudies = () => {
 
         {/* Navigation Arrows */}
         <button
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow hover:bg-white"
-          onClick={() =>
-            setCurrent((prev) => (prev - 1 + totalSlides) % totalSlides)
-          }
+          className="-translate-y-1/2 absolute top-1/2 left-2 rounded-full bg-white/80 p-2 shadow hover:bg-white"
+          onClick={() => setCurrent((prev) => (prev - 1 + totalSlides) % totalSlides)}
         >
           <ChevronLeft className="size-5" />
         </button>
 
         <button
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow hover:bg-white"
+          className="-translate-y-1/2 absolute top-1/2 right-2 rounded-full bg-white/80 p-2 shadow hover:bg-white"
           onClick={() => setCurrent((prev) => (prev + 1) % totalSlides)}
         >
           <ChevronRight className="size-5" />
@@ -121,9 +116,7 @@ const CaseStudies = () => {
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`h-2 w-2 rounded-full transition-all ${
-              current === idx ? "bg-blue-600 w-5" : "bg-gray-300"
-            }`}
+            className={`h-2 w-2 rounded-full transition-all ${current === idx ? "w-5 bg-blue-600" : "bg-gray-300"}`}
           />
         ))}
       </div>

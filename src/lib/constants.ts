@@ -54,7 +54,6 @@ import Test4 from "@/assets/img/test/test4.png";
 import Test5 from "@/assets/img/test/test5.png";
 import Test6 from "@/assets/img/test/test6.png";
 import TrustedOne from "@/assets/img/trusted1.svg";
-import TrustedTen from "@/assets/img/trusted10.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
 import TrustedFour from "@/assets/img/trusted4.svg";
@@ -63,6 +62,7 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
+import TrustedTen from "@/assets/img/trusted10.svg";
 import vocalCoachImgOne from "@/assets/img/vocal-coach/vocalCoach-mg-1.png";
 import vocalCoachImgTwo from "@/assets/img/vocal-coach/vocalCoach-mg-2.png";
 import vocalCoachImgThree from "@/assets/img/vocal-coach/vocalCoach-mg-3.png";
@@ -693,7 +693,6 @@ export const FAQS_LIST = [
 ];
 
 export const teamMembers = [
-  
   {
     name: "Katarzyna Helma",
     designation: "Client Success Director",
@@ -733,17 +732,16 @@ export const casesData = [
     image3: setterAIImgThree,
     mainImg: setteraiMain,
     logo: setterAiLogo,
-    header:
-      "Never Miss a Lead Again. Book More Sales Calls.",
-    header_desc:
-      "Setter AI automates lead follow-ups and booking through WhatsApp, web, & social media.",
+    header: "Never Miss a Lead Again. Book More Sales Calls.",
+    header_desc: "Setter AI automates lead follow-ups and booking through WhatsApp, web, & social media.",
 
     sections: [
       {
         title: "Overview",
         content: `TrySetter is a SaaS startup offering AI-automated appointment booking solutions. Their platform automates lead engagement over WhatsApp, SMS, and web widgets, helping businesses instantly qualify leads and schedule sales calls without human agents. The platform needed to manage high-volume lead traffic efficiently and reliably, especially for clients generating 30,000+ leads per month.
 Clients using the platform have reported up to 52% lead-to-booking conversion rates, 30% fewer no-shows through automated reminders, and a 3x increase in sales meetings booked per week. It’s an all-in-one sales automation tool that boosts pipeline performance while lowering operational costs`,
-      }, {
+      },
+      {
         title: "Challenges & Expectations",
         content: "",
         listTitle: "",
@@ -763,8 +761,8 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
           "The platform instantly responds to inbound leads across multiple channels, including WhatsApp, Instagram, Facebook, LinkedIn, SMS, and website chat, ensuring no opportunity is missed, even outside working hours.",
           "It's an AI engine synced with Calendly to auto-schedule meetings based on user availability. Setter AI also automates follow-ups and reminders to minimize no-shows and increase attendance.",
           "For more complex queries, the system intelligently routes conversations to human agents without interrupting the flow.",
-          "The result is a user-friendly automation platform that accelerates the lead-to-meeting journey, improves response rates and conversions, and allows sales teams to scale efficiently without increasing their headcount."
-        ]
+          "The result is a user-friendly automation platform that accelerates the lead-to-meeting journey, improves response rates and conversions, and allows sales teams to scale efficiently without increasing their headcount.",
+        ],
       },
       {
         title: "Final Conclusion & Results",
@@ -778,8 +776,7 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
         ],
       },
     ],
-    tagList: ["AI Automation", "Sales Engagement", "SaaS", "Lead Generation", "Web Platform"]
-
+    tagList: ["AI Automation", "Sales Engagement", "SaaS", "Lead Generation", "Web Platform"],
   },
 
   {
@@ -791,10 +788,8 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     image3: bookkeepaImgThree,
     mainImg: bookkeepaMain,
     logo: bookeepa,
-    header:
-      "Easy Bookkeeping for Your Business",
-    header_desc:
-      "Bookkeepa automates and simlifies financial management for growing business.",
+    header: "Easy Bookkeeping for Your Business",
+    header_desc: "Bookkeepa automates and simlifies financial management for growing business.",
 
     sections: [
       {
@@ -817,7 +812,7 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
           "Receipts were often misplaced, expenses went untracked, and most users only updated their books once a month, leading to poor cash flow visibility and missed tax deductions.",
           "Traditional accounting tools were too complex, expensive, or inflexible for their needs. The challenge was to design a solution that was simple enough for non-accountants, fast enough to record transactions in seconds, accessible on the go, and accurate enough to eliminate manual errors.",
           "The expectation was clear, to create a financial companion that made bookkeeping effortless, reliable, and even enjoyable.",
-        ]
+        ],
       },
       {
         title: "The Solution",
@@ -830,7 +825,7 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
           "The platform supports multiple businesses under one account, offers Custom year-start settings, and offline functionality ensures you have uninterrupted access whenever you need.",
           "Hosted on AWS for high performance and reliability, Bookkeepa provides a secure environment where users can store and retrieve their financial data anytime.",
           "The design focused on keeping the interface minimal, user-friendly, and optimized for speed, ensuring that even first-time users could navigate and start logging transactions immediately.",
-        ]
+        ],
       },
       {
         title: "Final Conclusion & Results",
@@ -846,8 +841,7 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
         ],
       },
     ],
-    tagList: ["Fintech", "AI Automation", "Mobile App", "Bookkeeping", "SaaS"]
-
+    tagList: ["Fintech", "AI Automation", "Mobile App", "Bookkeeping", "SaaS"],
   },
 
   {
@@ -864,7 +858,8 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
     sections: [
       {
         title: "Overview",
-        content: "Learning music can be tough because it's hard to fit into practice regularly without proper guidance. We have come up with the solution “The Vocal Coach” to help people improve their singing voices. It includes vocal exercises, warm-ups, and tips on vocal health. Users can also create a personalized workout plan and track their progress. This app includes video tutorials and reminders to practice. Users can create custom workout routines. The app is led by Annabel Williams, a vocal coach who has worked with celebrities like Kelly Clarkson and Jessie J.",
+        content:
+          "Learning music can be tough because it's hard to fit into practice regularly without proper guidance. We have come up with the solution “The Vocal Coach” to help people improve their singing voices. It includes vocal exercises, warm-ups, and tips on vocal health. Users can also create a personalized workout plan and track their progress. This app includes video tutorials and reminders to practice. Users can create custom workout routines. The app is led by Annabel Williams, a vocal coach who has worked with celebrities like Kelly Clarkson and Jessie J.",
       },
       {
         title: "Challenges & Expectations",
@@ -887,7 +882,7 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
           "Users can take virtual training sessions even if the expert is not available, they can continue practicing with the personal online vocal coach, which includes warm-ups, exercises, and video tutorials.",
           "The app provides multi-levels of advanced training and performance evaluations.",
           "The app provides complete guidance to the users to achieve their singing ambitions.",
-        ]
+        ],
       },
       {
         title: "Final Conclusion & Results",
@@ -897,10 +892,10 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
           "This app is like having a singing coach in your pocket! It reminds you to practice with a built-in calendar, so you can pick which days work for you. It's a personal trainer for your voice. Just like going to the gym, the more you practice, the faster you'll improve. No more excuses – this app keeps you on track to become a better singer!",
           "This application has numerous useful features like warm-up and development exercises to strengthen and develop your voice, with high-quality produced backing tracks and multi-level exercise comes with a video tutorial to help you. ",
           "The customized plans helped “Annabel Williams” the coaching expert to attract aspiring singers towards the plan. Additionally, the “Vocal Coach” app made it possible to widen the brand reach by making the platform fully trusted for vocal training. Users started achieving their goals without any hassle and as a result, there was a high percentage of satisfied users which helped in the enhancement of retention rates.",
-        ]
-      }
+        ],
+      },
     ],
-    tagList: ["Music", "Mobile App", "EdTech", "Coaching"]
+    tagList: ["Music", "Mobile App", "EdTech", "Coaching"],
   },
   {
     id: 4,
@@ -919,7 +914,7 @@ Clients using the platform have reported up to 52% lead-to-booking conversion ra
         content: `There is no doubt that Pets bring happiness into our lives and eventually become our family. Having a pet requires lots of effort, like ensuring pets' health and safety with complete attention and love. This is how PetLuv comes in. PetLuv is an advanced mobile application specially made to serve pet owners worldwide and offers pet rescue as well.
 This application has multiple features and helps pet owners to connect and share experiences.  Moreover, this also provides the facility for pet adoption and makes you engage with reliable pet sitters and caregivers for mental relaxation. PetLuv tends to encourage connections and increase the well-being of pets and owners.`,
         listTitle: "",
-        list: []
+        list: [],
       },
       {
         title: "Challenges & Expectations",
@@ -931,12 +926,10 @@ This application has multiple features and helps pet owners to connect and share
           "Recognizing the stress of finding reliable pet care and timely veterinary attention, our client expects an application that empowers pet owners to locate trusted pet sitters and connect with nearby veterinarians for immediate care, all in one convenient platform.",
           "Our client expected an application that aims to offer an easy solution for pet owners to get numerous services for their pets like finding good breeders, groomers, pet sitters, and veterinarians.",
           "The client expected an application that is also user-friendly and easily accessible so that people with diverse backgrounds can comprehend the interface and all.",
-          "Imagine a place for pet lovers to hang out, share stories and swap tips on how to keep them happy and healthy. It's all about creating a transparent and awesome community for pet people!"
-        ]
-      }
+          "Imagine a place for pet lovers to hang out, share stories and swap tips on how to keep them happy and healthy. It's all about creating a transparent and awesome community for pet people!",
+        ],
+      },
     ],
-    tagList: ["React Native", "Social", "Market Place"]
+    tagList: ["React Native", "Social", "Market Place"],
   },
-
-
 ];
