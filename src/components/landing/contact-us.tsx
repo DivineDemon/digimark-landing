@@ -1,11 +1,11 @@
 "use client";
 
+import { sendEmail } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import z from "zod";
-import { sendEmail } from "@/lib/utils";
 import CustomButton from "../custom-button";
 import MaxWidthWrapper from "../max-width-wrapper";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
@@ -15,7 +15,13 @@ import { Textarea } from "../ui/textarea";
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }).max(40, { message: "Name must be less than 40 characters" }).regex(/^[A-Za-z\s]+$/, { message: "Name can only contain alphabets and spaces" }),
   email: z.string().email({ message: "Invalid email address" }),
-  phone: z.string().min(1, { message: "Phone number is required" }),
+  phone: z
+    .string()
+    .min(10, { message: "Phone number must be at least 10 digits" })
+    .max(15, { message: "Phone number must be less than 15 digits" })
+    .regex(/^\+?[0-9\s-]{10,15}$/, {
+      message: "Invalid phone number format (e.g. +1234567890)",
+    }),
   message: z
     .string()
     .min(1, { message: "Message is required" })
@@ -134,7 +140,7 @@ const ContactUs = () => {
               name="message"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel>Phone</FormLabel>
+                  <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
                       className="h-56 w-full resize-none p-5 placeholder:text-[#8E8E8E]"
