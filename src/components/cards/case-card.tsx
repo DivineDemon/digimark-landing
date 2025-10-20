@@ -22,7 +22,7 @@ const CaseCard: React.FC<CaseCardProps> = ({ id, title, header, header_desc, mai
   return (
     <>
       <div
-        className="group hover:-translate-y-1 relative mb-2 flex h-[580px] cursor-pointer flex-col overflow-hidden rounded-xl bg-white shadow-md transition-transform hover:shadow-lg sm:h-[620px] sm:rounded-2xl md:h-[660px] md:rounded-3xl"
+        className=" hover:-translate-y-1 relative mb-2 flex h-[580px] cursor-pointer flex-col overflow-hidden rounded-xl bg-white shadow-md transition-transform hover:shadow-lg sm:h-[620px] sm:rounded-2xl md:h-[660px] md:rounded-3xl"
         onClick={() => setOpen(true)}
       >
         {/* Top Image Section (40%) with top padding */}
