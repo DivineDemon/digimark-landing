@@ -13,7 +13,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: "Name is required" }).max(40, { message: "Name must be less than 40 characters" }),
+  name: z.string().min(1, { message: "Name is required" }).max(40, { message: "Name must be less than 40 characters" }).regex(/^[A-Za-z\s]+$/, { message: "Name can only contain alphabets and spaces" }),
   email: z.string().email({ message: "Invalid email address" }),
   phone: z.string().min(1, { message: "Phone number is required" }),
   message: z
