@@ -11,9 +11,10 @@ interface CustomLinkProps {
   variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined;
   size?: "default" | "sm" | "lg" | "icon" | null | undefined;
   className?: string;
+  target?: string;
 }
 
-const CustomLink = ({ href, size, variant, children, className }: CustomLinkProps) => {
+const CustomLink = ({ href, size, variant, children, className, target="" }: CustomLinkProps) => {
   return (
     <Link
       href={href}
@@ -27,6 +28,7 @@ const CustomLink = ({ href, size, variant, children, className }: CustomLinkProp
           ),
         }),
       )}
+      target={target}
     >
       {children}
     </Link>

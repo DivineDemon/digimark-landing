@@ -17,7 +17,7 @@ const CTA = () => {
             <br />
             Across Every Industry
           </span>
-          <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mx-auto">
+          <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mx-auto" target="_blank">
             <span>Get Started</span>
             <ChevronRight className="size-4 text-gray-200" />
           </CustomLink>
