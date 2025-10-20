@@ -25,7 +25,7 @@ const KeyBenefit = () => {
       </div>
       <div className="w-full px-4 lg:px-16">
         <div className="grid grid-cols-1 space-y-5 lg:grid-cols-2 lg:space-y-10">
-          <Image src={Benifit1} alt="" className="h-88 rounded-2xl object-cover shadow-lg" />
+          <Image src={Benifit1} alt="" className="h-88 rounded-2xl object-cover shadow-lg [image-rendering:smooth] transition-transform duration-500 hover:scale-105" />
           <div className="lg:pl-10">
             <div className="flex size-8 items-center justify-center rounded-sm bg-gray-200 font-medium text-gray-500 text-sm">
               01
@@ -46,8 +46,8 @@ const KeyBenefit = () => {
               talent gaps or scale your team quickly with full transparency and control.
             </p>
           </div>
-          <Image src={Benifit2} alt="" className="h-88 rounded-2xl object-cover shadow-lg" />
-          <Image src={Benifit3} alt="" className="h-88 rounded-2xl object-cover shadow-lg" />
+          <Image src={Benifit2} alt="" className="h-88 rounded-2xl object-cover shadow-lg transition-transform duration-500 hover:scale-105" />
+          <Image src={Benifit3} alt="" className="h-88 rounded-2xl object-cover shadow-lg transition-transform duration-500 hover:scale-105" />
           <div className="lg:pl-10">
             <div className="flex size-8 items-center justify-center rounded-sm bg-gray-200 font-medium text-gray-500 text-sm">
               03

@@ -29,7 +29,7 @@ export function FAQS() {
       >
         {FAQS_LIST.map((faq) => (
           <AccordionItem key={faq.id} value={`item-${faq.id}`} className="w-full rounded-xl border bg-white shadow">
-            <AccordionTrigger className="w-full p-4 font-medium">
+            <AccordionTrigger className="w-full p-4 font-medium cursor-pointer">
               <div className="flex w-full items-center justify-center gap-2.5">
                 <MessageCircleQuestion className="size-5" />
                 <span className="flex-1 text-left">{faq.question}</span>

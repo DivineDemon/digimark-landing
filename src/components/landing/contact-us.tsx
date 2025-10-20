@@ -146,7 +146,7 @@ const ContactUs = () => {
                 </FormItem>
               )}
             />
-            <CustomButton type="submit" className="w-full">
+            <CustomButton type="submit" className="w-full cursor-pointer" disabled={loading}>
               {loading ? <Loader2 className="animate-spin" /> : "Send Message"}
             </CustomButton>
           </form>

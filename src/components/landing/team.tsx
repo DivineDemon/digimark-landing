@@ -23,13 +23,17 @@ const Team = () => {
       <div className="mx-auto my-14 flex w-full max-w-4xl flex-wrap items-center justify-around md:w-3/5 ">
         {teamMembers.map((member, idx) => (
           <div key={idx} className="mt-2 flex flex-col items-center justify-center py-3">
-            <div className="flex size-28 shrink-0 items-center justify-end overflow-hidden rounded-full bg-white shadow">
+            <div className="flex size-28 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-b from-gray-50 to-white shadow-md">
               <Image
                 src={member.image}
                 alt={`${member.name} photo`}
-                className="size-full object-cover object-top antialiased"
+                width={112}
+                height={112}
+                className="size-full object-cover object-top rounded-full [image-rendering:smooth] transition-transform duration-500 hover:scale-105"
+                priority
               />
             </div>
+
             <span className="mt-2.5 w-full text-center font-semibold text-[18px] sm:text-[22px]">{member.name}</span>
             <span className="w-3/4 text-center text-[10px] text-muted-foreground sm:text-[14px]">
               {member.designation}
