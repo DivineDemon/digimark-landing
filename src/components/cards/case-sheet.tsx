@@ -62,7 +62,7 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
           </div>
 
           {/* IMAGES */}
-          <div className="grid w-full grid-cols-2 gap-2.5">
+          <div className="grid w-full grid-cols-2 gap-2.5 mb-3">
             <Image
               src={caseItem.image}
               alt={`${caseItem.title} main project image`}
@@ -97,10 +97,10 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
             ))}
           </div> */}
           {caseItem.sections.map((section, idx) => (
-            <div key={idx} className="flex w-full flex-col gap-10 p-8">
+            <div key={idx} className="flex w-full flex-col gap-5 px-8 pt-5">
               <h2 className="font-semibold text-2xl">{section.title}</h2>
               {section.content && (
-                <p className="whitespace-pre-line text-muted-foreground text-sm leading-relaxed">
+                <p className="whitespace-pre-line text-muted-foreground text-md leading-relaxed">
                   {section.content.trim()}
                 </p>
               )}
@@ -109,8 +109,8 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
                   {section.listTitle && <h3 className="font-semibold text-base">{section.listTitle}</h3>}
                   <ul className="">
                     {section.list.map((item, i) => (
-                      <li key={i} className="mt-1 flex items-start gap-2 text-muted-foreground text-sm">
-                        <span className="mt-[6px] size-[6px] shrink-0 rounded-full bg-gray-500"></span>
+                      <li key={i} className="pb-1  flex items-start gap-2 text-muted-foreground text-md leading-relaxed">
+                        <span className="mt-[8px] size-[6px] shrink-0 rounded-full bg-gray-500"></span>
                         <span>{item}</span>
                       </li>
                     ))}
