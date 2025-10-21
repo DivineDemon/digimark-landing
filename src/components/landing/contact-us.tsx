@@ -2,7 +2,7 @@
 
 import { sendEmail } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2, Mail, Phone } from "lucide-react";
+import { Linkedin, Loader2, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import z from "zod";
@@ -59,19 +59,43 @@ const ContactUs = () => {
               </span>
             </div>
             <div className="flex w-full flex-col items-center justify-center gap-2.5 rounded-lg border border-white/25 bg-white/10 p-5 text-white shadow backdrop-blur-sm">
+              {/* Phone */}
               <div className="flex w-full items-center justify-center gap-5">
                 <div className="flex size-8 items-center justify-center rounded-full border p-2">
                   <Phone className="size-4" />
                 </div>
                 <span className="flex-1 text-left">+ 1 (407) 37-34745</span>
               </div>
+
+              {/* Email */}
               <div className="flex w-full items-center justify-center gap-5">
                 <div className="flex size-8 items-center justify-center rounded-full border p-2">
                   <Mail className="size-4" />
                 </div>
-                <span className="flex-1 text-left">info@digimarkdevelopers.us</span>
+                <a
+                  href="mailto:info@digimarkdevelopers.us"
+                  className="flex-1 text-left underline hover:text-gray-200"
+                >
+                  info@digimarkdevelopers.us
+                </a>
+              </div>
+
+              {/* LinkedIn */}
+              <div className="flex w-full items-center justify-center gap-5">
+                <div className="flex size-8 items-center justify-center rounded-full border p-2">
+                  <Linkedin />
+                </div>
+                <a
+                  href="https://www.linkedin.com/company/digimark-developers-canada/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-left underline hover:text-gray-200"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
+
           </div>
           <div className="-top-32 -right-32 absolute z-0 size-64 rounded-full bg-white/20 blur-[50px]" />
           <div className="-bottom-24 -left-24 absolute z-0 size-80 rounded-full bg-white/20 blur-[50px]" />
