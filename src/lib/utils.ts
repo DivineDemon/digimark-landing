@@ -44,7 +44,7 @@ export function sendEmail(
     )
     .then(
       (response) => {
-        toast.success("Message sent successfully!");
+        toast.success("Mail sent successfully!");
         if (typeof setLoading === "function") {
           setLoading(false);
         }
