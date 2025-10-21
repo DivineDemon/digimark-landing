@@ -51,8 +51,8 @@ const Team = () => {
                   <Image
                     src={linkedinIcon}
                     alt="LinkedIn"
-                    width={20}
-                    height={20}
+                    width={30}
+                    height={30}
                     className="rounded-full border bg-white p-[2px] shadow hover:scale-110 transition-transform"
                   />
                 </a>
