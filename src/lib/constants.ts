@@ -70,6 +70,7 @@ import bookeepa from "@/assets/logo/bookeepa-logo.png";
 import petluvsLogo from "@/assets/logo/petluvs-logo.png";
 import setterAiLogo from "@/assets/logo/setterai-logo.png";
 import vocalLogo from "@/assets/logo/vocal-coach-logo.png";
+import { link } from "fs";
 
 export const trusted = [
   {
@@ -697,26 +698,31 @@ export const teamMembers = [
     name: "Daniel Coburn",
     designation: "Head of Global Partnerships",
     image: memberFour,
+    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
   },
   {
     name: "Stefania Fleck",
     designation: "Growth & Partnerships Manager",
     image: memberThree,
+    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
   },
   {
     name: "Katarzyna Helma",
     designation: "Client Success Director",
     image: memberTwo,
+    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
   },
   {
     name: "Calem Kay",
     designation: "Business Development Manager",
     image: memberOne,
+    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
   },
   {
     name: "Azee Shah",
     designation: " Technical Delivery Manager",
     image: memberFive,
+    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
   },
 ];
 

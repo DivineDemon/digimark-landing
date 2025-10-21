@@ -2,6 +2,7 @@ import { Users2 } from "lucide-react";
 import Image from "next/image";
 import { teamMembers } from "@/lib/constants";
 import MaxWidthWrapper from "../max-width-wrapper";
+import linkedinIcon from "@/assets/icons/socials/linkedin.png"; // replace with your icon
 
 const Team = () => {
   return (
@@ -20,6 +21,7 @@ const Team = () => {
           dedicated to delivering exceptional digital solutions that drive results for our clients.
         </span>
       </div>
+
       <div className="mx-auto my-14 flex w-full max-w-4xl flex-wrap items-center justify-around md:w-3/5 ">
         {teamMembers.map((member, idx) => (
           <div key={idx} className="mt-2 flex flex-col items-center justify-center py-3">
@@ -34,8 +36,34 @@ const Team = () => {
               />
             </div>
 
-            <span className="mt-2.5 w-full text-center font-semibold text-[18px] sm:text-[22px]">{member.name}</span>
-            <span className="w-3/4 text-center text-[10px] text-muted-foreground sm:text-[14px]">
+            {/* Name with LinkedIn icon */}
+            <div className="mt-2.5 flex items-center gap-2">
+              <span className="text-center font-semibold text-[18px] sm:text-[22px]">
+                {member.name}
+              </span>
+              {member.linkedin && (
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex"
+                >
+                  <Image
+                    src={linkedinIcon}
+                    alt="LinkedIn"
+                    width={20}
+                    height={20}
+                    className="rounded-full border bg-white p-[2px] shadow hover:scale-110 transition-transform"
+                  />
+                </a>
+              )}
+            </div>
+
+            {/* Fixed height container for designation to prevent shifting */}
+            <span
+              className="w-3/4 text-center text-[11px] text-muted-foreground sm:text-[14px] mt-1"
+              style={{ minHeight: "38px" }}
+            >
               {member.designation}
             </span>
           </div>
