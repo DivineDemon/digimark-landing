@@ -359,7 +359,7 @@ const ChatBot = () => {
                   e.stopPropagation();
                   setShowChat(true);
                 }}
-                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-primary/90 backdrop-blur p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
+                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-primary/80 backdrop-blur p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
               >
                 <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2">
                   <span className="w-full text-left font-bold text-[14px] leading-[14px]">Ask a question</span>
