@@ -206,7 +206,7 @@ const ChatBot = () => {
                         <div
                           className={cn("w-fit max-w-full rounded-lg px-4 py-2 text-sm", {
                             "bg-muted text-black": msg.role === "assistant",
-                            "bg-[#6BB64A] text-white": msg.role === "user",
+                            "bg-black text-white": msg.role === "user",
                           })}
                         >
                           {isLastAssistantLoading ? (
@@ -267,7 +267,7 @@ const ChatBot = () => {
                                         sendToAI(step);
                                       }}
                                       key={i}
-                                      className="cursor-pointer rounded-md border border-[#6BB64A] p-2 font-semibold text-[#6BB64A] text-[14px] text-sm leading-[14px] shadow transition-colors duration-200 ease-in-out hover:bg-[#6BB64A] hover:text-white"
+                                      className="cursor-pointer rounded-md border border-[#1d1d20] p-2 font-semibold text-black text-[14px] text-sm leading-[14px] shadow transition-colors duration-200 ease-in-out hover:bg-[#1d1d20] hover:text-white"
                                     >
                                       {step}
                                     </span>
@@ -301,7 +301,7 @@ const ChatBot = () => {
                 className={cn(
                   "flex w-full items-center justify-center gap-2 rounded-xl p-2.5 shadow ring-2 ring-black/25 transition-colors duration-200 ease-in-out",
                   {
-                    "ring-2 ring-[#6BB64A]": inputFocused && !loading,
+                    "ring-2 ring-[#1d1d20]": inputFocused && !loading,
                   },
                 )}
                 onSubmit={(e) => {
@@ -359,7 +359,7 @@ const ChatBot = () => {
                   e.stopPropagation();
                   setShowChat(true);
                 }}
-                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-[#1D4354] p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
+                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-primary/90 backdrop-blur p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
               >
                 <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2">
                   <span className="w-full text-left font-bold text-[14px] leading-[14px]">Ask a question</span>
@@ -389,7 +389,7 @@ const ChatBot = () => {
                       setShowChat(true);
                       await sendToAI(item);
                     }}
-                    className="cursor-pointer rounded-md bg-[#6BB64A] px-4 py-2 font-semibold text-[14px] text-white leading-[14px] shadow-md transition-transform duration-200 ease-in-out hover:scale-105"
+                    className="cursor-pointer rounded-md bg-black px-4 py-2 font-semibold text-[14px] text-white leading-[14px] shadow-md transition-transform duration-200 ease-in-out hover:scale-105"
                   >
                     {item}
                   </span>
