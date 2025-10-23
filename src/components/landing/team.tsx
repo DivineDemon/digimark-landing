@@ -37,7 +37,7 @@ const Team = () => {
             </div>
 
             {/* Name with LinkedIn icon */}
-            <div className="mt-2.5 flex items-center gap-2">
+            <div className="mt-2.5 flex items-center gap-1">
               <span className="text-center font-semibold text-[18px] sm:text-[22px]">
                 {member.name}
               </span>
