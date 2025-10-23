@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex w-[205px] items-center justify-start">
           <Image src={TestLogo} alt="logo" className="w-28" />
         </div>
-        <CustomLink href="https://calendly.com/digimark-developers">Get Started</CustomLink>
+        <CustomLink href="https://calendly.com/digimark-developers" target="_blank">Get Started</CustomLink>
       </motion.div>
     </nav>
   );

@@ -130,7 +130,7 @@ const CaseSheet = ({ open, setOpen, caseId }: CaseSheetProps) => {
               vision. It&apos;s an open conversation to explore ideas, share insights, and see if we&apos;re the right
               fit. Book yours today and let&apos;s begin shaping your next project.
             </span>
-            <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mr-auto">
+            <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mr-auto" target="_blank">
               Book a Call
             </CustomLink>
           </div>

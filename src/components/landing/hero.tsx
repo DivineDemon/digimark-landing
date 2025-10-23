@@ -20,7 +20,7 @@ const Hero = () => {
             Empowering SMEs with tailored SaaS development, AI integrations, and end-to-end automation to drive growth
             and efficiency.
           </span>
-          <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mt-5 mb-2.5 w-full">
+          <CustomLink href="https://calendly.com/digimark-developers" size="lg" className="mt-5 mb-2.5 w-full" target="_blank">
             <Image src={CalendlyIcon} alt="calendly-icon" width={16} height={16} className="size-8" />
             <span>Get Started</span>
           </CustomLink>

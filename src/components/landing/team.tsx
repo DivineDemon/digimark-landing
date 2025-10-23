@@ -2,7 +2,7 @@ import { Users2 } from "lucide-react";
 import Image from "next/image";
 import { teamMembers } from "@/lib/constants";
 import MaxWidthWrapper from "../max-width-wrapper";
-import linkedinIcon from "@/assets/icons/socials/linkedin.png"; // replace with your icon
+import linkedinIcon from "@/assets/icons/socials/linkedin.svg"; // replace with your icon
 
 const Team = () => {
   return (
@@ -51,9 +51,9 @@ const Team = () => {
                   <Image
                     src={linkedinIcon}
                     alt="LinkedIn"
-                    width={30}
-                    height={30}
-                    className="rounded-full border bg-white p-[2px] shadow hover:scale-110 transition-transform"
+                    width={25}
+                    height={25}
+                    className=" rounded-full hover:scale-110 transition-transform"
                   />
                 </a>
               )}
