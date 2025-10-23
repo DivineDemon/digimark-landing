@@ -54,6 +54,7 @@ import Test4 from "@/assets/img/test/test4.png";
 import Test5 from "@/assets/img/test/test5.png";
 import Test6 from "@/assets/img/test/test6.png";
 import TrustedOne from "@/assets/img/trusted1.svg";
+import TrustedTen from "@/assets/img/trusted10.svg";
 import TrustedTwo from "@/assets/img/trusted2.svg";
 import TrustedThree from "@/assets/img/trusted3.svg";
 import TrustedFour from "@/assets/img/trusted4.svg";
@@ -62,7 +63,6 @@ import TrustedSix from "@/assets/img/trusted6.svg";
 import TrustedSeven from "@/assets/img/trusted7.svg";
 import TrustedEight from "@/assets/img/trusted8.svg";
 import TrustedNine from "@/assets/img/trusted9.svg";
-import TrustedTen from "@/assets/img/trusted10.svg";
 import vocalCoachImgOne from "@/assets/img/vocal-coach/vocalCoach-mg-1.png";
 import vocalCoachImgTwo from "@/assets/img/vocal-coach/vocalCoach-mg-2.png";
 import vocalCoachImgThree from "@/assets/img/vocal-coach/vocalCoach-mg-3.png";
@@ -70,7 +70,6 @@ import bookeepa from "@/assets/logo/bookeepa-logo.png";
 import petluvsLogo from "@/assets/logo/petluvs-logo.png";
 import setterAiLogo from "@/assets/logo/setterai-logo.png";
 import vocalLogo from "@/assets/logo/vocal-coach-logo.png";
-import { link } from "fs";
 
 export const trusted = [
   {
@@ -698,31 +697,31 @@ export const teamMembers = [
     name: "Daniel Coburn",
     designation: "Head of Global Partnerships",
     image: memberFour,
-    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
+    linkedin: "https://www.linkedin.com/in/dcoburn/",
   },
   {
     name: "Stefania Fleck",
     designation: "Growth & Partnerships Manager",
     image: memberThree,
-    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
+    linkedin: "https://www.linkedin.com/in/dcoburn/",
   },
   {
     name: "Katarzyna Helma",
     designation: "Client Success Director",
     image: memberTwo,
-    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
+    linkedin: "https://www.linkedin.com/in/dcoburn/",
   },
   {
     name: "Calem Kay",
     designation: "Business Development Manager",
     image: memberOne,
-    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
+    linkedin: "https://www.linkedin.com/in/dcoburn/",
   },
   {
     name: "Azee Shah",
     designation: " Technical Delivery Manager",
     image: memberFive,
-    linkedin: "https://www.linkedin.com/in/daniel-coburn-3b4115244/",
+    linkedin: "https://www.linkedin.com/in/dcoburn/",
   },
 ];
 
