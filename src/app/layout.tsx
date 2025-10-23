@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { TRPCReactProvider } from "@/trpc/react";
 
 export const metadata: Metadata = {
-  title: "Digimark Developers | From Vision to Value – We Build Together.",
+  title: "Digimark Developers | From Vision to Value – We Build Together",
   description: "Digimark Developers",
   icons: [{ rel: "icon", url: "/logo-prime.png" }],
 };
