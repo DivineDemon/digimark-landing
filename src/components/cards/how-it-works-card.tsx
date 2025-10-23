@@ -45,7 +45,7 @@ const HowItWorksCard = ({ data }: HowItWorksCardProps) => {
         </div>
         {/* Inner Most Circle */}
         <div className="absolute flex aspect-square w-[60px] items-center justify-center rounded-full border border-gray-300">
-          <Image src="/favicon.webp" alt="favicon" className="size-[35px]" width={35} height={35} />
+          <Image src="/logo-prime.png" alt="favicon" className="size-[35px]" width={35} height={35} />
         </div>
       </div>
     </div>

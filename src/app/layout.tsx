@@ -9,7 +9,7 @@ import { TRPCReactProvider } from "@/trpc/react";
 export const metadata: Metadata = {
   title: "Digimark Developers | From Vision to Value – We Build Together.",
   description: "Digimark Developers",
-  icons: [{ rel: "icon", url: "/favicon.webp" }],
+  icons: [{ rel: "icon", url: "/logo-prime.png" }],
 };
 
 const poppins = Poppins({

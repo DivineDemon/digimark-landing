@@ -7,7 +7,7 @@ import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
 import { ragAction } from "@/app/(server-actions)/rag-action";
 import { cn } from "@/lib/utils";
-import DMLogo from "../../assets/img/logo-sec.svg";
+import DMLogo from "../../assets/img/logo-prime.png";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
@@ -389,7 +389,7 @@ const ChatBot = () => {
                       setShowChat(true);
                       await sendToAI(item);
                     }}
-                    className="cursor-pointer rounded-md bg-black px-4 py-2 font-semibold text-[14px] text-white leading-[14px] shadow-md transition-transform duration-200 ease-in-out hover:scale-105"
+                    className="cursor-pointer rounded-md bg-primary px-4 py-2 font-semibold text-[14px] text-white leading-[14px] shadow-md transition-transform duration-200 ease-in-out hover:scale-105"
                   >
                     {item}
                   </span>
