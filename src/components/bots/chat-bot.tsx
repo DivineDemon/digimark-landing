@@ -15,7 +15,7 @@ const ChatBot = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string>("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   const [nextSteps, setNextSteps] = useState<string[]>([
     "Explore AI & Chatbot Solution",
     "Web or Mobile App Development",
@@ -400,7 +400,7 @@ const ChatBot = () => {
         )}
       </div>
       <div
-        className="fixed right-5 bottom-5 z-[51] flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary p-2.5 md:right-10 md:bottom-10"
+        className="fixed right-5 bottom-5 z-[51] flex size-16 cursor-pointer items-center justify-center rounded-full bg-primary p-2.5 md:right-10 md:bottom-10"
         onClick={handleToggle}
         aria-expanded={isOpen}
       >
