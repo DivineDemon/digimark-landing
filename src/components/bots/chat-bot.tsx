@@ -145,7 +145,7 @@ const ChatBot = () => {
       )}
       <div
         className={cn(
-          "fixed right-2 bottom-14 z-[50] h-[calc(100vh-200px)] w-[380px] overflow-hidden rounded-xl bg-white shadow-[0px_0px_20px_15px_#00000024] transition-opacity duration-500 ease-in-out md:right-10 md:bottom-28 md:w-[400px]",
+          "fixed right-2 bottom-20 z-[50] h-[calc(100vh-200px)] w-[380px] overflow-hidden rounded-xl bg-white shadow-[0px_0px_20px_15px_#00000024] transition-opacity duration-500 ease-in-out md:right-10 md:bottom-28 md:w-[400px]",
           {
             "pointer-events-auto opacity-100": isOpen,
             "pointer-events-none opacity-0": !isOpen,
@@ -400,7 +400,7 @@ const ChatBot = () => {
         )}
       </div>
       <div
-        className="fixed right-5 bottom-5 z-[51] flex size-16 cursor-pointer items-center justify-center rounded-full bg-primary p-2.5 md:right-10 md:bottom-10"
+        className="fixed right-5 bottom-5 z-[51] flex size-14 cursor-pointer items-center justify-center rounded-full bg-primary p-2.5 md:right-10 md:bottom-10"
         onClick={handleToggle}
         aria-expanded={isOpen}
       >
