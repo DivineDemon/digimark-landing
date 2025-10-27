@@ -1,15 +1,18 @@
 "use client";
 
+import { ragAction } from "@/app/(server-actions)/rag-action";
+import headerImg from "@/assets/chat-header-img.jpg";
+
+import { cn } from "@/lib/utils";
 import MDEditor from "@uiw/react-md-editor";
 import { ArrowUp, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import { type MouseEvent, useEffect, useRef, useState } from "react";
-import { ragAction } from "@/app/(server-actions)/rag-action";
-import { cn } from "@/lib/utils";
 import DMLogo from "../../assets/img/logo-prime.png";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+
 
 const ChatBot = () => {
   const [loading, setLoading] = useState(false);
@@ -82,9 +85,9 @@ const ChatBot = () => {
         const newMsgs = prev.map((msg, idx) =>
           idx === prev.length - 1
             ? ({
-                role: "assistant",
-                content: aiReply,
-              } as ChatCompletionMessageParam)
+              role: "assistant",
+              content: aiReply,
+            } as ChatCompletionMessageParam)
             : msg,
         );
         setAnimatedMessages((anim) => [...anim, newMsgs.length - 1]);
@@ -96,9 +99,9 @@ const ChatBot = () => {
         const newMsgs = prev.map((msg, idx) =>
           idx === prev.length - 1
             ? ({
-                role: "assistant",
-                content: "Sorry, something went wrong.",
-              } as ChatCompletionMessageParam)
+              role: "assistant",
+              content: "Sorry, something went wrong.",
+            } as ChatCompletionMessageParam)
             : msg,
         );
         setAnimatedMessages((anim) => [...anim, newMsgs.length - 1]);
@@ -341,9 +344,10 @@ const ChatBot = () => {
           <div className="flex h-full w-full flex-col items-start justify-start">
             <div className="relative h-[200px] w-full bg-black">
               <Image
-                src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg"
+                // src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg"
+                src={headerImg}
                 alt="header-img"
-                className="z-[0] h-full w-full object-cover opacity-35 grayscale"
+                className="z-[0] h-full w-full object-top opacity-40 "
                 width={500}
                 height={500}
               />
@@ -359,7 +363,7 @@ const ChatBot = () => {
                   e.stopPropagation();
                   setShowChat(true);
                 }}
-                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-primary/80 backdrop-blur p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
+                className="-bottom-[45px] absolute inset-x-0 z-[1] mx-auto flex h-[78px] w-[85%] items-center justify-center rounded-lg bg-primary/90 backdrop-blur p-5 text-white shadow transition-transform duration-300 ease-in-out hover:scale-105"
               >
                 <div className="flex w-full cursor-pointer flex-col items-center justify-center gap-2">
                   <span className="w-full text-left font-bold text-[14px] leading-[14px]">Ask a question</span>
